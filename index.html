@@ -1,519 +1,496 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Priya Jaiswal | DevOps Engineer</title>
-
-    <meta name="description"
-        content="Priya Jaiswal - Azure Cloud, DevOps and DevSecOps Engineer">
-
+    <title>Priya Jaiswal | Cloud DevOps & DevSecOps Engineer</title>
+    <meta name="description" content="Portfolio of Priya Jaiswal - Azure Cloud, DevOps and DevSecOps Engineer specializing in IaC, CI/CD, and Kubernetes.">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- ================= NAVBAR ================= -->
-
-    <nav class="navbar">
-
+    <nav class="navbar" id="navbar">
         <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>Priya Jaiswal<span class="logo-accent"> /&gt;</span>
+            </a>
 
-            <div class="logo">
-                Priya Jaiswal
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a></li>
+                    <li><a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Projects</a></li>
+                    <li><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a></li>
+                </ul>
             </div>
 
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#contact">Contact</a>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
-
         </div>
-
     </nav>
 
-
     <!-- ================= HERO ================= -->
-
-    <section class="hero">
-
+    <section class="hero" id="hero">
         <div class="container hero-container">
-
             <div class="hero-content">
-
-                <p class="intro">
-                    Hello, I'm
-                </p>
-
-                <h1>
-                    Priya Jaiswal
-                </h1>
-
-                <h2>
-                    Azure Cloud | DevOps | DevSecOps Engineer
+                <div class="badge-status">
+                    <span class="status-ping"></span> Open to Cloud & DevOps Opportunities
+                </div>
+                
+                <p class="intro">Hi, my name is</p>
+                <h1 class="hero-title">Priya Jaiswal.</h1>
+                <h2 class="hero-subtitle">
+                    I build & secure <span class="typing-text" id="typing-text">Cloud Infrastructure</span>
                 </h2>
 
                 <p class="hero-description">
-                    I am passionate about cloud infrastructure automation,
-                    CI/CD, containerization, Kubernetes and secure DevOps practices.
+                    Result-oriented Azure DevOps & DevSecOps Engineer skilled in Cloud Infrastructure Automation 
+                    (<strong>Terraform</strong>), CI/CD pipelines, Shift-Left security, and <strong>Kubernetes (AKS)</strong> orchestration.
                 </p>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">IaC Environment Consistency</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">Shift-Left</span>
+                        <span class="stat-label">Security First Mindset</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8.43</span>
+                        <span class="stat-label">B.Tech CGPA</span>
+                    </div>
+                </div>
 
                 <div class="hero-buttons">
-
                     <a href="#projects" class="btn primary-btn">
-                        View Projects
+                        <i class="fa-solid fa-rocket"></i> Explore Projects
                     </a>
-
-                    <a href="https://github.com/Pjaisw1103"
-                       target="_blank"
-                       class="btn secondary-btn">
-                        GitHub
+                    <a href="https://github.com/Pjaisw1103" target="_blank" rel="noopener noreferrer" class="btn secondary-btn">
+                        <i class="fa-brands fa-github"></i> GitHub Profile
                     </a>
-
+                    <a href="Priya_Jaiswal_DevOps.pdf" download class="btn outline-btn">
+                        <i class="fa-solid fa-file-arrow-down"></i> Resume
+                    </a>
                 </div>
-
             </div>
-
+            
+            <div class="hero-terminal">
+                <div class="terminal-header">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                    <span class="terminal-title">bash ~ devsecops-pipeline.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="line"><span class="prompt">$</span> terraform init & terraform plan</p>
+                    <p class="line success"><i class="fa-solid fa-check"></i> Azure Infrastructure modules initialized.</p>
+                    <p class="line"><span class="prompt">$</span> run-security-scan --tools=tfsec,checkov,sonarqube</p>
+                    <p class="line success"><i class="fa-solid fa-shield-halved"></i> 0 Vulnerabilities found. Quality Gate Passed!</p>
+                    <p class="line"><span class="prompt">$</span> kubectl apply -f aks-deployment.yaml</p>
+                    <p class="line info"><i class="fa-solid fa-arrows-rotate fa-spin"></i> Deploying workloads to Azure AKS...</p>
+                    <p class="line success"><i class="fa-solid fa-circle-check"></i> Pods running smoothly. Prometheus & Grafana active.</p>
+                </div>
+            </div>
         </div>
-
     </section>
-
 
     <!-- ================= ABOUT ================= -->
-
     <section id="about" class="section">
-
         <div class="container">
-
-            <p class="section-label">
-                ABOUT ME
-            </p>
-
-            <h2 class="section-title">
-                Who I Am
-            </h2>
-
-            <div class="about-content">
-
-                <p>
-                    I am an aspiring DevOps and DevSecOps Engineer with
-                    hands-on experience in cloud infrastructure automation,
-                    CI/CD pipeline design and Kubernetes orchestration.
-                </p>
-
-                <p>
-                    I work with Microsoft Azure, Terraform, Docker,
-                    Kubernetes, Azure DevOps and GitHub Actions. I am also
-                    interested in implementing security practices into
-                    development and deployment workflows.
-                </p>
-
-                <p>
-                    My technical interests include Infrastructure as Code,
-                    containerization, CI/CD automation, cloud security and
-                    system observability using Prometheus and Grafana.
-                </p>
-
+            <div class="section-header">
+                <p class="section-label">01. ABOUT ME</p>
+                <h2 class="section-title">Who I Am</h2>
             </div>
 
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I am an Azure Cloud DevOps & DevSecOps Engineer driven by passion for automating software delivery lifecycle 
+                        and designing resilient, self-healing cloud architectures.
+                    </p>
+                    <p>
+                        My expertise lies in implementing <strong>Infrastructure as Code (Terraform)</strong>, building automated 
+                        CI/CD pipelines via <strong>Azure DevOps</strong> & <strong>GitHub Actions</strong>, and integrating 
+                        <em>Shift-Left security checks</em> (SonarQube, TFSec, Checkov) to eliminate misconfigurations before deployment.
+                    </p>
+                    <p>
+                        I focus on containerized deployments on <strong>Azure Kubernetes Service (AKS)</strong>, system observability using 
+                        <strong>Prometheus & Grafana</strong>, and writing custom Shell automation scripts for Linux cloud instances.
+                    </p>
+
+                    <div class="tech-stack-pills">
+                        <span><i class="fa-brands fa-microsoft"></i> Azure</span>
+                        <span><i class="fa-solid fa-cubes"></i> Terraform</span>
+                        <span><i class="fa-brands fa-docker"></i> Docker</span>
+                        <span><i class="fa-solid fa-dharmachakra"></i> Kubernetes (AKS)</span>
+                        <span><i class="fa-solid fa-shield-halved"></i> DevSecOps</span>
+                        <span><i class="fa-brands fa-linux"></i> Linux</span>
+                    </div>
+                </div>
+
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <div class="card-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                        <h3>Cloud & Infrastructure Automation</h3>
+                        <p>Provisioning modular, multi-environment infrastructure with Azure & Terraform.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
+                        <h3>DevSecOps Security First</h3>
+                        <p>Automating static code analysis and IaC compliance within CI/CD pipelines.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                        <h3>Observability & Operations</h3>
+                        <p>Monitoring AKS cluster metrics and system performance with Prometheus & Grafana.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </section>
-
 
     <!-- ================= SKILLS ================= -->
-
     <section id="skills" class="section skills-section">
-
         <div class="container">
+            <div class="section-header">
+                <p class="section-label">02. TECHNICAL SKILLS</p>
+                <h2 class="section-title">Technologies & Tools</h2>
+            </div>
 
-            <p class="section-label">
-                TECHNICAL SKILLS
-            </p>
+            <!-- Category Filter Tabs -->
+            <div class="skill-tabs">
+                <button class="tab-btn active" data-category="all">All Tools</button>
+                <button class="tab-btn" data-category="cloud">Cloud & IaC</button>
+                <button class="tab-btn" data-category="cicd">CI/CD & DevSecOps</button>
+                <button class="tab-btn" data-category="containers">Containers & K8s</button>
+                <button class="tab-btn" data-category="monitoring">Observability & Scripting</button>
+            </div>
 
-            <h2 class="section-title">
-                Technologies I Work With
-            </h2>
+            <div class="skills-grid" id="skills-grid">
 
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <h3>Cloud</h3>
-                    <p>Microsoft Azure</p>
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-icon"><i class="fa-brands fa-microsoft"></i></div>
+                    <h3>Cloud Platform</h3>
+                    <p class="skill-tags">Microsoft Azure</p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-category="cloud">
+                    <div class="skill-icon"><i class="fa-solid fa-code-branch"></i></div>
                     <h3>Infrastructure as Code</h3>
-                    <p>Terraform</p>
+                    <p class="skill-tags">Terraform (Modular Scripts, Remote State & Locking)</p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-category="cicd">
+                    <div class="skill-icon"><i class="fa-solid fa-rotate"></i></div>
                     <h3>CI/CD & Automation</h3>
-                    <p>Azure DevOps, GitHub Actions</p>
+                    <p class="skill-tags">Azure DevOps, GitHub Actions</p>
                 </div>
 
-                <div class="skill-card">
-                    <h3>DevSecOps</h3>
-                    <p>SonarQube, TFSec, TFLint, Checkov</p>
+                <div class="skill-card" data-category="cicd">
+                    <div class="skill-icon"><i class="fa-solid fa-user-shield"></i></div>
+                    <h3>DevSecOps & Code Quality</h3>
+                    <p class="skill-tags">SonarQube, TFSec, TFLint, Checkov</p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-category="containers">
+                    <div class="skill-icon"><i class="fa-brands fa-docker"></i></div>
                     <h3>Containers</h3>
-                    <p>Docker</p>
+                    <p class="skill-tags">Docker, Multi-stage Builds</p>
                 </div>
 
-                <div class="skill-card">
+                <div class="skill-card" data-category="containers">
+                    <div class="skill-icon"><i class="fa-solid fa-dharmachakra"></i></div>
                     <h3>Orchestration</h3>
-                    <p>Kubernetes, Azure Kubernetes Service</p>
+                    <p class="skill-tags">Kubernetes, Azure Kubernetes Service (AKS)</p>
                 </div>
 
-                <div class="skill-card">
-                    <h3>Monitoring</h3>
-                    <p>Prometheus, Grafana</p>
+                <div class="skill-card" data-category="monitoring">
+                    <div class="skill-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>Monitoring & Observability</h3>
+                    <p class="skill-tags">Prometheus, Grafana</p>
                 </div>
 
-                <div class="skill-card">
-                    <h3>Scripting & OS</h3>
-                    <p>Bash, Python, Git, Linux</p>
+                <div class="skill-card" data-category="monitoring">
+                    <div class="skill-icon"><i class="fa-terminal fa-solid"></i></div>
+                    <h3>Scripting & System</h3>
+                    <p class="skill-tags">Bash, Python, Git, Linux (Ubuntu)</p>
                 </div>
 
             </div>
-
         </div>
-
     </section>
-
 
     <!-- ================= EXPERIENCE ================= -->
-
     <section id="experience" class="section">
-
         <div class="container">
-
-            <p class="section-label">
-                EXPERIENCE
-            </p>
-
-            <h2 class="section-title">
-                Professional Experience
-            </h2>
-
-            <div class="experience-card">
-
-                <div class="experience-header">
-
-                    <div>
-                        <h3>
-                            DevOps Engineer Intern
-                        </h3>
-
-                        <p class="company">
-                            DevOps Insiders
-                        </p>
-                    </div>
-
-                    <span class="duration">
-                        2024 – 2025
-                    </span>
-
-                </div>
-
-                <ul>
-
-                    <li>
-                        Provisioned scalable Azure infrastructure using
-                        modular Terraform scripts.
-                    </li>
-
-                    <li>
-                        Implemented secure remote state handling using
-                        Azure Blob Storage with state locking.
-                    </li>
-
-                    <li>
-                        Built automated Azure DevOps pipelines to reduce
-                        manual deployment overhead.
-                    </li>
-
-                    <li>
-                        Integrated SonarQube, TFSec and Checkov quality
-                        and security checks into pipelines.
-                    </li>
-
-                    <li>
-                        Enforced Infrastructure as Code standards using
-                        TFLint static analysis.
-                    </li>
-
-                    <li>
-                        Containerized microservices using Docker and
-                        deployed workloads on Azure Kubernetes Service.
-                    </li>
-
-                    <li>
-                        Used multi-stage Docker builds to reduce build
-                        times and image footprints.
-                    </li>
-
-                    <li>
-                        Set up Prometheus and Grafana dashboards for
-                        AKS cluster health and system metrics.
-                    </li>
-
-                    <li>
-                        Created Bash scripts for Linux server maintenance
-                        and deployment automation.
-                    </li>
-
-                </ul>
-
+            <div class="section-header">
+                <p class="section-label">03. EXPERIENCE</p>
+                <h2 class="section-title">Work Experience</h2>
             </div>
 
-        </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
+                    <div class="timeline-content">
+                        <div class="experience-header">
+                            <div>
+                                <h3>DevOps Engineer Intern</h3>
+                                <p class="company"><i class="fa-solid fa-building"></i> DevOps Insiders | <span class="location">Remote, India</span></p>
+                            </div>
+                            <span class="duration-badge">2024 – 2025</span>
+                        </div>
 
+                        <ul class="experience-bullets">
+                            <li>Provisioned scalable Azure cloud infrastructure using modular <strong>Terraform</strong> scripts to achieve 100% environment consistency.</li>
+                            <li>Implemented secure remote state management with <strong>Azure Blob Storage</strong> and state locking mechanisms.</li>
+                            <li>Engineered automated <strong>Azure DevOps CI/CD pipelines</strong>, significantly reducing manual deployment overhead.</li>
+                            <li>Embedded <strong>SonarQube, TFSec, and Checkov</strong> quality gates into pipelines to identify security vulnerabilities pre-deployment.</li>
+                            <li>Enforced strict Infrastructure as Code coding standards across pipeline stages using <strong>TFLint</strong> static analysis.</li>
+                            <li>Containerized microservices with Docker (utilizing multi-stage builds) and deployed workloads onto <strong>Azure Kubernetes Service (AKS)</strong>.</li>
+                            <li>Configured <strong>Prometheus & Grafana</strong> monitoring dashboards to analyze cluster health, workloads, and node metrics.</li>
+                            <li>Authored custom <strong>Bash scripts</strong> for automated Linux server maintenance, deployment routines, and root-cause debugging.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-
     <!-- ================= PROJECTS ================= -->
-
     <section id="projects" class="section projects-section">
-
         <div class="container">
+            <div class="section-header">
+                <p class="section-label">04. FEATURED WORK</p>
+                <h2 class="section-title">DevOps & Cloud Projects</h2>
+            </div>
 
-            <p class="section-label">
-                PROJECTS
-            </p>
+            <div class="projects-grid">
 
-            <h2 class="section-title">
-                Featured DevOps Projects
-            </h2>
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-number">01</span>
+                        <div class="project-links">
+                            <a href="https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
 
-
-            <!-- PROJECT 1 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    01
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
+                    <h3 class="project-title">
                         CI/CD Pipeline with Code Quality & Security Scanning
                     </h3>
 
-                    <p>
-                        Engineered an automated Azure DevOps CI/CD pipeline
-                        for application deployment with integrated code
-                        quality and Infrastructure as Code security scanning.
+                    <p class="project-description">
+                        Engineered an end-to-end automated Azure DevOps CI/CD pipeline for web application deployments. 
+                        Integrated SonarQube for static code analysis and Checkov for automated IaC security scanning, 
+                        enforcing Shift-Left security practices before containerizing and deploying via NGINX on Linux nodes.
                     </p>
 
                     <div class="project-tags">
-
                         <span>Azure DevOps</span>
                         <span>SonarQube</span>
                         <span>Checkov</span>
                         <span>Docker</span>
                         <span>NGINX</span>
-
                     </div>
 
-                    <a href="https://github.com/Pjaisw1103"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
+                    <a href="https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline.git" target="_blank" rel="noopener noreferrer" class="project-btn">
+                        View Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-
                 </div>
 
-            </div>
+                <!-- PROJECT 2 -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-number">02</span>
+                        <div class="project-links">
+                            <a href="https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
 
-
-            <!-- PROJECT 2 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    02
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
-                        Multi-Environment Infrastructure Automation
+                    <h3 class="project-title">
+                        Multi-Environment Azure Infrastructure Automation
                     </h3>
 
-                    <p>
-                        Developed reusable Terraform modules to provision
-                        isolated Dev, Staging and Production environments
-                        on Azure with secure remote state management.
+                    <p class="project-description">
+                        Developed reusable Terraform modules to provision isolated Dev, Staging, and Production environments on Azure. 
+                        Automated TFSec and TFLint code analysis workflows to detect cloud misconfigurations early, with backend remote state 
+                        locking configured on Azure Blob Storage.
                     </p>
 
                     <div class="project-tags">
-
                         <span>Terraform</span>
                         <span>Azure</span>
                         <span>TFSec</span>
                         <span>TFLint</span>
                         <span>Azure Storage</span>
-
                     </div>
 
-                    <a href="https://github.com/Pjaisw1103"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
+                    <a href="https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup.git" target="_blank" rel="noopener noreferrer" class="project-btn">
+                        View Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-
                 </div>
 
-            </div>
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+                    <div class="project-top">
+                        <span class="project-number">03</span>
+                        <div class="project-links">
+                            <a href="https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment.git" target="_blank" rel="noopener noreferrer" aria-label="GitHub Repo">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
 
-
-            <!-- PROJECT 3 -->
-
-            <div class="project-card">
-
-                <div class="project-number">
-                    03
-                </div>
-
-                <div class="project-content">
-
-                    <h3>
+                    <h3 class="project-title">
                         Azure AKS Cluster Provisioning & Deployment
                     </h3>
 
-                    <p>
-                        Provisioned Azure Kubernetes Service infrastructure
-                        using Terraform and deployed applications using
-                        Kubernetes Deployments and Services.
+                    <p class="project-description">
+                        Provisioned production-ready Azure Kubernetes Service (AKS) clusters using Terraform. 
+                        Authored declarative Kubernetes YAML manifests (Deployments & Services) to efficiently manage app pods, 
+                        resource limits, environment variables, and cluster networking workflows.
                     </p>
 
                     <div class="project-tags">
-
                         <span>Azure AKS</span>
                         <span>Kubernetes</span>
                         <span>Docker</span>
                         <span>Terraform</span>
                         <span>YAML</span>
-
                     </div>
 
-                    <a href="https://github.com/Pjaisw1103"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
+                    <a href="https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment.git" target="_blank" rel="noopener noreferrer" class="project-btn">
+                        View Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
-
                 </div>
 
             </div>
-
         </div>
-
     </section>
-
 
     <!-- ================= EDUCATION ================= -->
-
     <section id="education" class="section">
-
         <div class="container">
-
-            <p class="section-label">
-                EDUCATION
-            </p>
-
-            <h2 class="section-title">
-                Academic Background
-            </h2>
-
-            <div class="education-card">
-
-                <h3>
-                    Bachelor of Technology — Computer Science & Engineering
-                </h3>
-
-                <p>
-                    Dr. A.P.J. Abdul Kalam Technical University
-                </p>
-
-                <p>
-                    2022 – 2026
-                </p>
-
-                <p class="highlight">
-                    CGPA: 8.43 / 10
-                </p>
-
+            <div class="section-header">
+                <p class="section-label">05. EDUCATION</p>
+                <h2 class="section-title">Academic Background</h2>
             </div>
 
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="edu-details">
+                        <h3>Bachelor of Technology — Computer Science & Engineering</h3>
+                        <p class="institution">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh, India</p>
+                        <div class="edu-meta">
+                            <span class="year">2022 – 2026</span>
+                            <span class="cgpa-badge">CGPA: 8.43 / 10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+                    <div class="edu-details">
+                        <h3>Intermediate (PCM - CBSE)</h3>
+                        <p class="institution">Jawahar Navodaya Vidyalaya, Balrampur</p>
+                        <p class="location"><i class="fa-solid fa-location-dot"></i> Uttar Pradesh, India</p>
+                        <div class="edu-meta">
+                            <span class="year">Passing Year: 2021</span>
+                            <span class="cgpa-badge">Percentage: 84.4%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </section>
-
 
     <!-- ================= CONTACT ================= -->
-
     <section id="contact" class="section contact-section">
-
         <div class="container contact-container">
-
-            <p class="section-label">
-                CONTACT
-            </p>
-
-            <h2 class="section-title">
-                Let's Connect
-            </h2>
-
-            <p>
-                I am open to opportunities in DevOps, Cloud and
-                DevSecOps roles.
-            </p>
-
-            <div class="contact-links">
-
-                <a href="mailto:priyajaisw9554@gmail.com">
-                    Email
-                </a>
-
-                <a href="https://github.com/Pjaisw1103"
-                   target="_blank">
-                    GitHub
-                </a>
-
-                <a href="https://www.linkedin.com/in/priya-jaiswal1103"
-                   target="_blank">
-                    LinkedIn
-                </a>
-
+            <div class="section-header center">
+                <p class="section-label">06. WHAT'S NEXT?</p>
+                <h2 class="section-title">Get In Touch</h2>
             </div>
 
-        </div>
+            <p class="contact-subtitle">
+                I am actively seeking full-time and intern opportunities in <strong>DevOps, Cloud Infrastructure, and DevSecOps</strong> roles. 
+                Whether you have a question or want to discuss cloud solutions, my inbox is always open!
+            </p>
 
+            <div class="contact-cards">
+                <a href="mailto:priyajaisw9554@gmail.com" class="contact-card">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h4>Email Me</h4>
+                    <p>priyajaisw9554@gmail.com</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/priya-jaiswal1103" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <h4>LinkedIn</h4>
+                    <p>priya-jaiswal1103</p>
+                </a>
+
+                <a href="https://github.com/Pjaisw1103" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <i class="fa-brands fa-github"></i>
+                    <h4>GitHub</h4>
+                    <p>Pjaisw1103</p>
+                </a>
+
+                <div class="contact-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h4>Location</h4>
+                    <p>Lucknow, India</p>
+                </div>
+            </div>
+
+            <a href="mailto:priyajaisw9554@gmail.com" class="btn primary-btn btn-lg">
+                <i class="fa-solid fa-paper-plane"></i> Say Hello
+            </a>
+        </div>
     </section>
 
-
     <!-- ================= FOOTER ================= -->
-
     <footer>
-
-        <p>
-            © 2026 Priya Jaiswal | DevOps Engineer
-        </p>
-
+        <div class="container footer-container">
+            <p>© 2026 Designed & Built by <strong>Priya Jaiswal</strong> | Cloud & DevOps Specialist</p>
+            <div class="footer-socials">
+                <a href="https://github.com/Pjaisw1103" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/priya-jaiswal1103" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:priyajaisw9554@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
 
-
+    <!-- Interactive Script -->
+    <script src="script.js"></script>
 </body>
 
 </html>
