@@ -18,11 +18,15 @@
 
 <body>
 
+    <!-- Background Glow Effect Elements -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
     <!-- ================= NAVBAR ================= -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <span class="logo-accent">&lt;</span>Priya Jaiswal<span class="logo-accent">&gt;</span>
+                <span class="logo-accent"></span>Priya Jaiswal<span class="logo-accent"></span>
             </a>
 
             <div class="nav-menu" id="nav-menu">
@@ -52,9 +56,11 @@
     <!-- ================= HERO ================= -->
     <section class="hero" id="hero">
         <div class="container hero-container">
-            <div class="hero-content">
+            <div class="hero-content reveal-left">
                 <div class="badge-status">
-                    <span class="status-ping"></span> Open to Cloud & DevOps Opportunities
+                    <span class="status-ping"></span>
+                    <span class="status-pulse"></span>
+                    Open to Cloud & DevOps Opportunities
                 </div>
                 
                 <p class="intro">Hi, my name is</p>
@@ -64,18 +70,17 @@
                 </h2>
 
                 <p class="hero-description">
-                    Result-oriented Azure DevOps & DevSecOps Engineer skilled in Cloud Infrastructure Automation 
-                    (<strong>Terraform</strong>), CI/CD pipelines, Shift-Left security, and <strong>Kubernetes (AKS)</strong> orchestration.
+                    Result-oriented <strong>Azure DevOps & DevSecOps Engineer</strong> specializing in Infrastructure as Code (<strong>Terraform</strong>), CI/CD pipelines, Shift-Left security, and <strong>Kubernetes (AKS)</strong> orchestration.
                 </p>
 
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">IaC Environment Consistency</span>
+                        <span class="stat-label">IaC Consistency</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">Shift-Left</span>
-                        <span class="stat-label">Security First Mindset</span>
+                        <span class="stat-label">Security Integration</span>
                     </div>
                     <div class="stat-item">
                         <span class="stat-number">8.43</span>
@@ -96,7 +101,7 @@
                 </div>
             </div>
             
-            <div class="hero-terminal">
+            <div class="hero-terminal reveal-right">
                 <div class="terminal-header">
                     <span class="dot red"></span>
                     <span class="dot yellow"></span>
@@ -119,25 +124,21 @@
     <!-- ================= ABOUT ================= -->
     <section id="about" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-up">
                 <p class="section-label">01. ABOUT ME</p>
                 <h2 class="section-title">Who I Am</h2>
             </div>
 
             <div class="about-grid">
-                <div class="about-text">
+                <div class="about-text reveal-left">
                     <p>
-                        I am an Azure Cloud DevOps & DevSecOps Engineer driven by passion for automating software delivery lifecycle 
-                        and designing resilient, self-healing cloud architectures.
+                        I am an Azure Cloud DevOps & DevSecOps Engineer passionate about automating the software delivery lifecycle and designing resilient, self-healing cloud architectures.
                     </p>
                     <p>
-                        My expertise lies in implementing <strong>Infrastructure as Code (Terraform)</strong>, building automated 
-                        CI/CD pipelines via <strong>Azure DevOps</strong> & <strong>GitHub Actions</strong>, and integrating 
-                        <em>Shift-Left security checks</em> (SonarQube, TFSec, Checkov) to eliminate misconfigurations before deployment.
+                        My expertise lies in implementing <strong>Infrastructure as Code (Terraform)</strong>, building automated CI/CD pipelines via <strong>Azure DevOps & GitHub Actions</strong>, and integrating <em>Shift-Left security checks</em> (SonarQube, TFSec, Checkov) to eliminate misconfigurations before deployment.
                     </p>
                     <p>
-                        I focus on containerized deployments on <strong>Azure Kubernetes Service (AKS)</strong>, system observability using 
-                        <strong>Prometheus & Grafana</strong>, and writing custom Shell automation scripts for Linux cloud instances.
+                        I focus on containerized deployments on <strong>Azure Kubernetes Service (AKS)</strong>, system observability using <strong>Prometheus & Grafana</strong>, and writing custom Shell automation scripts for Linux environments.
                     </p>
 
                     <div class="tech-stack-pills">
@@ -150,21 +151,27 @@
                     </div>
                 </div>
 
-                <div class="about-highlights">
+                <div class="about-highlights reveal-right">
                     <div class="highlight-card">
                         <div class="card-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-                        <h3>Cloud & Infrastructure Automation</h3>
-                        <p>Provisioning modular, multi-environment infrastructure with Azure & Terraform.</p>
+                        <div>
+                            <h3>Cloud & Infrastructure Automation</h3>
+                            <p>Provisioning modular, multi-environment infrastructure with Azure & Terraform.</p>
+                        </div>
                     </div>
                     <div class="highlight-card">
                         <div class="card-icon"><i class="fa-solid fa-lock"></i></div>
-                        <h3>DevSecOps Security First</h3>
-                        <p>Automating static code analysis and IaC compliance within CI/CD pipelines.</p>
+                        <div>
+                            <h3>DevSecOps & Security First</h3>
+                            <p>Automating static code analysis and IaC compliance within CI/CD pipelines.</p>
+                        </div>
                     </div>
                     <div class="highlight-card">
                         <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
-                        <h3>Observability & Operations</h3>
-                        <p>Monitoring AKS cluster metrics and system performance with Prometheus & Grafana.</p>
+                        <div>
+                            <h3>Observability & Operations</h3>
+                            <p>Monitoring AKS cluster metrics and system performance with Prometheus & Grafana.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,13 +181,12 @@
     <!-- ================= SKILLS ================= -->
     <section id="skills" class="section skills-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-up">
                 <p class="section-label">02. TECHNICAL SKILLS</p>
                 <h2 class="section-title">Technologies & Tools</h2>
             </div>
 
-            <!-- Category Filter Tabs -->
-            <div class="skill-tabs">
+            <div class="skill-tabs reveal-up">
                 <button class="tab-btn active" data-category="all">All Tools</button>
                 <button class="tab-btn" data-category="cloud">Cloud & IaC</button>
                 <button class="tab-btn" data-category="cicd">CI/CD & DevSecOps</button>
@@ -188,56 +194,47 @@
                 <button class="tab-btn" data-category="monitoring">Observability & Scripting</button>
             </div>
 
-            <div class="skills-grid" id="skills-grid">
-
+            <div class="skills-grid reveal-up" id="skills-grid">
                 <div class="skill-card" data-category="cloud">
                     <div class="skill-icon"><i class="fa-brands fa-microsoft"></i></div>
                     <h3>Cloud Platform</h3>
                     <p class="skill-tags">Microsoft Azure</p>
                 </div>
-
                 <div class="skill-card" data-category="cloud">
                     <div class="skill-icon"><i class="fa-solid fa-code-branch"></i></div>
                     <h3>Infrastructure as Code</h3>
-                    <p class="skill-tags">Terraform (Modular Scripts, Remote State & Locking)</p>
+                    <p class="skill-tags">Terraform (Modular, Remote State & Locking)</p>
                 </div>
-
                 <div class="skill-card" data-category="cicd">
                     <div class="skill-icon"><i class="fa-solid fa-rotate"></i></div>
                     <h3>CI/CD & Automation</h3>
                     <p class="skill-tags">Azure DevOps, GitHub Actions</p>
                 </div>
-
                 <div class="skill-card" data-category="cicd">
                     <div class="skill-icon"><i class="fa-solid fa-user-shield"></i></div>
                     <h3>DevSecOps & Code Quality</h3>
                     <p class="skill-tags">SonarQube, TFSec, TFLint, Checkov</p>
                 </div>
-
                 <div class="skill-card" data-category="containers">
                     <div class="skill-icon"><i class="fa-brands fa-docker"></i></div>
                     <h3>Containers</h3>
                     <p class="skill-tags">Docker, Multi-stage Builds</p>
                 </div>
-
                 <div class="skill-card" data-category="containers">
                     <div class="skill-icon"><i class="fa-solid fa-dharmachakra"></i></div>
                     <h3>Orchestration</h3>
                     <p class="skill-tags">Kubernetes, Azure Kubernetes Service (AKS)</p>
                 </div>
-
                 <div class="skill-card" data-category="monitoring">
                     <div class="skill-icon"><i class="fa-solid fa-chart-pie"></i></div>
                     <h3>Monitoring & Observability</h3>
                     <p class="skill-tags">Prometheus, Grafana</p>
                 </div>
-
                 <div class="skill-card" data-category="monitoring">
-                    <div class="skill-icon"><i class="fa-terminal fa-solid"></i></div>
-                    <h3>Scripting & System</h3>
+                    <div class="skill-icon"><i class="fa-solid fa-terminal"></i></div>
+                    <h3>Scripting & OS</h3>
                     <p class="skill-tags">Bash, Python, Git, Linux (Ubuntu)</p>
                 </div>
-
             </div>
         </div>
     </section>
@@ -245,12 +242,12 @@
     <!-- ================= EXPERIENCE ================= -->
     <section id="experience" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-up">
                 <p class="section-label">03. EXPERIENCE</p>
                 <h2 class="section-title">Work Experience</h2>
             </div>
 
-            <div class="timeline">
+            <div class="timeline reveal-up">
                 <div class="timeline-item">
                     <div class="timeline-dot"><i class="fa-solid fa-briefcase"></i></div>
                     <div class="timeline-content">
@@ -268,9 +265,9 @@
                             <li>Engineered automated <strong>Azure DevOps CI/CD pipelines</strong>, significantly reducing manual deployment overhead.</li>
                             <li>Embedded <strong>SonarQube, TFSec, and Checkov</strong> quality gates into pipelines to identify security vulnerabilities pre-deployment.</li>
                             <li>Enforced strict Infrastructure as Code coding standards across pipeline stages using <strong>TFLint</strong> static analysis.</li>
-                            <li>Containerized microservices with Docker (utilizing multi-stage builds) and deployed workloads onto <strong>Azure Kubernetes Service (AKS)</strong>.</li>
+                            <li>Containerized microservices with Docker (multi-stage builds) and deployed workloads onto <strong>Azure Kubernetes Service (AKS)</strong>.</li>
                             <li>Configured <strong>Prometheus & Grafana</strong> monitoring dashboards to analyze cluster health, workloads, and node metrics.</li>
-                            <li>Authored custom <strong>Bash scripts</strong> for automated Linux server maintenance, deployment routines, and root-cause debugging.</li>
+                            <li>Authored custom <strong>Bash scripts</strong> for automated Linux server maintenance and deployment routines.</li>
                         </ul>
                     </div>
                 </div>
@@ -281,15 +278,14 @@
     <!-- ================= PROJECTS ================= -->
     <section id="projects" class="section projects-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-up">
                 <p class="section-label">04. FEATURED WORK</p>
                 <h2 class="section-title">DevOps & Cloud Projects</h2>
             </div>
 
             <div class="projects-grid">
-
                 <!-- PROJECT 1 -->
-                <div class="project-card">
+                <div class="project-card reveal-up">
                     <div class="project-top">
                         <span class="project-number">01</span>
                         <div class="project-links">
@@ -303,10 +299,12 @@
                         CI/CD Pipeline with Code Quality & Security Scanning
                     </h3>
 
+                    <div class="arch-flow">
+                        <span>Azure DevOps</span> &rarr; <span>SonarQube / Checkov</span> &rarr; <span>Docker</span> &rarr; <span>NGINX</span>
+                    </div>
+
                     <p class="project-description">
-                        Engineered an end-to-end automated Azure DevOps CI/CD pipeline for web application deployments. 
-                        Integrated SonarQube for static code analysis and Checkov for automated IaC security scanning, 
-                        enforcing Shift-Left security practices before containerizing and deploying via NGINX on Linux nodes.
+                        Engineered an end-to-end automated Azure DevOps CI/CD pipeline. Integrated SonarQube for code analysis and Checkov for automated IaC security scanning, enforcing Shift-Left security practices.
                     </p>
 
                     <div class="project-tags">
@@ -323,7 +321,7 @@
                 </div>
 
                 <!-- PROJECT 2 -->
-                <div class="project-card">
+                <div class="project-card reveal-up">
                     <div class="project-top">
                         <span class="project-number">02</span>
                         <div class="project-links">
@@ -337,10 +335,12 @@
                         Multi-Environment Azure Infrastructure Automation
                     </h3>
 
+                    <div class="arch-flow">
+                        <span>Terraform Modules</span> &rarr; <span>TFSec / TFLint</span> &rarr; <span>Azure Blob Lock</span>
+                    </div>
+
                     <p class="project-description">
-                        Developed reusable Terraform modules to provision isolated Dev, Staging, and Production environments on Azure. 
-                        Automated TFSec and TFLint code analysis workflows to detect cloud misconfigurations early, with backend remote state 
-                        locking configured on Azure Blob Storage.
+                        Developed reusable Terraform modules to provision isolated Dev, Staging, and Production environments on Azure. Automated TFSec and TFLint code analysis workflows to detect cloud misconfigurations early.
                     </p>
 
                     <div class="project-tags">
@@ -357,7 +357,7 @@
                 </div>
 
                 <!-- PROJECT 3 -->
-                <div class="project-card">
+                <div class="project-card reveal-up">
                     <div class="project-top">
                         <span class="project-number">03</span>
                         <div class="project-links">
@@ -371,10 +371,12 @@
                         Azure AKS Cluster Provisioning & Deployment
                     </h3>
 
+                    <div class="arch-flow">
+                        <span>Terraform</span> &rarr; <span>AKS Cluster</span> &rarr; <span>K8s Manifests</span> &rarr; <span>Pods</span>
+                    </div>
+
                     <p class="project-description">
-                        Provisioned production-ready Azure Kubernetes Service (AKS) clusters using Terraform. 
-                        Authored declarative Kubernetes YAML manifests (Deployments & Services) to efficiently manage app pods, 
-                        resource limits, environment variables, and cluster networking workflows.
+                        Provisioned production-ready Azure Kubernetes Service (AKS) clusters using Terraform. Authored declarative Kubernetes YAML manifests to efficiently manage app pods, resource limits, and cluster networking.
                     </p>
 
                     <div class="project-tags">
@@ -389,7 +391,6 @@
                         View Repository <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
@@ -397,12 +398,12 @@
     <!-- ================= EDUCATION ================= -->
     <section id="education" class="section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header reveal-up">
                 <p class="section-label">05. EDUCATION</p>
                 <h2 class="section-title">Academic Background</h2>
             </div>
 
-            <div class="education-grid">
+            <div class="education-grid reveal-up">
                 <div class="education-card">
                     <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <div class="edu-details">
@@ -434,15 +435,14 @@
 
     <!-- ================= CONTACT ================= -->
     <section id="contact" class="section contact-section">
-        <div class="container contact-container">
+        <div class="container contact-container reveal-up">
             <div class="section-header center">
                 <p class="section-label">06. WHAT'S NEXT?</p>
                 <h2 class="section-title">Get In Touch</h2>
             </div>
 
             <p class="contact-subtitle">
-                I am actively seeking full-time and intern opportunities in <strong>DevOps, Cloud Infrastructure, and DevSecOps</strong> roles. 
-                Whether you have a question or want to discuss cloud solutions, my inbox is always open!
+                I am actively seeking full-time and intern opportunities in <strong>DevOps, Cloud Infrastructure, and DevSecOps</strong> roles.
             </p>
 
             <div class="contact-cards">
@@ -463,12 +463,6 @@
                     <h4>GitHub</h4>
                     <p>Pjaisw1103</p>
                 </a>
-
-                <!-- <div class="contact-card">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h4>Location</h4>
-                    <p>Lucknow, India</p>
-                </div> -->
             </div>
 
             <a href="mailto:priyajaisw9554@gmail.com" class="btn primary-btn btn-lg">
@@ -489,8 +483,6 @@
         </div>
     </footer>
 
-    <!-- Interactive Script -->
     <script src="script.js"></script>
 </body>
-
 </html>
