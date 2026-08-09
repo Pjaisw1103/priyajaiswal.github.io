@@ -35,7 +35,7 @@ Settings → Pages → Deploy from a branch → `main` → `/ (root)`.
 
 Live site:
 
-https://pjaisw1103.github.io/
+https://priyajaiswal.github.io/
 
 ## Links
 
