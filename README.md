@@ -1,37 +1,36 @@
-# ⚡ Priya Jaiswal — Azure Cloud, DevOps & DevSecOps Engineer Portfolio
+# ⚡ Priya Jaiswal — Entry-Level / Fresher Azure Cloud, DevOps & DevSecOps Engineer
 
-[![Portfolio Status](https://img.shields.io/badge/Portfolio-Live-00f0ff?style=for-the-badge&logo=githubpages&logoColor=white)](https://priyajaiswal.github.io/)
-[![Role](https://img.shields.io/badge/Role-DevOps_%26_DevSecOps-a855f7?style=for-the-badge&logo=microsoftazure&logoColor=white)](https://priyajaiswal.github.io/)
-[![Status](https://img.shields.io/badge/Availability-Immediate_Joiner-10b981?style=for-the-badge)](https://priyajaiswal.github.io/)
+[![Portfolio Status](https://img.shields.io/badge/Portfolio-Live-ffc200?style=for-the-badge&logo=githubpages&logoColor=black)](https://priyajaiswal.github.io/)
+[![Role](https://img.shields.io/badge/Role-Fresher_Azure_DevOps_Engineer-ffc200?style=for-the-badge&logo=microsoftazure&logoColor=black)](https://priyajaiswal.github.io/)
+[![Status](https://img.shields.io/badge/Status-Open_to_Work_(0_Days_Notice)-22c55e?style=for-the-badge)](https://priyajaiswal.github.io/)
 
-Modern, interactive, and high-performance engineering portfolio website built for **Priya Jaiswal** (Azure Cloud, DevOps & DevSecOps Engineer). Engineered with raw HTML5, modern CSS3 glassmorphism design system, interactive JavaScript, and live GitHub API integrations.
+Modern, high-impact, luxury obsidian black & signature gold engineering portfolio website for **Priya Jaiswal** (Fresher Azure Cloud, DevOps & DevSecOps Engineer). Built using HTML5, Bootstrap 5, modern CSS3 glassmorphism, Swiper 11, AOS animations, Three.js / Particles.js canvas, and Formspree query routing.
 
-🌐 **Live Website**: [priyajaiswal.github.io](https://priyajaiswal.github.io/)
+🌐 **Live Portfolio**: [priyajaiswal.github.io](https://priyajaiswal.github.io/)
 
 ---
 
-## 📋 Fast Facts for Hiring Managers
+## 📋 Fast Facts for Hiring Managers & Recruiters
 
 | Metric / Criteria | Details |
 | :--- | :--- |
-| 🎯 **Target Role** | Azure Cloud / DevOps / DevSecOps Engineer |
-| ⏳ **Availability** | **Immediate Joiner** (0 Days Notice Period) |
-| 🎓 **Academic Record** | **B.Tech Computer Science & Engg.** (8.43 CGPA / 10) |
-| 💼 **Experience** | **1 Year Internship** at DevOps Insiders (Remote, India) |
-| 🛠️ **Primary Stack** | Azure, Terraform IaC, Docker, Kubernetes (AKS), Azure DevOps, SonarQube, Checkov |
-| 📍 **Location** | Lucknow, UP (Open for Remote, Pan-India & Onsite) |
+| 🎯 **Target Role** | Entry-Level / Fresher Azure Cloud, DevOps & DevSecOps Engineer |
+| ⚡ **Notice Period** | **0 Days (Immediate Joiner)** |
+| 🎓 **Academic Record** | **B.Tech Computer Science & Engineering** (CGPA: 8.43 / 10) — AKTU |
+| 💼 **Internship Experience** | **1 Year DevOps Internship** at DevOps Insiders (2024 – 2025) |
+| 🛠️ **Primary Technical Stack** | Azure Cloud, Terraform HCL, Docker, AKS Kubernetes, Azure DevOps, SonarQube, Checkov, Linux |
+| 📍 **Preferred Locations** | **Noida · Delhi · Lucknow · Remote** (Pan-India Ready) |
 
 ---
 
-## 🌟 Core Portfolio Features
+## 🌟 Key Portfolio Highlights
 
-- **⚡ Recruiter Corner (30-Second Summary)**: Dedicated right-side header button and fast-track section giving recruiters instant 30-second ROI on hiring qualifications, experience, and direct PDF resume download.
-- **🛡️ Live CI/CD & DevSecOps Pipeline Simulator**: Interactive multi-stage pipeline runner (`Source Code` ➔ `DevSecOps Scan` ➔ `Terraform Provision` ➔ `AKS Deploy` ➔ `Grafana Monitor`) allowing visitors to click stages and view real-time log outputs.
-- **💻 Interactive CLI Command Terminal**: Live typewriter prompt with clickable terminal chips (`$ terraform plan`, `$ kubectl get pods`, `$ checkov scan`, `$ cat resume`).
-- **🔍 Project Architecture Spec Modals**: Visual architecture topology flow diagrams (`GitHub Repo` ➔ `Azure Pipeline` ➔ `SonarQube` ➔ `Checkov` ➔ `Prod Release`) embedded inside modal popups for all featured projects.
-- **📊 Real-Time GitHub Profile Metrics**: Dynamic REST API integration pulling public repository counts, stars, followers, and primary language metrics automatically.
-- **🎨 Glassmorphism & Aurora Cyber Aesthetics**: Quantum dark mode with ambient aurora lighting blobs, interactive 3D particle mesh network canvas, and custom Google Fonts (`Outfit`, `Space Grotesk`, `JetBrains Mono`).
-- **🌗 Dual-Theme System**: Seamless Light and Dark mode toggling with preference stored in `localStorage`.
+- **✨ Obsidian Black & Signature Gold Luxury Theme**: Premium `#000000` dark mode UI with gold `#ffc200` accents, Maven Pro typography, glassmorphism navbar, and glowing `🟢 Open to Work` status.
+- **💻 Interactive Live Terminal Simulation**: Real-time Azure DevOps deployment command console (`terraform apply`, `checkov`, `sonarqube_quality_gate`).
+- **🛂 Compact Work Authorization & Location Flex**: Verified Indian Citizenship, 0-day notice period, and multi-city readiness (Noida, Delhi, Lucknow, Remote).
+- **🛠️ Interactive Technical Toolbox (Skills)**: Categorized technical pillars with interactive modal popups detailing sub-services (*AKS, VNet, Key Vault, HCL modules, SAST gates, Helm*).
+- **🎠 Production Projects Swiper Carousel**: Responsive project cards featuring enterprise architecture specs and GitHub repo links.
+- **📩 Direct Recruiter Contact Form**: WhatsApp direct chat, direct email link, and Formspree query routing to `priyajaisw9554@gmail.com`.
 
 ---
 
@@ -39,9 +38,10 @@ Modern, interactive, and high-performance engineering portfolio website built fo
 
 ```text
 priyajaiswal.github.io/
-├── index.html       # Semantic HTML5 layout with modals & fast-track sections
-├── style.css        # Vanilla CSS3 quantum design system with glassmorphism & aurora animations
-├── script.js        # Core engine (Particle canvas, typewriter CLI, pipeline simulator, GitHub API)
+├── index.html       # Splash landing page with 3D Three.js particle canvas & PJ watermark sweep
+├── home.html        # Main portfolio layout with Bootstrap 5, Swiper, AOS, & Formspree contact
+├── style.css        # Core luxury black & gold CSS stylesheet
+├── script.js        # Core JavaScript interactions & reticle cursor engine
 ├── README.md        # Technical portfolio documentation
 └── assets/
     └── Priya_Jaiswal_DevOps_Resume.pdf  # Verified official DevOps resume PDF
@@ -49,13 +49,12 @@ priyajaiswal.github.io/
 
 ---
 
-## 🚀 Local Development & Deployment
+## 🚀 Local Development
 
-### Run Locally
-Simply serve the static directory using any standard HTTP server:
+To run the portfolio locally:
 
 ```bash
-# Using Python
+# Using Python HTTP Server
 python -m http.server 8080
 
 # Or using Node.js http-server
@@ -64,19 +63,15 @@ npx http-server ./ -p 8080
 
 Open `http://localhost:8080` in your web browser.
 
-### GitHub Pages Deployment
-1. Go to repository **Settings** ➔ **Pages**.
-2. Select **Source**: `Deploy from a branch`.
-3. Choose **Branch**: `main` / `/ (root)`.
-4. Save and wait for GitHub Pages deployment.
+---
+
+## 📬 Direct Contact & Professional Links
+
+- 💬 **WhatsApp Chat**: [+91 9554988771](https://wa.me/919554988771)
+- ✉️ **Direct Email**: [priyajaisw9554@gmail.com](mailto:priyajaisw9554@gmail.com)
+- 💼 **LinkedIn Profile**: [priya-jaiswal1103](https://www.linkedin.com/in/priya-jaiswal1103/)
+- 💻 **GitHub Repositories**: [Pjaisw1103](https://github.com/Pjaisw1103)
 
 ---
 
-## 📬 Contact & Links
-
-- 💻 **GitHub**: [Pjaisw1103](https://github.com/Pjaisw1103)
-- 👔 **LinkedIn**: [priya-jaiswal1103](https://www.linkedin.com/in/priya-jaiswal1103/)
-- ✉️ **Email**: [priyajaisw9554@gmail.com](mailto:priyajaisw9554@gmail.com)
-
----
 *© 2026 Priya Jaiswal. All rights reserved.*

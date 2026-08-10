@@ -760,4 +760,55 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // ------------------------------------------------------------------------
+  // Reticle Custom Cursor & Ring Follower (Dharmendra-inspired)
+  // ------------------------------------------------------------------------
+  const cursorDot = document.getElementById("cursorDot");
+  const cursorRing = document.getElementById("cursorRing");
+
+  if (cursorDot && cursorRing) {
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX;
+    let ringY = mouseY;
+
+    window.addEventListener("pointermove", (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cursorDot.style.left = `${mouseX}px`;
+      cursorDot.style.top = `${mouseY}px`;
+    });
+
+    function renderCursorRing() {
+      ringX += (mouseX - ringX) * 0.18;
+      ringY += (mouseY - ringY) * 0.18;
+      cursorRing.style.left = `${ringX}px`;
+      cursorRing.style.top = `${ringY}px`;
+      requestAnimationFrame(renderCursorRing);
+    }
+    requestAnimationFrame(renderCursorRing);
+
+    // Expand ring on interactive elements
+    const interactiveElements = document.querySelectorAll(
+      "a, button, input, textarea, select, .tilt-card, .contact-item, .cli-chip, .tech-chip"
+    );
+    interactiveElements.forEach((el) => {
+      el.addEventListener("mouseenter", () => cursorRing.classList.add("active"));
+      el.addEventListener("mouseleave", () => cursorRing.classList.remove("active"));
+    });
+  }
+
+  // ------------------------------------------------------------------------
+  // Hero Splash Enter Button Scroll Transition
+  // ------------------------------------------------------------------------
+  const enterBtn = document.getElementById("enterBtn");
+  if (enterBtn) {
+    enterBtn.addEventListener("click", () => {
+      const nextSection = document.getElementById("recruiter-summary") || document.getElementById("about");
+      if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
 });

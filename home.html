@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="Priya Jaiswal – Entry-Level / Fresher Azure Cloud, DevOps & DevSecOps Engineer. B.Tech CSE (8.43 CGPA), 1 Year Internship at DevOps Insiders. Immediate Joiner." />
+  <meta name="author" content="Priya Jaiswal" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#ffc200" />
+  <title>Priya Jaiswal | Fresher Azure Cloud · DevOps · DevSecOps Engineer</title>
+  <link rel="canonical" href="https://priyajaiswal.github.io/home.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23000000'/><text x='50%' y='68%' font-size='52' font-weight='800' font-family='sans-serif' text-anchor='middle' fill='%23ffc200'>PJ</text></svg>">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Priya Jaiswal Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://priyajaiswal.github.io/home.html" />
+  <meta property="og:title" content="Priya Jaiswal | Fresher Azure Cloud · DevOps · DevSecOps Engineer" />
+  <meta property="og:description" content="Priya Jaiswal — Entry-Level Azure DevOps & DevSecOps Engineer specializing in Terraform IaC, AKS Kubernetes, CI/CD pipelines, and shift-left security." />
+
+  <!-- Fonts & CDN Dependencies -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    :root {
+      --gold: #ffc200; --gold-dark: #e6af00; --gold-light: rgba(255,194,0,0.15);
+      --bg-dark: #000000; --card-bg: rgba(255,255,255,0.04);
+      --border: rgba(255,194,0,0.2); --border-hover: rgba(255,194,0,0.6);
+      --text-muted: #b0b0b0; --font: 'Maven Pro', sans-serif; --font-code: 'JetBrains Mono', monospace;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;overflow-x:hidden}
+    body{font-family:var(--font);background:var(--bg-dark);color:#fff;overflow-x:hidden;padding-top:85px;cursor:default}
+    a{text-decoration:none!important;transition:all .3s ease;cursor:pointer}
+    a:hover{color:var(--gold)!important}
+    button, input, textarea, select{cursor:pointer;font-family:inherit}
+    ul{list-style:none;margin:0;padding:0}
+    img{max-width:100%}
+    p{color:var(--text-muted);line-height:1.75;font-size:1.02rem}
+    #particles-js{position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;pointer-events:none}
+
+    /* GLASS NAVBAR */
+    .navbar{position:fixed;top:0;left:0;width:100%;z-index:9999;background:transparent!important;padding:12px 0 0}
+    .navbar>.container{max-width:1240px;background:rgba(12,12,12,.75);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);border:1px solid rgba(255,194,0,.22);border-radius:22px;box-shadow:0 16px 40px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.08);padding:10px 20px;transition:border-color .3s,box-shadow .3s}
+    .navbar:hover>.container{border-color:var(--gold);box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 25px rgba(255,194,0,.2)}
+    .navbar-brand{font-weight:900;font-size:1.2rem;color:#fff!important;display:flex;align-items:center;gap:10px}
+    .brand-badge{width:38px;height:38px;border-radius:50%;background:rgba(255,194,0,.15);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:900;font-size:.92rem;box-shadow:0 0 12px rgba(255,194,0,.3)}
+    .navbar-collapse{justify-content:center}
+    .navbar-nav{gap:.4rem;align-items:center}
+    .nav-link{color:rgba(255,255,255,.85)!important;font-weight:600;font-size:.95rem;padding:.5rem 1rem!important;border-radius:999px;transition:all .3s ease;border:1px solid transparent}
+    .nav-link:hover,.nav-link.active{color:var(--gold)!important;background:rgba(255,194,0,.12);border-color:rgba(255,194,0,.25);transform:translateY(-1px)}
+    .navbar-toggler{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.05);border:none!important;outline:none!important}
+    .navbar-toggler i{color:var(--gold);font-size:1.5rem}
+
+    /* Open to Work Simple Switch */
+    .otw-simple-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:50px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4)}
+    .otw-dot{width:10px;height:10px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:pulse 2s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.2)}}
+    .otw-text{font-size:.82rem;font-weight:700;color:#22c55e;letter-spacing:.3px}
+
+    /* SECTION HEADINGS */
+    section{padding:55px 0;position:relative;z-index:2}
+    .section-head{text-align:center;margin-bottom:34px}
+    .section-tag{display:inline-block;background:var(--gold-light);color:var(--gold);font-weight:700;font-size:.8rem;border:1px solid rgba(255,194,0,.3);border-radius:50px;padding:4px 16px;margin-bottom:10px;letter-spacing:.5px;text-transform:uppercase}
+    .section-head h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;color:#fff;margin:0 0 10px}
+    .section-head h2 span{color:var(--gold)}
+    .section-head p{color:var(--text-muted);max-width:680px;margin:0 auto;font-size:1.05rem}
+
+    /* HERO SECTION */
+    #home{min-height:85vh;display:flex;align-items:center;padding:30px 0 50px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(34,197,94,.12);color:#22c55e;font-weight:700;font-size:.85rem;border:1px solid rgba(34,197,94,.35);border-radius:50px;padding:6px 18px;margin-bottom:20px}
+    .hero-name{font-size:clamp(2.6rem,6.5vw,4.6rem);font-weight:900;line-height:1.08;letter-spacing:-2px;color:#fff;margin-bottom:14px}
+    .hero-name .pj{color:var(--gold)}
+    .animated-info{height:46px;overflow:hidden;position:relative;margin-bottom:20px;min-width:300px}
+    .animated-item{font-size:clamp(1.3rem,3vw,2.1rem);font-weight:800;color:var(--gold);position:absolute;top:0;left:0;right:0;opacity:0;animation:cycle 6s linear infinite}
+    .animated-item:nth-child(2){animation-delay:3s}
+    @keyframes cycle{0%,5%{opacity:0;transform:translateY(20px)}15%,45%{opacity:1;transform:translateY(0)}55%,100%{opacity:0;transform:translateY(-20px)}}
+    .hero-lead{font-size:1.08rem;color:var(--text-muted);max-width:580px;margin-bottom:28px;line-height:1.75}
+
+    /* TECH BADGES GRID */
+    .tech-pill-list{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
+    .tech-pill{background:rgba(255,255,255,.05);border:1px solid rgba(255,194,0,.2);color:#fff;font-size:.82rem;font-weight:700;padding:5px 14px;border-radius:50px;display:inline-flex;align-items:center;gap:6px;transition:all .25s}
+    .tech-pill:hover{background:var(--gold-light);border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
+    .tech-pill i{color:var(--gold)}
+
+    .btn-hero{display:inline-flex;align-items:center;gap:10px;border-radius:50px;padding:14px 32px;font-weight:700;font-size:1rem;transition:all .3s ease;border:2px solid transparent}
+    .btn-hero-primary{background:var(--gold);color:#181818;border-color:var(--gold);box-shadow:0 6px 20px rgba(255,194,0,.3)}
+    .btn-hero-primary:hover{background:transparent;color:var(--gold)!important;border-color:var(--gold);box-shadow:0 10px 30px rgba(255,194,0,.5);transform:translateY(-3px)}
+    .btn-hero-outline{background:transparent;color:var(--gold);border-color:var(--gold)}
+    .btn-hero-outline:hover{background:var(--gold);color:#181818!important;transform:translateY(-3px)}
+
+    .hero-terminal{width:100%;max-width:460px;border-radius:20px;border:1.5px solid var(--border);box-shadow:0 0 45px rgba(255,194,0,.25);background:rgba(10,10,10,.9);overflow:hidden}
+    .terminal-header{background:rgba(255,255,255,.05);padding:10px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,194,0,.15)}
+    .terminal-dots{display:flex;gap:6px}
+    .terminal-dot{width:12px;height:12px;border-radius:50%}
+    .terminal-body{padding:20px;font-family:var(--font-code);font-size:.85rem;text-align:left;line-height:1.8}
+
+    /* ABOUT & COMPACT WORK AUTHORIZATION BANNER */
+    .about-card{background:var(--card-bg);border:1.5px solid var(--border);border-radius:20px;padding:28px;transition:all .3s ease;height:100%}
+    .about-card:hover{border-color:var(--gold);box-shadow:0 12px 32px rgba(255,194,0,.18)}
+    .metric-card{background:rgba(0,0,0,0.6);border:1px solid var(--border);border-radius:16px;padding:18px 12px;text-align:center;transition:border-color .3s}
+    .metric-card:hover{border-color:var(--gold)}
+
+    /* COMPACT WORK AUTHORIZATION BOXES */
+    .compact-work-banner{background:linear-gradient(135deg,rgba(255,194,0,.06) 0%,rgba(0,0,0,0.85) 100%);border:1.5px solid var(--border);border-radius:20px;padding:22px 24px;margin-top:24px}
+    .compact-auth-card{background:rgba(0,0,0,0.7);border:1px solid rgba(255,194,0,.25);border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:14px;height:100%;transition:all .3s ease}
+    .compact-auth-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,194,0,.15)}
+    .c-icon{width:42px;height:42px;border-radius:12px;background:rgba(255,194,0,.12);border:1.5px solid rgba(255,194,0,.4);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1.2rem;flex-shrink:0}
+
+    /* TECHNICAL TOOLBOX (SKILLS) */
+    .skill-expand-card{background:var(--card-bg);border:1.5px solid var(--border);border-radius:20px;padding:24px;text-align:center;transition:all .3s ease;cursor:pointer;position:relative;overflow:hidden;height:100%}
+    .skill-expand-card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 14px 35px rgba(255,194,0,.22)}
+    .skill-expand-card .click-hint{font-size:0.78rem;color:var(--gold);margin-top:12px;font-weight:700;letter-spacing:0.5px}
+
+    /* EDUCATION & EXPERIENCE */
+    .edu-card,.journey-exp-card{background:var(--card-bg);border:1.5px solid var(--border);border-radius:20px;padding:26px;transition:all .3s ease}
+    .edu-card:hover,.journey-exp-card:hover{border-color:var(--gold);box-shadow:0 12px 32px rgba(255,194,0,.18);transform:translateY(-4px)}
+    .bullet-list{list-style:none;padding:0;margin:12px 0 0}
+    .bullet-list li{position:relative;padding-left:22px;margin-bottom:8px;color:var(--text-muted);font-size:.95rem;line-height:1.6}
+    .bullet-list li::before{content:'▹';position:absolute;left:0;color:var(--gold);font-weight:900}
+
+    /* PRODUCTION PROJECTS */
+    .projects-swiper{padding:10px 20px 50px;position:relative;--swiper-theme-color:var(--gold)}
+    .project-card{background:var(--card-bg);border:1.5px solid var(--border);border-radius:20px;overflow:hidden;height:440px;display:flex;flex-direction:column;transition:all .3s ease;cursor:pointer}
+    .project-card:hover{border-color:var(--gold);box-shadow:0 14px 36px rgba(255,194,0,.2);transform:translateY(-6px)}
+    .project-card-header{padding:18px 22px;background:rgba(255,194,0,0.06);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+    .project-card-body{padding:22px;flex:1;display:flex;flex-direction:column;justify-content:space-between}
+
+    /* CONTACT SECTION */
+    .contact-container{max-width:840px;margin:0 auto}
+    .contact-action-btn{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 28px;border-radius:18px;font-size:1.1rem;font-weight:700;transition:all .3s ease;border:1.5px solid transparent;width:100%}
+    .contact-wa-btn{background:rgba(37,211,102,.12);border-color:rgba(37,211,102,.4);color:#25d366!important}
+    .contact-wa-btn:hover{background:#25d366;color:#fff!important;transform:translateY(-4px);box-shadow:0 10px 30px rgba(37,211,102,.4)}
+    .contact-mail-btn{background:rgba(255,194,0,.12);border-color:rgba(255,194,0,.4);color:var(--gold)!important}
+    .contact-mail-btn:hover{background:var(--gold);color:#181818!important;transform:translateY(-4px);box-shadow:0 10px 30px rgba(255,194,0,.4)}
+
+    .contact-form{background:rgba(255,255,255,.04);border:1.5px solid rgba(255,194,0,.2);border-radius:22px;padding:32px;width:100%;display:flex;flex-direction:column;gap:16px}
+    .contact-form label{font-size:.85rem;font-weight:700;color:var(--gold);display:block;margin-bottom:6px;letter-spacing:.3px}
+    .contact-form input,.contact-form textarea,.contact-form select{width:100%;background:rgba(0,0,0,.6);border:1.5px solid rgba(255,194,0,.25);border-radius:12px;padding:12px 16px;color:#fff;font-family:var(--font)}
+    .contact-form input:focus,.contact-form textarea:focus,.contact-form select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 14px rgba(255,194,0,.25)}
+    .cf-submit{background:var(--gold);color:#181818;border:none;border-radius:30px;padding:15px 34px;font-weight:800;font-size:1.05rem;cursor:pointer;transition:all .3s ease;box-shadow:0 6px 20px rgba(255,194,0,.3)}
+    .cf-submit:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,194,0,.5)}
+
+    /* FOOTER */
+    footer{padding:32px 0;text-align:center;border-top:1px solid var(--border);color:var(--text-muted);font-size:.9rem}
+  </style>
+</head>
+<body class="cursor-ready">
+
+  <!-- Particles JS Background -->
+  <div id="particles-js"></div>
+
+  <!-- FIXED FLOATING NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-visible">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <span class="brand-badge">PJ</span>
+        <span>Priya Jaiswal</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#home"><i class="fa-solid fa-house me-1"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about"><i class="fa-solid fa-user me-1"></i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills"><i class="fa-solid fa-gears me-1"></i> Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects"><i class="fa-solid fa-laptop-code me-1"></i> Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experiences"><i class="fa-solid fa-timeline me-1"></i> Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa-solid fa-envelope me-1"></i> Hire Me</a></li>
+        </ul>
+      </div>
+
+      <!-- Header Status ON: Open to Work -->
+      <div class="d-none d-lg-flex align-items-center">
+        <div class="otw-simple-badge">
+          <div class="otw-dot"></div>
+          <span class="otw-text">Open to Work</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION (FRESHER / ENTRY-LEVEL READY) -->
+  <section id="home">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7" data-aos="fade-right">
+          <div class="hero-badge">
+            <i class="fa-solid fa-circle-check"></i> Entry-Level / Fresher · Azure Cloud & DevOps Engineer
+          </div>
+
+          <h1 class="hero-name">Hi, I'm <span class="pj">Priya Jaiswal</span></h1>
+          
+          <div class="animated-info">
+            <div class="animated-item">Azure Cloud Engineer</div>
+            <div class="animated-item">DevOps & DevSecOps Engineer</div>
+          </div>
+
+          <p class="hero-lead">
+            Computer Science Engineering graduate with hands-on internship experience at <strong>DevOps Insiders</strong>. Architecting automated Azure cloud infrastructure using modular Terraform HCL, AKS Kubernetes clusters, and shift-left CI/CD security quality gates.
+          </p>
+
+          <!-- Core Tech Keyword Badges -->
+          <div class="tech-pill-list">
+            <span class="tech-pill"><i class="fa-solid fa-cloud"></i> Microsoft Azure</span>
+            <span class="tech-pill"><i class="fa-solid fa-cubes"></i> Terraform HCL</span>
+            <span class="tech-pill"><i class="fa-brands fa-docker"></i> Docker & AKS</span>
+            <span class="tech-pill"><i class="fa-solid fa-shield-cat"></i> SonarQube & Checkov</span>
+            <span class="tech-pill"><i class="fa-brands fa-github"></i> CI/CD Pipelines</span>
+            <span class="tech-pill"><i class="fa-solid fa-terminal"></i> Linux Ubuntu</span>
+          </div>
+
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a class="btn-hero btn-hero-primary" href="assets/Priya_Jaiswal_DevOps_Resume.pdf" target="_blank" download>
+              <i class="fa-solid fa-download"></i> Download Resume (PDF)
+            </a>
+            <a class="btn-hero btn-hero-outline" href="#contact">
+              <i class="fa-solid fa-paper-plane"></i> Contact Candidate
+            </a>
+          </div>
+
+          <div class="d-flex align-items-center gap-3">
+            <a href="https://wa.me/919554988771?text=Hi%20Priya,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity!" target="_blank" class="text-warning fs-4" title="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:priyajaisw9554@gmail.com" class="text-warning fs-4" title="Send Direct Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/Pjaisw1103" target="_blank" class="text-warning fs-4" title="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank" class="text-warning fs-4" title="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-5 text-center" data-aos="fade-left">
+          <div class="hero-terminal mx-auto">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot bg-danger"></span>
+                <span class="terminal-dot bg-warning"></span>
+                <span class="terminal-dot bg-success"></span>
+              </div>
+              <small class="text-muted font-monospace">azure-devops-pipeline.yml</small>
+            </div>
+            <div class="terminal-body">
+              <div class="text-warning">$ terraform apply -auto-approve</div>
+              <div class="text-success">✓ azurerm_resource_group.rg: Created [0s]</div>
+              <div class="text-success">✓ azurerm_virtual_network.vnet: Created [4s]</div>
+              <div class="text-success">✓ azurerm_kubernetes_cluster.aks: Created [42s]</div>
+              <div class="text-info">$ checkov -d ./terraform --framework terraform</div>
+              <div class="text-success">✓ Passed checks: 24, Failed: 0</div>
+              <div class="text-warning">$ sonarqube_quality_gate --status</div>
+              <div class="text-success">✓ Quality Gate Status: PASSED</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT & COMPACT WORK AUTHORIZATION BANNER -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="section-tag">PROFESSIONAL PROFILE</span>
+        <h2><i class="fa-solid fa-user"></i> About <span>Me</span></h2>
+        <p>Fresher Computer Science Engineer specializing in Azure Cloud, DevOps & DevSecOps.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center" data-aos="fade-up">
+        <div class="col-lg-6">
+          <div class="about-card">
+            <h4 class="text-warning fw-bold mb-3"><i class="fa-solid fa-code-branch me-2"></i> Engineering Background</h4>
+            <p>Fresher Computer Science & Engineering graduate (AKTU <strong>8.43 CGPA</strong>) eager to launch a career in <strong>Azure Cloud Infrastructure</strong>, <strong>Terraform IaC Automation</strong>, <strong>AKS Kubernetes Containerization</strong>, and <strong>DevSecOps Shift-Left Security</strong>.</p>
+            <p>My technical focus centers on provisioning immutable, zero-downtime Azure environments, enforcing SonarQube & Checkov security quality gates in CI/CD pipelines, and multi-stage Docker containerization.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="about-card">
+            <h4 class="text-warning fw-bold mb-3"><i class="fa-solid fa-shield-halved me-2"></i> Internship Foundation</h4>
+            <p>During my 1-year DevOps internship at <strong>DevOps Insiders</strong>, I gained practical hands-on experience authoring modular HCL scripts, configuring Azure Blob remote state locking, private VNets, and Azure Key Vault secret integration.</p>
+            <p>Eager to apply my strong academic background and internship learning as an entry-level Azure Cloud & DevOps Engineer, bringing a proactive learning attitude and 100% dedication.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Verified Metrics Grid -->
+      <div class="row g-3 mt-3 text-center" data-aos="fade-up">
+        <div class="col-md-3 col-6">
+          <div class="metric-card">
+            <h3 class="text-warning fw-bold mb-1">1+ Year</h3>
+            <small class="text-white font-weight-bold d-block">DevOps Internship</small>
+            <span class="text-muted" style="font-size: 0.75rem;">DevOps Insiders Experience</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="metric-card">
+            <h3 class="text-warning fw-bold mb-1">8.43 / 10</h3>
+            <small class="text-white font-weight-bold d-block">B.Tech CSE Grade</small>
+            <span class="text-muted" style="font-size: 0.75rem;">AKTU Academic Record</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="metric-card">
+            <h3 class="text-warning fw-bold mb-1">100%</h3>
+            <small class="text-white font-weight-bold d-block">IaC Automation</small>
+            <span class="text-muted" style="font-size: 0.75rem;">Modular Terraform Provisioning</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="metric-card">
+            <h3 class="text-warning fw-bold mb-1">0 Days</h3>
+            <small class="text-white font-weight-bold d-block">Notice Period</small>
+            <span class="text-muted" style="font-size: 0.75rem;">Immediate Joining (Pan-India)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPACT SLEEK WORK AUTHORIZATION & AVAILABILITY BANNER -->
+      <div class="compact-work-banner" data-aos="fade-up">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="compact-auth-card">
+              <div class="c-icon"><i class="fa-solid fa-passport"></i></div>
+              <div>
+                <h6 class="text-white fw-bold mb-0" style="font-size:0.92rem;">Work Authorization</h6>
+                <small class="text-warning font-weight-bold">Indian Citizen</small>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Full-time work eligible</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="compact-auth-card">
+              <div class="c-icon"><i class="fa-solid fa-bolt"></i></div>
+              <div>
+                <h6 class="text-white fw-bold mb-0" style="font-size:0.92rem;">Availability & Joining</h6>
+                <small class="text-warning font-weight-bold">0 Days Notice Period</small>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Available immediately</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="compact-auth-card">
+              <div class="c-icon"><i class="fa-solid fa-globe"></i></div>
+              <div>
+                <h6 class="text-white fw-bold mb-0" style="font-size:0.92rem;">Location & Work Mode</h6>
+                <small class="text-warning font-weight-bold">Noida · Delhi · Lucknow · Remote</small>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Onsite, Hybrid & Remote Ready</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS & TECHNICAL COMPETENCIES -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="section-tag">CORE COMPETENCIES</span>
+        <h2><i class="fa-solid fa-gears"></i> Technical <span>Toolbox</span></h2>
+        <p>Click on any skill card to inspect sub-services, tools, and enterprise capabilities.</p>
+      </div>
+
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in">
+          <div class="skill-expand-card" onclick="openSkillModal('azure')">
+            <i class="fa-solid fa-cloud text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">Microsoft Azure</h5>
+            <small class="text-muted">AKS, VNet, Blob Storage, Key Vault</small>
+            <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="skill-expand-card" onclick="openSkillModal('terraform')">
+            <i class="fa-solid fa-cubes text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">Terraform IaC</h5>
+            <small class="text-muted">Modular HCL, Remote State Locking</small>
+            <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
+          <div class="skill-expand-card" onclick="openSkillModal('docker_k8s')">
+            <i class="fa-brands fa-docker text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">Docker & AKS</h5>
+            <small class="text-muted">Kubernetes Manifests, Microservices</small>
+            <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
+          <div class="skill-expand-card" onclick="openSkillModal('devsecops')">
+            <i class="fa-solid fa-shield-cat text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">SonarQube & Checkov</h5>
+            <small class="text-muted">DevSecOps Shift-Left Security</small>
+            <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
+          <div class="skill-expand-card" onclick="openSkillModal('cicd')">
+            <i class="fa-brands fa-github text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">CI/CD Automation</h5>
+            <small class="text-muted">Azure DevOps Pipelines, GitHub Actions</small>
+            <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
+          <div class="skill-expand-card" onclick="openSkillModal('linux')">
+            <i class="fa-solid fa-terminal text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">Linux & Bash</h5>
+            <small class="text-muted">Ubuntu Admin, Shell Automation</small>
+            <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTION PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="section-tag">PRACTICAL IMPLEMENTATIONS</span>
+        <h2><i class="fa-solid fa-laptop-code"></i> Production <span>Projects</span></h2>
+        <p>Click on any project card to view complete architecture breakdown, cloud services, and security gates.</p>
+      </div>
+
+      <div class="swiper projects-swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1 -->
+          <div class="swiper-slide">
+            <div class="project-card w-100" onclick="openProjectModal('aks_terraform')">
+              <div class="project-card-header">
+                <span class="badge bg-warning text-dark font-weight-bold">Azure IaC</span>
+                <small class="text-muted">Terraform & AKS</small>
+              </div>
+              <div class="project-card-body">
+                <div>
+                  <h5>Production Azure AKS Cluster with Terraform IaC</h5>
+                  <p>Provisioned enterprise Azure AKS cluster with Blob storage remote state locking, private VNet subnets, and automated nodepool scaling.</p>
+                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-network-wired me-1"></i> View Architecture Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="swiper-slide">
+            <div class="project-card w-100" onclick="openProjectModal('devsecops_pipeline')">
+              <div class="project-card-header">
+                <span class="badge bg-warning text-dark font-weight-bold">DevSecOps</span>
+                <small class="text-muted">CI/CD Security</small>
+              </div>
+              <div class="project-card-body">
+                <div>
+                  <h5>Automated DevSecOps Pipeline with SonarQube & Checkov</h5>
+                  <p>Engineered automated CI/CD pipeline enforcing SAST static security analysis, Checkov IaC compliance, and automated quality gates.</p>
+                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-shield-halved me-1"></i> View Architecture Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="swiper-slide">
+            <div class="project-card w-100" onclick="openProjectModal('microservices_k8s')">
+              <div class="project-card-header">
+                <span class="badge bg-warning text-dark font-weight-bold">Kubernetes</span>
+                <small class="text-muted">Prometheus & Grafana</small>
+              </div>
+              <div class="project-card-body">
+                <div>
+                  <h5>Microservices Containerization & AKS Monitoring</h5>
+                  <p>Multi-stage Docker containerization for microservices with Prometheus metrics exporter and Grafana live cluster dashboards.</p>
+                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-chart-line me-1"></i> View Architecture Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER JOURNEY & EDUCATION -->
+  <section id="experiences">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="section-tag">CAREER MILESTONES</span>
+        <h2><i class="fa-solid fa-timeline"></i> Experience & <span>Education</span></h2>
+        <p>Corporate internship background and academic foundation.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Experience Card -->
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="journey-exp-card h-100">
+            <span class="badge bg-warning text-dark font-weight-bold mb-2">DEVOPS INTERNSHIP (1 YEAR)</span>
+            <div class="text-warning small font-monospace mb-2"><i class="fa-solid fa-calendar me-1"></i> 2024 – 2025</div>
+            <h4 class="text-white fw-bold mb-1">DevOps Engineer Intern</h4>
+            <div class="text-warning font-weight-bold mb-3">DevOps Insiders</div>
+            
+            <ul class="bullet-list">
+              <li>Provisioned production Azure infrastructure using modular Terraform HCL scripts.</li>
+              <li>Configured Azure Blob Storage backend with remote state locking.</li>
+              <li>Managed Azure Kubernetes Service (AKS) cluster deployments & Docker containerization.</li>
+              <li>Integrated SonarQube & Checkov static code security scanning inside Azure DevOps CI/CD pipelines.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education Card -->
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="edu-card h-100">
+            <span class="badge bg-warning text-dark font-weight-bold mb-2">GRADUATION (2022 – 2026)</span>
+            <div class="text-warning small font-monospace mb-2"><i class="fa-solid fa-graduation-cap me-1"></i> CGPA: 8.43 / 10</div>
+            <h4 class="text-white fw-bold mb-1">B.Tech in Computer Science & Engineering</h4>
+            <div class="text-warning font-weight-bold mb-3">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</div>
+            
+            <ul class="bullet-list">
+              <li>Specialized in Cloud Computing, Operating Systems, Computer Networks, & Software Security.</li>
+              <li>Built capstone cloud automation & microservices containerization projects.</li>
+              <li>Maintained top 10% academic standing throughout the B.Tech CSE program.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECRUITER CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head" data-aos="fade-up">
+        <span class="section-tag">GET IN TOUCH / HIRE CANDIDATE</span>
+        <h2><i class="fa-solid fa-envelope"></i> Contact <span>Candidate</span></h2>
+        <p>Interested in hiring Priya Jaiswal for Entry-Level Azure Cloud / DevOps roles? Connect directly below.</p>
+      </div>
+
+      <div class="contact-container" data-aos="fade-up">
+        
+        <!-- Direct Contact Action Cards -->
+        <div class="row g-3 mb-4">
+          <div class="col-md-6">
+            <a class="contact-action-btn contact-wa-btn" href="https://wa.me/919554988771?text=Hi%20Priya,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity!" target="_blank">
+              <i class="fa-brands fa-whatsapp fs-3 me-1"></i> Chat on WhatsApp
+            </a>
+          </div>
+
+          <div class="col-md-6">
+            <a class="contact-action-btn contact-mail-btn" href="mailto:priyajaisw9554@gmail.com">
+              <i class="fa-solid fa-envelope fs-3 me-1"></i> Send Direct Email
+            </a>
+          </div>
+        </div>
+
+        <!-- Direct Recruiter Inquiry Form (Formspree Email Delivery) -->
+        <form class="contact-form" id="queryContactForm" action="https://formspree.io/f/priyajaisw9554@gmail.com" method="POST">
+          <h5 class="text-warning fw-bold mb-1"><i class="fa-solid fa-paper-plane me-2"></i> Send Direct Message / Inquiry</h5>
+          <p class="text-muted small mb-3">Messages submitted here go straight to candidate email: <strong>priyajaisw9554@gmail.com</strong>.</p>
+
+          <div class="row g-3 mb-2">
+            <div class="col-md-6">
+              <label>Your Full Name *</label>
+              <input type="text" name="name" required placeholder="e.g. Rahul Sharma" />
+            </div>
+            <div class="col-md-6">
+              <label>Your Email Address *</label>
+              <input type="email" name="email" required placeholder="e.g. recruiter@company.com" />
+            </div>
+          </div>
+
+          <div class="row g-3 mb-2">
+            <div class="col-md-6">
+              <label>Subject / Opportunity</label>
+              <input type="text" name="role_offered" placeholder="e.g. Entry-Level Azure DevOps Opportunity" />
+            </div>
+            <div class="col-md-6">
+              <label>Work Location & Mode</label>
+              <select name="work_mode">
+                <option value="Remote">Remote</option>
+                <option value="Hybrid (Noida/Delhi/Lucknow)">Hybrid</option>
+                <option value="Onsite">Onsite</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label>Message / Details *</label>
+            <textarea name="message" rows="4" required placeholder="Write your message here..."></textarea>
+          </div>
+
+          <button type="submit" class="cf-submit"><i class="fa-solid fa-paper-plane me-2"></i> Send Direct Message to Email</button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>© 2026 Priya Jaiswal. All rights reserved. | Azure Cloud & DevOps Engineer</p>
+    </div>
+  </footer>
+
+  <!-- SKILL EXPANSION MODAL -->
+  <div class="modal fade" id="skillModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark border-warning text-white rounded-4">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title text-warning fw-bold" id="skillModalTitle">Sub-Tools & Services</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="skillModalBody">
+          <!-- Dynamic details populated via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT ARCHITECTURE MODAL -->
+  <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-dark border-warning text-white rounded-4">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title text-warning fw-bold" id="projectModalTitle">Project Specification</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="projectModalBody">
+          <!-- Dynamic details populated via JS -->
+        </div>
+        <div class="modal-footer border-secondary">
+          <a href="https://github.com/Pjaisw1103" target="_blank" class="btn btn-warning fw-bold rounded-pill">
+            <i class="fa-brands fa-github me-1"></i> View Full Repository on GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // AOS Init
+      if (typeof AOS !== 'undefined') AOS.init({ duration: 800, once: true });
+
+      // Particles JS Init
+      if (typeof particlesJS !== 'undefined') {
+        particlesJS("particles-js", {
+          particles: {
+            number: { value: 50, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffc200" },
+            shape: { type: "circle" },
+            opacity: { value: 0.3, random: true },
+            size: { value: 3, random: true },
+            line_linked: { enable: true, distance: 130, color: "#ffc200", opacity: 0.2, width: 1 },
+            move: { enable: true, speed: 1.5, direction: "none", random: true }
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" } },
+            modes: { grab: { distance: 140, line_linked: { opacity: 0.4 } } }
+          }
+        });
+      }
+
+      // Swiper Projects Init
+      if (typeof Swiper !== 'undefined') {
+        new Swiper('.projects-swiper', {
+          slidesPerView: 1,
+          spaceBetween: 20,
+          loop: true,
+          pagination: { el: '.swiper-pagination', clickable: true },
+          navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+          breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 }
+          }
+        });
+      }
+    });
+
+    // SKILL CARDS EXPANSION MODAL LOGIC
+    function openSkillModal(type) {
+      const title = document.getElementById('skillModalTitle');
+      const body = document.getElementById('skillModalBody');
+      const modal = new bootstrap.Modal(document.getElementById('skillModal'));
+
+      const data = {
+        azure: {
+          title: "Microsoft Azure Cloud Services",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-cubes text-warning me-2"></i> Azure Kubernetes Service (AKS):</strong> Production cluster orchestration & nodepool autoscaling.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-network-wired text-warning me-2"></i> Azure Virtual Networks (VNet):</strong> Private subnets, Network Security Groups (NSGs), & Peering.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-key text-warning me-2"></i> Azure Key Vault:</strong> Centralized secret management, TLS certificates, & Key Vault secrets integration.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-database text-warning me-2"></i> Azure Blob Storage:</strong> Terraform remote state backend with Blob state locking.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-infinity text-warning me-2"></i> Azure DevOps Services:</strong> Pipelines, Repos, Artifacts, & Environment deployment gates.</li>
+                </ul>`
+        },
+        terraform: {
+          title: "Terraform Infrastructure as Code (IaC)",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-code text-warning me-2"></i> Modular HCL Architecture:</strong> Reusable modules for VNets, Resource Groups, & AKS clusters.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-lock text-warning me-2"></i> Remote State Locking:</strong> Azure Blob Storage backend with state locking protection.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-shield text-warning me-2"></i> Checkov & TFSec:</strong> Automated IaC static security scans checking for misconfigurations.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-folder-tree text-warning me-2"></i> TFLint & Format:</strong> HCL code formatting & linting checks.</li>
+                </ul>`
+        },
+        docker_k8s: {
+          title: "Docker & Kubernetes (AKS) Containers",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-brands fa-docker text-warning me-2"></i> Multi-Stage Docker Builds:</strong> Ultra-lightweight minimal container images.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-gear text-warning me-2"></i> Kubernetes Manifests:</strong> Deployments, Services, ConfigMaps, Secrets, & PVCs.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-box text-warning me-2"></i> Helm Charts:</strong> Application packaging & environment deployments.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-chart-line text-warning me-2"></i> Horizontal Pod Autoscaler (HPA):</strong> Automatic pod scaling.</li>
+                </ul>`
+        },
+        devsecops: {
+          title: "DevSecOps & Shift-Left Security",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-bug text-warning me-2"></i> SonarQube Quality Gates:</strong> SAST static code analysis.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-shield-halved text-warning me-2"></i> Checkov Compliance:</strong> Infrastructure security scanning.</li>
+                </ul>`
+        },
+        cicd: {
+          title: "CI/CD Pipeline Automation",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-brands fa-github text-warning me-2"></i> GitHub Actions & Azure DevOps:</strong> Automated YAML pipelines.</li>
+                </ul>`
+        },
+        linux: {
+          title: "Linux Administration & Bash Scripting",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-terminal text-warning me-2"></i> Ubuntu Server Admin:</strong> User permissions, networking & SSH hardening.</li>
+                </ul>`
+        }
+      };
+
+      if (data[type]) {
+        title.innerText = data[type].title;
+        body.innerHTML = data[type].html;
+        modal.show();
+      }
+    }
+
+    // PROJECT BREAKDOWN MODAL LOGIC
+    function openProjectModal(projKey) {
+      const title = document.getElementById('projectModalTitle');
+      const body = document.getElementById('projectModalBody');
+      const modal = new bootstrap.Modal(document.getElementById('projectModal'));
+
+      const projects = {
+        aks_terraform: {
+          title: "Production Azure AKS Cluster with Terraform IaC",
+          html: `<div class="mb-3">
+                  <h6 class="text-warning font-weight-bold">Architecture Highlights:</h6>
+                  <ul>
+                    <li>Provisioned Azure Resource Group, Virtual Network (VNet) with subnets & NSGs.</li>
+                    <li>Configured Azure Blob Storage backend for Terraform remote state locking.</li>
+                    <li>Deployed Azure Kubernetes Service (AKS) with system & user node pools.</li>
+                  </ul>
+                 </div>`
+        },
+        devsecops_pipeline: {
+          title: "Automated DevSecOps Pipeline with SonarQube & Checkov",
+          html: `<div class="mb-3">
+                  <h6 class="text-warning font-weight-bold">Architecture Highlights:</h6>
+                  <ul>
+                    <li>Automated build pipeline triggered on git commit.</li>
+                    <li>Configured SonarQube SAST analysis step enforcing quality gates.</li>
+                    <li>Integrated Checkov IaC security scanner checking HCL scripts against policies.</li>
+                  </ul>
+                 </div>`
+        },
+        microservices_k8s: {
+          title: "Microservices Containerization & AKS Monitoring",
+          html: `<div class="mb-3">
+                  <h6 class="text-warning font-weight-bold">Architecture Highlights:</h6>
+                  <ul>
+                    <li>Created multi-stage Dockerfiles optimizing image size.</li>
+                    <li>Deployed microservices onto Azure AKS using Kubernetes Deployments & Ingress.</li>
+                    <li>Configured Prometheus & Grafana live dashboards monitoring pod health.</li>
+                  </ul>
+                 </div>`
+        }
+      };
+
+      if (projects[projKey]) {
+        title.innerText = projects[projKey].title;
+        body.innerHTML = projects[projKey].html;
+        modal.show();
+      }
+    }
+  </script>
+</body>
+</html>
