@@ -687,14 +687,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // ------------------------------------------------------------------------
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting || window.innerWidth <= 768) {
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.01 });
 
   document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
+
+  // Immediate visibility check for mobile viewports so content never disappears
+  if (window.innerWidth <= 768) {
+    document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+  }
 
   const sections = document.querySelectorAll("section[id]");
   const navItems = document.querySelectorAll(".nav-links a");
