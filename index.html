@@ -3,461 +3,978 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Priya — Azure Cloud, DevOps and DevSecOps Engineer portfolio.">
-  <meta name="theme-color" content="#050816">
-  <title>Priya | Azure Cloud · DevOps · DevSecOps</title>
+  <meta name="description" content="Priya Jaiswal — Azure Cloud, DevOps & DevSecOps Engineer Portfolio. Building resilient, scalable, and automated cloud systems.">
+  <meta name="keywords" content="Priya Jaiswal, DevOps Engineer, Azure Cloud, DevSecOps, Terraform, Kubernetes, AKS, CI/CD, SonarQube, GitHub Pages">
+  <meta name="author" content="Priya Jaiswal">
+  <meta name="theme-color" content="#030712">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23030712'/><text x='50%' y='68%' font-size='52' font-weight='800' font-family='sans-serif' text-anchor='middle' fill='%2300f0ff'>PJ</text></svg>">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:title" content="Priya Jaiswal | Azure Cloud · DevOps · DevSecOps Engineer">
+  <meta property="og:description" content="Portfolio of Priya Jaiswal — Azure DevOps & DevSecOps Engineer specializing in Terraform IaC, AKS Kubernetes, CI/CD pipelines, and shift-left security.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://priyajaiswal.github.io/">
+
+  <title>Priya Jaiswal | Azure Cloud · DevOps · DevSecOps</title>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="aurora"><span></span><span></span><span></span><span></span></div>
-  <div class="cursor-glow"></div>
-  <div class="noise"></div>
+  <!-- Top Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-  <header class="site-header">
+  <!-- Interactive 3D Cyber Engineering Mesh Network Background -->
+  <canvas id="cyberMeshCanvas" class="mesh-canvas"></canvas>
+
+  <!-- Ambient Quantum Lighting Blobs -->
+  <div class="aurora-bg">
+    <div class="aurora-blob blob-cyan"></div>
+    <div class="aurora-blob blob-violet"></div>
+    <div class="aurora-blob blob-gold"></div>
+    <div class="aurora-blob blob-emerald"></div>
+  </div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- Header Navigation -->
+  <header class="site-header" id="siteHeader">
     <nav class="nav container">
-      <a class="brand" href="#home">
-        <span class="brand-mark">PJ</span>
-        <span>Priya <span class="brand-dot">.</span></span>
+      <a class="brand" href="#home" aria-label="Priya Jaiswal Homepage">
+        <span class="brand-badge">PJ</span>
+        <span class="brand-text">Priya <span class="brand-dot">.</span><span class="brand-tag">DevOps</span></span>
       </a>
 
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
-      <div class="nav-links">
+      <!-- Navigation Links -->
+      <div class="nav-links" id="navLinks">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#pipeline">Pipeline Live</a>
+        <a href="#skills">Toolbox</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </div>
 
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" type="button">
-        <span class="theme-icon theme-icon-sun">☀</span>
-        <span class="theme-icon theme-icon-moon">☾</span>
-      </button>
+      <!-- Action Controls -->
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" type="button">
+          <span class="theme-icon theme-icon-sun">☀</span>
+          <span class="theme-icon theme-icon-moon">☾</span>
+        </button>
 
-      <a class="resume-btn" href="assets/Priya__DevOps_Resume.pdf" target="_blank" rel="noopener">
-        <span>↓</span> Resume
-      </a>
+        <button class="btn btn-sm btn-cheat" id="openCheatSheetBtn" type="button">
+          <span>📋</span> Recruiter Corner
+        </button>
+
+        <button class="btn btn-sm btn-accent" id="openResumeModal" type="button">
+          <span>↓</span> Resume
+        </button>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
   </header>
 
   <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-grid-bg"></div>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
-          <div class="status-pill"><i></i> Available for Fresher / Entry-Level Roles</div>
-          <p class="eyebrow">AZURE CLOUD · DEVOPS · DEVSECOPS</p>
-          <h1>Building <span>resilient & secure</span><br>cloud systems.</h1>
+        <div class="hero-content reveal">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available Immediately for Azure Cloud & DevOps Roles</span>
+          </div>
+
+          <p class="hero-eyebrow">// AZURE CLOUD · DEVOPS · DEVSECOPS</p>
+          <h1 class="hero-title">
+            Architecting <span class="text-gradient shimmer-text">Resilient & Secure</span> Cloud Infrastructure.
+          </h1>
+
+          <!-- Ultra-Crisp Recruiter 5-Second Highlights -->
+          <div class="hero-pillars">
+            <div class="pillar-item"><span class="pi-check">✓</span> <strong>1 Year Internship</strong> at DevOps Insiders</div>
+            <div class="pillar-item"><span class="pi-check">✓</span> <strong>B.Tech CSE (8.43 CGPA)</strong> — Immediate Joiner</div>
+            <div class="pillar-item"><span class="pi-check">✓</span> <strong>Azure, Terraform IaC, AKS & DevSecOps</strong></div>
+          </div>
+
           <p class="hero-lead">
-            Hi, I’m <strong>Priya </strong> — an Azure Cloud & DevOps Engineer specializing in 
-            cloud infrastructure automation (Terraform), CI/CD pipelines, Kubernetes (AKS) orchestration, and shift-left DevSecOps.
+            Building automated, zero-downtime cloud infrastructure on Microsoft Azure using modular Terraform IaC, Kubernetes (AKS), and shift-left security.
           </p>
 
-          <div class="type-line">
-            <span class="mono-prompt">$</span>
-            <span id="typing-text">terraform apply -auto-approve</span><span class="caret">_</span>
+          <!-- Interactive CLI Command Bar -->
+          <div class="cli-box tilt-card">
+            <div class="cli-header">
+              <span class="cli-dot red"></span>
+              <span class="cli-dot yellow"></span>
+              <span class="cli-dot green"></span>
+              <span class="cli-title">bash — priya@devops-node:~</span>
+            </div>
+            <div class="cli-body">
+              <div class="cli-line">
+                <span class="cli-prompt">priya@azure-cloud:~$</span>
+                <span id="typing-text">terraform apply -auto-approve</span><span class="caret">█</span>
+              </div>
+            </div>
+            <div class="cli-shortcuts">
+              <span class="cli-label">Quick Commands:</span>
+              <button type="button" class="cli-chip" data-cmd="terraform plan -out=tfplan">$ terraform plan</button>
+              <button type="button" class="cli-chip" data-cmd="kubectl get pods -n prod">$ kubectl get pods</button>
+              <button type="button" class="cli-chip" data-cmd="checkov -d ./terraform">$ checkov scan</button>
+              <button type="button" class="cli-chip" data-cmd="cat resume.txt">$ cat resume</button>
+            </div>
           </div>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Explore My Work <span>↗</span></a>
-            <a class="btn btn-ghost" href="mailto:priyajaisw9554@gmail.com">Let's Connect <span>✉</span></a>
+          <div class="hero-cta">
+            <a class="btn btn-primary btn-glow" href="#projects">
+              Explore Projects <span>↗</span>
+            </a>
+            <a class="btn btn-outline" href="#pipeline">
+              <span>⚡</span> Live DevOps Simulator
+            </a>
           </div>
 
-          <div class="social-row">
-            <a href="https://github.com/Pjaisw1103" target="_blank" rel="noopener">GitHub ↗</a>
-            <a href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank" rel="noopener">LinkedIn ↗</a>
-            <a href="tel:+918840610240">+91-8840610240</a>
+          <div class="social-links">
+            <a href="https://github.com/Pjaisw1103" target="_blank" rel="noopener">
+              <span class="social-icon">💻</span> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank" rel="noopener">
+              <span class="social-icon">👔</span> LinkedIn
+            </a>
           </div>
         </div>
 
         <div class="hero-visual reveal">
-          <div class="visual-glow"></div>
-          <div class="code-window">
-            <div class="window-top"><span></span><span></span><span></span><em>devops.tf</em></div>
-            <pre><code><b>resource</b> <i>"azurerm_kubernetes_cluster"</i> <i>"aks"</i> {
-  name                = <mark>"aks-production"</mark>
-  location            = <mark>"Azure"</mark>
-  kubernetes_version  = <mark>"stable"</mark>
+          <div class="hero-card-glow"></div>
+          
+          <div class="code-terminal tilt-card" id="heroTerminal">
+            <div class="terminal-bar">
+              <div class="terminal-dots"><span></span><span></span><span></span></div>
+              <span class="terminal-file">main.tf — Azure AKS Infrastructure Spec</span>
+              <span class="terminal-tag">Verified IaC</span>
+            </div>
+            <pre class="terminal-code"><code><span class="syn-keyword">module</span> <span class="syn-string">"azure_aks_cluster"</span> {
+  <span class="syn-prop">source</span>             = <span class="syn-string">"./modules/aks"</span>
+  <span class="syn-prop">cluster_name</span>       = <span class="syn-string">"aks-prod-priya"</span>
+  <span class="syn-prop">location</span>           = <span class="syn-string">"East US"</span>
+  <span class="syn-prop">resource_group_name</span>= <span class="syn-string">"rg-devops-prod"</span>
+  <span class="syn-prop">dns_prefix</span>          = <span class="syn-string">"k8s-priya-cloud"</span>
 
-  <b>identity</b> {
-    type = <mark>"SystemAssigned"</mark>
+  <span class="syn-block">default_node_pool</span> {
+    <span class="syn-prop">name</span>       = <span class="syn-string">"systemnodes"</span>
+    <span class="syn-prop">node_count</span> = <span class="syn-num">3</span>
+    <span class="syn-prop">vm_size</span>    = <span class="syn-string">"Standard_D2s_v3"</span>
   }
 
-  <b>tags</b> = {
-    environment = <mark>"production"</mark>
-    managed_by  = <mark>"terraform"</mark>
+  <span class="syn-block">security_profile</span> {
+    <span class="syn-prop">checkov_scan</span>   = <span class="syn-bool">true</span>
+    <span class="syn-prop">sonarqube_gate</span> = <span class="syn-string">"PASSED"</span>
   }
 }</code></pre>
-            <div class="terminal-status"><span class="pulse"></span> infrastructure · secure · automated</div>
+
+            <div class="terminal-footer">
+              <span class="pulse-indicator"></span>
+              <span>AZURE AKS · TERRAFORM REMOTE STATE · SECURE</span>
+            </div>
           </div>
 
-          <div class="floating-chip chip-azure">AZURE</div>
-          <div class="floating-chip chip-terraform">TERRAFORM</div>
-          <div class="floating-chip chip-k8s">K8S</div>
-          <div class="floating-chip chip-sec">DEVSECOPS</div>
-
-          <div class="orb orb-one"></div>
-          <div class="orb orb-two"></div>
+          <!-- Micro Floating Badges -->
+          <div class="tech-chip chip-1">☁ Azure Cloud</div>
+          <div class="tech-chip chip-2">🏗 Terraform IaC</div>
+          <div class="tech-chip chip-3">☸ Kubernetes AKS</div>
+          <div class="tech-chip chip-4">🔒 DevSecOps Scan</div>
         </div>
       </div>
 
-      <div class="scroll-cue"><span></span> Scroll to explore</div>
+      <div class="scroll-indicator">
+        <span class="scroll-mouse"></span>
+        <span>Scroll to Explore</span>
+      </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- RECRUITER CORNER & 30-SECOND CHEAT SHEET -->
+    <section id="recruiter-summary" class="section cheat-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-num">01</span>
+          <div>
+            <p class="section-eyebrow">HIRING MANAGER CORNER</p>
+            <h2 class="section-title">Recruiter <span class="text-gradient">30-Second Summary</span></h2>
+          </div>
+          <p class="section-desc">Key technical qualifications and hiring criteria at a glance.</p>
+        </div>
+
+        <div class="cheat-card glass-card tilt-card reveal">
+          <div class="cheat-grid">
+            <div class="cheat-col">
+              <div class="cheat-item">
+                <span class="ci-badge">TARGET ROLE</span>
+                <strong>Azure Cloud / DevOps / DevSecOps Engineer</strong>
+              </div>
+              <div class="cheat-item">
+                <span class="ci-badge">AVAILABILITY</span>
+                <strong class="text-emerald">Immediate Joiner (0 Days Notice)</strong>
+              </div>
+              <div class="cheat-item">
+                <span class="ci-badge">LOCATION & RELOCATION</span>
+                <strong>Lucknow, UP (Open for Remote, Pan-India & Onsite)</strong>
+              </div>
+              <div class="cheat-item">
+                <span class="ci-badge">HANDS-ON EXPERIENCE</span>
+                <strong>1 Year Internship at DevOps Insiders</strong>
+              </div>
+            </div>
+
+            <div class="cheat-col">
+              <div class="cheat-item">
+                <span class="ci-badge">ACADEMIC RECORD</span>
+                <strong>B.Tech Computer Science & Engg. (8.43 CGPA / 10)</strong>
+              </div>
+              <div class="cheat-item">
+                <span class="ci-badge">PRIMARY TOOL STACK</span>
+                <strong>Azure, Terraform, Docker, Kubernetes (AKS), Azure DevOps, SonarQube</strong>
+              </div>
+              <div class="cheat-item">
+                <span class="ci-badge">KEY DIFFERENTIATOR</span>
+                <strong class="text-cyan">Shift-Left Security & Terraform Remote State Automation</strong>
+              </div>
+              <div class="cheat-item">
+                <span class="ci-badge">OFFICIAL RESUME</span>
+                <strong>Verified PDF Resume Available for Direct Review</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="cheat-footer">
+            <a class="btn btn-sm btn-accent" href="assets/Priya_Jaiswal_DevOps_Resume.pdf" target="_blank" download>
+              <span>↓</span> Download Official PDF Resume
+            </a>
+            <a class="btn btn-sm btn-outline" href="#contact">
+              <span>✉</span> Send Direct Query
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & METRICS SECTION -->
     <section id="about" class="section about-section">
       <div class="container">
-        <div class="section-kicker reveal"><span>01</span> ABOUT</div>
+        <div class="section-header reveal">
+          <span class="section-num">02</span>
+          <div>
+            <p class="section-eyebrow">BACKGROUND & PHILOSOPHY</p>
+            <h2 class="section-title">Automating Cloud Infrastructure with <span class="text-gradient">Zero Trust Security.</span></h2>
+          </div>
+        </div>
 
         <div class="about-grid">
-          <div class="about-intro reveal">
-            <p class="eyebrow">A LITTLE ABOUT ME</p>
-            <h2>From code to cloud,<br><span>automated & secured by design.</span></h2>
+          <div class="about-card glass-card tilt-card reveal">
+            <h3>Who I Am</h3>
+            <p>
+              Azure DevOps & DevSecOps Engineer with hands-on internship experience at <strong>DevOps Insiders</strong> in provisioning automated Azure infrastructure, building CI/CD pipelines, and managing AKS Kubernetes clusters.
+            </p>
           </div>
 
-          <div class="about-copy reveal">
-            <p>
-              I am a result-oriented Azure DevOps and DevSecOps Engineer passionate about building resilient, 
-              scalable, and secure cloud operations in Linux environments.
-            </p>
-            <p>
-              During my internship at DevOps Insiders, I automated cloud infrastructure using modular Terraform, 
-              designed automated Azure DevOps CI/CD pipelines, integrated 'Shift-Left' security tools (SonarQube, TFSec, Checkov), 
-              and orchestrated containerized workloads on Azure Kubernetes Service (AKS).
-            </p>
-            <p>
-              I focus on eliminating deployment bottlenecks, securing infrastructure as code before release, 
-              and establishing complete system observability using Prometheus and Grafana.
-            </p>
+          <div class="about-card glass-card tilt-card reveal">
+            <h3>Core Engineering Principles</h3>
+            <ul class="principles-list">
+              <li>
+                <span class="p-icon">🛡</span>
+                <div>
+                  <strong>Shift-Left Security:</strong>
+                  <p>SonarQube & Checkov code security gates inside CI/CD pipelines.</p>
+                </div>
+              </li>
+              <li>
+                <span class="p-icon">⚡</span>
+                <div>
+                  <strong>Infrastructure as Code:</strong>
+                  <p>100% reproducible Azure cloud environments using modular Terraform.</p>
+                </div>
+              </li>
+              <li>
+                <span class="p-icon">📈</span>
+                <div>
+                  <strong>Full Observability:</strong>
+                  <p>Real-time cluster monitoring with Prometheus and Grafana dashboards.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="metrics reveal">
-          <div class="metric"><strong>1+</strong><span>Year of Hands-on Experience</span></div>
-          <div class="metric"><strong>3</strong><span>Featured DevOps Projects</span></div>
-          <div class="metric"><strong>16+</strong><span>Cloud & DevOps Technologies</span></div>
-          <div class="metric"><strong>8.43</strong><span>CGPA / 10</span></div>
+        <!-- Metrics Grid -->
+        <div class="metrics-grid reveal">
+          <div class="metric-card tilt-card">
+            <span class="metric-num">1+</span>
+            <span class="metric-label">Years Hands-on Experience</span>
+            <small>Azure, DevOps & Linux</small>
+          </div>
+          <div class="metric-card tilt-card">
+            <span class="metric-num">3+</span>
+            <span class="metric-label">End-to-End Projects</span>
+            <span class="metric-badge">Cloud & DevSecOps</span>
+          </div>
+          <div class="metric-card tilt-card">
+            <span class="metric-num">100%</span>
+            <span class="metric-label">Automated Pipelines</span>
+            <small>Zero-Touch DevSecOps Releases</small>
+          </div>
+          <div class="metric-card tilt-card">
+            <span class="metric-num">8.43</span>
+            <span class="metric-label">Academic CGPA / 10</span>
+            <small>B.Tech Computer Science & Engg.</small>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
+    <!-- LIVE DEVOPS PIPELINE SIMULATOR -->
+    <section id="pipeline" class="section pipeline-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-num">03</span>
+          <div>
+            <p class="section-eyebrow">INTERACTIVE WORKFLOW</p>
+            <h2 class="section-title">Live CI/CD & DevSecOps <span class="text-gradient">Pipeline Simulator</span></h2>
+          </div>
+          <p class="section-desc">Click any stage below to inspect the automated pipeline execution.</p>
+        </div>
+
+        <div class="pipeline-simulator glass-card tilt-card reveal">
+          <!-- Step Nav -->
+          <div class="pipeline-steps">
+            <button type="button" class="pipe-step active" data-step="1">
+              <span class="step-num">01</span>
+              <span class="step-icon">📦</span>
+              <span class="step-name">Source Code</span>
+              <span class="step-status status-pass">Pass</span>
+            </button>
+
+            <span class="pipe-arrow">➔</span>
+
+            <button type="button" class="pipe-step" data-step="2">
+              <span class="step-num">02</span>
+              <span class="step-icon">🛡</span>
+              <span class="step-name">DevSecOps Scan</span>
+              <span class="step-status status-pass">Pass</span>
+            </button>
+
+            <span class="pipe-arrow">➔</span>
+
+            <button type="button" class="pipe-step" data-step="3">
+              <span class="step-num">03</span>
+              <span class="step-icon">🏗</span>
+              <span class="step-name">Terraform Provision</span>
+              <span class="step-status status-pass">Pass</span>
+            </button>
+
+            <span class="pipe-arrow">➔</span>
+
+            <button type="button" class="pipe-step" data-step="4">
+              <span class="step-num">04</span>
+              <span class="step-icon">☸</span>
+              <span class="step-name">AKS K8s Deploy</span>
+              <span class="step-status status-pass">Pass</span>
+            </button>
+
+            <span class="pipe-arrow">➔</span>
+
+            <button type="button" class="pipe-step" data-step="5">
+              <span class="step-num">05</span>
+              <span class="step-icon">📊</span>
+              <span class="step-name">Grafana Monitor</span>
+              <span class="step-status status-live">Live</span>
+            </button>
+          </div>
+
+          <!-- Stage Output View -->
+          <div class="pipeline-console">
+            <div class="console-top">
+              <span class="console-title" id="pipeStageTitle">Stage 1: Source Code & Trigger</span>
+              <span class="console-badge" id="pipeStageBadge">AZURE DEVOPS PIPELINE #2026.08</span>
+            </div>
+            <div class="console-body" id="pipeStageLogs">
+              <p class="log-info">[INFO] Triggered by push to branch main on repository Pjaisw1103/CICD-Deployment-Automation-Pipeline</p>
+              <p class="log-success">[SUCCESS] Git commit 8f9a2c1 verified. Author: Priya Jaiswal</p>
+              <p class="log-info">[INFO] Starting multi-stage automated workflow runner...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
     <section id="skills" class="section skills-section">
       <div class="container">
-        <div class="section-kicker reveal"><span>02</span> TOOLBOX</div>
-        <div class="section-title-row reveal">
+        <div class="section-header reveal">
+          <span class="section-num">04</span>
           <div>
-            <p class="eyebrow">TECHNICAL SKILLS</p>
-            <h2>My DevOps toolkit.</h2>
+            <p class="section-eyebrow">DEVOPS TOOLBOX</p>
+            <h2 class="section-title">Technologies & <span class="text-gradient">Tools I Master</span></h2>
           </div>
-          <p>Tools I use to provision, build, secure, deploy and observe cloud workloads.</p>
         </div>
 
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <div class="skill-icon">☁</div>
-            <h3>Cloud Platform</h3>
-            <p>Microsoft Azure</p>
-            <small>VNet · VM · AKS · Key Vault · Azure SQL · Blob Storage · Monitor</small>
-            <div class="proficiency" data-level="5" aria-label="Proficiency 5 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-          <article class="skill-card reveal">
-            <div class="skill-icon">⌬</div>
-            <h3>Infrastructure as Code</h3>
-            <p>Terraform</p>
-            <small>Modules · Remote State · State Locking · TFSec · TFLint</small>
-            <div class="proficiency" data-level="5" aria-label="Proficiency 5 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-          <article class="skill-card reveal">
-            <div class="skill-icon">⇄</div>
-            <h3>CI/CD & Automation</h3>
-            <p>Azure DevOps · GitHub Actions</p>
-            <small>Build · Quality Gates · Release · Artifacts · Deployment Pipelines</small>
-            <div class="proficiency" data-level="4" aria-label="Proficiency 4 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-          <article class="skill-card reveal">
-            <div class="skill-icon">◇</div>
-            <h3>DevSecOps & Code Quality</h3>
-            <p>SonarQube · TFSec · TFLint · Checkov</p>
-            <small>Shift-left security · Quality gates · IaC security scanning · Static analysis</small>
-            <div class="proficiency" data-level="4" aria-label="Proficiency 4 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-          <article class="skill-card reveal">
-            <div class="skill-icon">▣</div>
-            <h3>Containers</h3>
-            <p>Docker</p>
-            <small>Containerization · Multi-stage builds · Image footprint reduction</small>
-            <div class="proficiency" data-level="4" aria-label="Proficiency 4 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-          <article class="skill-card reveal">
-            <div class="skill-icon">✣</div>
-            <h3>Orchestration</h3>
-            <p>Kubernetes · Azure AKS</p>
-            <small>Pods · Deployments · Services · YAML Manifests · Resource Limits · Networking</small>
-            <div class="proficiency" data-level="4" aria-label="Proficiency 4 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-          <article class="skill-card reveal">
-            <div class="skill-icon">◉</div>
-            <h3>Observability</h3>
-            <p>Prometheus · Grafana</p>
-            <small>Metrics · Dashboards · AKS cluster health · System monitoring</small>
-            <div class="proficiency" data-level="3" aria-label="Proficiency 3 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
-          <article class="skill-card reveal">
-            <div class="skill-icon">&gt;_</div>
-            <h3>Scripting & OS</h3>
-            <p>Linux (Ubuntu) · Bash · Python · Git</p>
-            <small>Automation · Server maintenance · Root-cause analysis · Cloud nodes</small>
-            <div class="proficiency" data-level="4" aria-label="Proficiency 4 out of 5"><i></i><i></i><i></i><i></i><i></i></div>
-          </article>
+        <!-- Filter Category Tabs -->
+        <div class="skills-filter reveal">
+          <button type="button" class="filter-tab active" data-filter="all">All Skills</button>
+          <button type="button" class="filter-tab" data-filter="cloud">Cloud & IaC</button>
+          <button type="button" class="filter-tab" data-filter="cicd">CI/CD & DevSecOps</button>
+          <button type="button" class="filter-tab" data-filter="k8s">Containers & OS</button>
+        </div>
+
+        <div class="skills-grid reveal">
+          <!-- Skill Card 1 -->
+          <div class="skill-card glass-card tilt-card" data-category="cloud">
+            <div class="skill-head">
+              <span class="skill-badge-icon">☁</span>
+              <div>
+                <h3>Microsoft Azure</h3>
+                <span class="skill-cat">Cloud Infrastructure</span>
+              </div>
+            </div>
+            <p class="skill-desc">VNets, VMs, AKS, Key Vault, Azure SQL, Blob Storage, Azure Monitor</p>
+            <div class="skill-meter" data-percent="90">
+              <div class="meter-bar" style="width: 0%;" data-target="90%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 2 -->
+          <div class="skill-card glass-card tilt-card" data-category="cloud">
+            <div class="skill-head">
+              <span class="skill-badge-icon">🏗</span>
+              <div>
+                <h3>Terraform IaC</h3>
+                <span class="skill-cat">Infrastructure Automation</span>
+              </div>
+            </div>
+            <p class="skill-desc">Modular HCL, Remote State Locking, TFSec, TFLint Analysis</p>
+            <div class="skill-meter" data-percent="92">
+              <div class="meter-bar" style="width: 0%;" data-target="92%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 3 -->
+          <div class="skill-card glass-card tilt-card" data-category="cicd">
+            <div class="skill-head">
+              <span class="skill-badge-icon">⚡</span>
+              <div>
+                <h3>Azure DevOps & GitHub Actions</h3>
+                <span class="skill-cat">CI/CD Automation</span>
+              </div>
+            </div>
+            <p class="skill-desc">YAML Pipelines, Build & Release Triggers, Quality Gates</p>
+            <div class="skill-meter" data-percent="88">
+              <div class="meter-bar" style="width: 0%;" data-target="88%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 4 -->
+          <div class="skill-card glass-card tilt-card" data-category="cicd">
+            <div class="skill-head">
+              <span class="skill-badge-icon">🛡</span>
+              <div>
+                <h3>SonarQube & DevSecOps</h3>
+                <span class="skill-cat">Shift-Left Security</span>
+              </div>
+            </div>
+            <p class="skill-desc">SonarQube Code Quality, Checkov Security Scans</p>
+            <div class="skill-meter" data-percent="85">
+              <div class="meter-bar" style="width: 0%;" data-target="85%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 5 -->
+          <div class="skill-card glass-card tilt-card" data-category="k8s">
+            <div class="skill-head">
+              <span class="skill-badge-icon">☸</span>
+              <div>
+                <h3>Kubernetes & Azure AKS</h3>
+                <span class="skill-cat">Container Orchestration</span>
+              </div>
+            </div>
+            <p class="skill-desc">Pods, Deployments, Services, Ingress, Resource Quotas</p>
+            <div class="skill-meter" data-percent="85">
+              <div class="meter-bar" style="width: 0%;" data-target="85%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 6 -->
+          <div class="skill-card glass-card tilt-card" data-category="k8s">
+            <div class="skill-head">
+              <span class="skill-badge-icon">🐳</span>
+              <div>
+                <h3>Docker</h3>
+                <span class="skill-cat">Containerization</span>
+              </div>
+            </div>
+            <p class="skill-desc">Multi-stage Builds, Image Optimization, Docker Compose</p>
+            <div class="skill-meter" data-percent="88">
+              <div class="meter-bar" style="width: 0%;" data-target="88%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 7 -->
+          <div class="skill-card glass-card tilt-card" data-category="k8s">
+            <div class="skill-head">
+              <span class="skill-badge-icon">📊</span>
+              <div>
+                <h3>Prometheus & Grafana</h3>
+                <span class="skill-cat">Observability</span>
+              </div>
+            </div>
+            <p class="skill-desc">Cluster Health Metrics, Custom Dashboards, System Logs</p>
+            <div class="skill-meter" data-percent="80">
+              <div class="meter-bar" style="width: 0%;" data-target="80%"></div>
+            </div>
+          </div>
+
+          <!-- Skill Card 8 -->
+          <div class="skill-card glass-card tilt-card" data-category="k8s">
+            <div class="skill-head">
+              <span class="skill-badge-icon">🐧</span>
+              <div>
+                <h3>Linux & Scripting</h3>
+                <span class="skill-cat">OS & Automation</span>
+              </div>
+            </div>
+            <p class="skill-desc">Ubuntu Linux, Bash Scripting, Python, Git Version Control</p>
+            <div class="skill-meter" data-percent="88">
+              <div class="meter-bar" style="width: 0%;" data-target="88%"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- WORK EXPERIENCE SECTION -->
     <section id="experience" class="section experience-section">
       <div class="container">
-        <div class="section-kicker reveal"><span>03</span> EXPERIENCE</div>
-        <div class="section-title-row reveal">
+        <div class="section-header reveal">
+          <span class="section-num">05</span>
           <div>
-            <p class="eyebrow">PROFESSIONAL JOURNEY</p>
-            <h2>Where I’ve built experience.</h2>
+            <p class="section-eyebrow">CAREER MILESTONES</p>
+            <h2 class="section-title">Professional <span class="text-gradient">Experience</span></h2>
           </div>
         </div>
 
-        <div class="experience-card reveal">
-          <div class="experience-side">
-            <span class="year">2024<br>—<br>2025</span>
-            <span class="line"></span>
-            <span class="dot"></span>
-          </div>
-          <div class="experience-main">
-            <div class="role-head">
-              <div>
-                <p class="eyebrow">INTERNSHIP</p>
-                <h3>DevOps Engineer Intern</h3>
-                <span class="company">DevOps Insiders · Remote, India</span>
+        <div class="timeline reveal">
+          <div class="timeline-item glass-card tilt-card">
+            <div class="timeline-badge">
+              <span class="tb-date">2024 – 2025</span>
+              <span class="tb-type">INTERNSHIP</span>
+            </div>
+
+            <div class="timeline-content">
+              <div class="role-header">
+                <div>
+                  <h3 class="role-title">DevOps Engineer Intern</h3>
+                  <span class="role-company">DevOps Insiders · Remote, India</span>
+                </div>
+                <span class="role-chip">Azure & K8s Spec</span>
               </div>
-              <span class="experience-badge">Azure / DevOps</span>
-            </div>
 
-            <div class="experience-columns">
-              <ul>
-                <li>Provisioned scalable Azure infrastructure using modular Terraform scripts to ensure 100% environment consistency.</li>
-                <li>Implemented secure remote state handling using Azure Blob Storage with state locking.</li>
-                <li>Built automated Azure DevOps pipelines, eliminating manual deployment overhead.</li>
-                <li>Embedded SonarQube, TFSec, and Checkov quality gates to catch vulnerabilities pre-deployment.</li>
-                <li>Enforced strict IaC coding standards across pipelines using TFLint static analysis.</li>
-              </ul>
-              <ul>
-                <li>Containerized microservices with Docker and deployed workloads onto Azure Kubernetes Service (AKS).</li>
-                <li>Reduced Docker build times and image footprints using multi-stage builds.</li>
-                <li>Set up Prometheus & Grafana dashboards to monitor AKS cluster health and system metrics.</li>
-                <li>Authored custom Bash scripts to automate routine Linux server maintenance and deployments.</li>
-                <li>Conducted root-cause analysis to resolve system and deployment issues across Linux cloud nodes.</li>
-              </ul>
-            </div>
+              <div class="role-points">
+                <div class="point-col">
+                  <h4>Infrastructure & CI/CD Automation</h4>
+                  <ul>
+                    <li>Provisioned production-grade Azure cloud infrastructure (VNet, AKS, Key Vault, Storage) using modular HCL Terraform with Blob state locking.</li>
+                    <li>Built automated multi-stage Azure DevOps & GitHub Actions CI/CD pipelines for zero-downtime application releases.</li>
+                  </ul>
+                </div>
 
-            <div class="experience-footer">
-              <span>Infrastructure</span><span>CI/CD</span><span>DevSecOps</span><span>Containers</span><span>Observability</span>
+                <div class="point-col">
+                  <h4>DevSecOps & Observability</h4>
+                  <ul>
+                    <li>Embedded SonarQube static code analysis, Checkov IaC security, and TFSec quality gates into automated deployment pipelines.</li>
+                    <li>Containerized services with Docker multi-stage builds and orchestrated workloads on Azure AKS clusters with Prometheus & Grafana monitoring.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tech-tags">
+                <span>Azure</span>
+                <span>Terraform</span>
+                <span>Azure DevOps</span>
+                <span>SonarQube</span>
+                <span>Checkov</span>
+                <span>Docker</span>
+                <span>AKS</span>
+                <span>Grafana</span>
+                <span>Bash</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GITHUB ACTIVITY -->
+    <!-- LIVE GITHUB STATS SECTION -->
     <section class="section github-section">
       <div class="container">
-        <div class="github-card reveal">
-          <div class="github-head">
+        <div class="github-card glass-card tilt-card reveal">
+          <div class="gh-header">
             <div>
-              <p class="eyebrow">LIVE FROM GITHUB</p>
-              <h2>Actually shipping code.</h2>
+              <p class="section-eyebrow">GITHUB LIVE ACTIVITY</p>
+              <h2>Shipping Code & <span class="text-gradient">Configurations</span></h2>
             </div>
-            <a href="https://github.com/Pjaisw1103" target="_blank" rel="noopener" class="view-github">View profile ↗</a>
+            <a class="btn btn-sm btn-ghost" href="https://github.com/Pjaisw1103" target="_blank" rel="noopener">
+              View GitHub Profile ↗
+            </a>
           </div>
-          <div class="github-stats" id="githubStats">
-            <div class="gh-stat"><strong id="ghRepos">—</strong><span>Public Repos</span></div>
-            <div class="gh-stat"><strong id="ghFollowers">—</strong><span>Followers</span></div>
-            <div class="gh-stat"><strong id="ghStars">—</strong><span>Total Stars</span></div>
-            <div class="gh-stat"><strong id="ghLangs">—</strong><span>Top Language</span></div>
+
+          <div class="gh-stats-grid" id="githubStats">
+            <div class="gh-stat-box">
+              <strong id="ghRepos">—</strong>
+              <span>Public Repos</span>
+            </div>
+            <div class="gh-stat-box">
+              <strong id="ghFollowers">—</strong>
+              <span>Followers</span>
+            </div>
+            <div class="gh-stat-box">
+              <strong id="ghStars">—</strong>
+              <span>Total Stars</span>
+            </div>
+            <div class="gh-stat-box">
+              <strong id="ghLangs">—</strong>
+              <span>Top Language</span>
+            </div>
           </div>
-          <p class="github-note" id="githubNote"></p>
+          <p class="gh-note" id="githubNote">Fetching real-time profile metrics via GitHub REST API...</p>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- FEATURED PROJECTS SECTION -->
     <section id="projects" class="section projects-section">
       <div class="container">
-        <div class="section-kicker reveal"><span>04</span> PROJECTS</div>
-        <div class="section-title-row reveal">
+        <div class="section-header reveal">
+          <span class="section-num">06</span>
           <div>
-            <p class="eyebrow">SELECTED WORK</p>
-            <h2>Projects, not just buzzwords.</h2>
+            <p class="section-eyebrow">PORTFOLIO HIGHLIGHTS</p>
+            <h2 class="section-title">Featured DevOps <span class="text-gradient">Projects</span></h2>
           </div>
-          <a class="view-github" href="https://github.com/Pjaisw1103" target="_blank" rel="noopener">View all repositories ↗</a>
+          <a class="btn btn-sm btn-ghost" href="https://github.com/Pjaisw1103" target="_blank" rel="noopener">
+            View All Repositories ↗
+          </a>
         </div>
 
-        <div class="projects-grid">
-          <article class="project-card project-purple reveal">
-            <div class="project-top"><span class="project-index">01</span><span class="project-state">CI/CD</span></div>
-            <div class="project-visual">
-              <div class="pipeline-mini"><span>CODE</span><b>→</b><span>BUILD</span><b>→</b><span>SCAN</span><b>→</b><span>RELEASE</span></div>
+        <div class="projects-grid reveal">
+          <!-- Project 1 -->
+          <article class="project-card glass-card card-purple tilt-card" data-project="p1">
+            <div class="project-top">
+              <span class="project-num">01</span>
+              <span class="project-tag">CI/CD & DevSecOps</span>
             </div>
-            <p class="project-label">AZURE DEVOPS · DEVSECOPS</p>
-            <h3>CI/CD Pipeline with Code Quality & Security Scanning</h3>
-            <p class="project-description">
-              Engineered an automated Azure DevOps CI/CD pipeline for seamless application deployments.
-              Integrated SonarQube for static code analysis and Checkov for automated IaC security scanning.
-              Containerized web applications via Docker and deployed them using NGINX on Linux nodes.
+            <div class="project-arch">
+              <span>CODE</span>➔<span>BUILD</span>➔<span>SONARQUBE</span>➔<span>RELEASE</span>
+            </div>
+            <h3 class="project-title">CI/CD Pipeline with Quality & Security Scanning</h3>
+            <p class="project-desc">
+              Automated Azure DevOps CI/CD pipeline with embedded SonarQube code quality gates and Checkov IaC security scanning.
             </p>
-            <div class="tags"><span>Azure DevOps</span><span>SonarQube</span><span>Checkov</span><span>Docker</span><span>NGINX</span></div>
-            <a class="project-link" href="https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline" target="_blank" rel="noopener">Explore repository <span>↗</span></a>
+            <div class="project-tech">
+              <span>Azure DevOps</span>
+              <span>SonarQube</span>
+              <span>Checkov</span>
+              <span>Docker</span>
+              <span>NGINX</span>
+            </div>
+            <div class="project-actions">
+              <button type="button" class="btn btn-sm btn-ghost open-proj-modal" data-proj="p1">Architecture Spec 🔍</button>
+              <a class="project-link" href="https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline" target="_blank" rel="noopener">
+                GitHub <span>↗</span>
+              </a>
+            </div>
           </article>
 
-          <article class="project-card project-mint reveal">
-            <div class="project-top"><span class="project-index">02</span><span class="project-state">IaC</span></div>
-            <div class="project-visual architecture-visual">
-              <span>DEV</span><i>→</i><span>STAGING</span><i>→</i><span>PROD</span>
+          <!-- Project 2 -->
+          <article class="project-card glass-card card-cyan tilt-card" data-project="p2">
+            <div class="project-top">
+              <span class="project-num">02</span>
+              <span class="project-tag">Cloud IaC Automation</span>
             </div>
-            <p class="project-label">AZURE · TERRAFORM · GOVERNANCE</p>
-            <h3>Multi-Environment Infrastructure Automation</h3>
-            <p class="project-description">
-              Developed reusable Terraform modules to provision isolated Dev, Staging, and Production environments on Azure.
-              Automated TFSec and TFLint code analysis in workflows to detect IaC misconfigurations early.
-              Configured remote state management using Azure Blob Storage with state locking for secure team workflows.
+            <div class="project-arch">
+              <span>TF MODULES</span>➔<span>TFSEC SCAN</span>➔<span>BLOB STATE LOCK</span>
+            </div>
+            <h3 class="project-title">Multi-Environment Infrastructure Automation</h3>
+            <p class="project-desc">
+              Modular Terraform configurations to provision isolated Dev, Staging, and Prod environments on Azure with Blob remote state locking.
             </p>
-            <div class="tags"><span>Terraform</span><span>TFSec</span><span>TFLint</span><span>Azure Storage</span><span>Key Vault</span></div>
-            <a class="project-link" href="https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup" target="_blank" rel="noopener">Explore repository <span>↗</span></a>
+            <div class="project-tech">
+              <span>Terraform</span>
+              <span>TFSec</span>
+              <span>TFLint</span>
+              <span>Azure Storage</span>
+              <span>Key Vault</span>
+            </div>
+            <div class="project-actions">
+              <button type="button" class="btn btn-sm btn-ghost open-proj-modal" data-proj="p2">Architecture Spec 🔍</button>
+              <a class="project-link" href="https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup" target="_blank" rel="noopener">
+                GitHub <span>↗</span>
+              </a>
+            </div>
           </article>
 
-          <article class="project-card project-coral reveal">
-            <div class="project-top"><span class="project-index">03</span><span class="project-state">K8S</span></div>
-            <div class="project-visual k8s-visual">
-              <span>TF</span><i>→</i><span>AKS</span><i>→</i><span>PODS</span>
+          <!-- Project 3 -->
+          <article class="project-card glass-card card-emerald tilt-card" data-project="p3">
+            <div class="project-top">
+              <span class="project-num">03</span>
+              <span class="project-tag">Kubernetes Orchestration</span>
             </div>
-            <p class="project-label">AZURE AKS · KUBERNETES</p>
-            <h3>Azure AKS Cluster Provisioning & Deployment</h3>
-            <p class="project-description">
-              Provisioned production-ready Kubernetes clusters on Azure AKS using modular Terraform scripts.
-              Authored declarative Kubernetes YAML manifests (Deployments & Services) to manage app pods efficiently.
-              Configured pod resource limits, environment variables, and cluster networking workflows.
+            <div class="project-arch">
+              <span>TERRAFORM</span>➔<span>AZURE AKS</span>➔<span>POD MANIFESTS</span>
+            </div>
+            <h3 class="project-title">Azure AKS Cluster Provisioning & Deployment</h3>
+            <p class="project-desc">
+              Provisioned production-grade Azure AKS Kubernetes clusters using Terraform with declarative YAML microservices manifests.
             </p>
-            <div class="tags"><span>Azure AKS</span><span>Kubernetes</span><span>Docker</span><span>YAML</span><span>Git</span></div>
-            <a class="project-link" href="https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment" target="_blank" rel="noopener">Explore repository <span>↗</span></a>
+            <div class="project-tech">
+              <span>Azure AKS</span>
+              <span>Kubernetes</span>
+              <span>Docker</span>
+              <span>YAML</span>
+              <span>Git</span>
+            </div>
+            <div class="project-actions">
+              <button type="button" class="btn btn-sm btn-ghost open-proj-modal" data-proj="p3">Architecture Spec 🔍</button>
+              <a class="project-link" href="https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment" target="_blank" rel="noopener">
+                GitHub <span>↗</span>
+              </a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- WORKFLOW -->
-    <section class="section workflow-section">
-      <div class="container">
-        <div class="workflow-card reveal">
-          <div>
-            <p class="eyebrow">HOW I THINK ABOUT DELIVERY</p>
-            <h2>Automate the path<br>from commit to confidence.</h2>
-          </div>
-          <div class="workflow-track">
-            <div><b>01</b><span>CODE</span></div>
-            <i>→</i>
-            <div><b>02</b><span>BUILD</span></div>
-            <i>→</i>
-            <div><b>03</b><span>TEST</span></div>
-            <i>→</i>
-            <div><b>04</b><span>SECURE</span></div>
-            <i>→</i>
-            <div><b>05</b><span>DEPLOY</span></div>
-            <i>→</i>
-            <div><b>06</b><span>MONITOR</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
+    <!-- EDUCATION SECTION -->
     <section id="education" class="section education-section">
-      <div class="container education-grid">
-        <div class="education-copy reveal">
-          <div class="section-kicker"><span>05</span> EDUCATION</div>
-          <p class="eyebrow">ACADEMIC BACKGROUND</p>
-          <h2>B.Tech in<br><span>Computer Science & Engineering</span></h2>
-          <p>Dr. A.P.J. Abdul Kalam Technical University</p>
-          <p class="muted">2022 – 2026 · Lucknow, Uttar Pradesh, India</p>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-num">07</span>
+          <div>
+            <p class="section-eyebrow">ACADEMIC CREDENTIALS</p>
+            <h2 class="section-title">Education & <span class="text-gradient">Qualifications</span></h2>
+          </div>
         </div>
-        <div class="education-score reveal">
-          <div class="score-orbit"></div>
-          <strong>8.43</strong>
-          <span>CGPA / 10</span>
+
+        <div class="education-card glass-card tilt-card reveal">
+          <div class="edu-content">
+            <span class="edu-badge">2022 – 2026</span>
+            <h3>B.Tech in Computer Science & Engineering</h3>
+            <p class="edu-inst">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</p>
+            <p class="edu-loc">Lucknow, Uttar Pradesh, India</p>
+            <p class="edu-details">
+              Focus on Cloud Infrastructure, Operating Systems, Database Systems, Software Engineering, and Computer Networks.
+            </p>
+          </div>
+
+          <div class="edu-score-box">
+            <div class="score-ring">
+              <span class="score-val">8.43</span>
+              <span class="score-max">CGPA / 10</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-      <div class="contact-orb contact-orb-one"></div>
-      <div class="contact-orb contact-orb-two"></div>
+    <!-- DEDICATED CONTACT & DIRECT QUERY FORM SECTION -->
+    <section id="contact" class="section contact-section">
       <div class="container">
-        <div class="contact-card reveal">
+        <div class="contact-box glass-card tilt-card reveal">
           <div class="contact-grid">
-            <div>
-              <p class="eyebrow">06 · LET’S CONNECT</p>
-              <h2>Have a role,<br>project or opportunity?</h2>
+            <div class="contact-info">
+              <p class="section-eyebrow">08 · GET IN TOUCH</p>
+              <h2>Have a query or <span class="text-gradient">opportunity?</span></h2>
               <p class="contact-lead">
-                I’m actively looking for fresher and entry-level opportunities in
-                DevOps, Azure Cloud and DevSecOps. Let’s build something reliable.
+                Send a direct query or opportunity straight to my inbox (<strong>priyajaisw9554@gmail.com</strong>). 
+                I am actively seeking fresher / entry-level roles in **Azure Cloud, DevOps, and DevSecOps**.
               </p>
-              <div class="contact-actions">
-                <a class="btn btn-primary" href="mailto:priyajaisw9554@gmail.com?subject=DevOps%20Opportunity%20for%20Priya%20">Send an Email <span>↗</span></a>
-                <button class="btn btn-outline" id="copyEmail" type="button">Copy Email <span>⧉</span></button>
+
+              <div class="contact-cards">
+                <a class="contact-item" href="mailto:priyajaisw9554@gmail.com">
+                  <span class="ci-icon">✉</span>
+                  <div>
+                    <small>DIRECT EMAIL</small>
+                    <strong>priyajaisw9554@gmail.com</strong>
+                  </div>
+                </a>
+
+                <a class="contact-item" href="https://github.com/Pjaisw1103" target="_blank" rel="noopener">
+                  <span class="ci-icon">💻</span>
+                  <div>
+                    <small>GITHUB PROFILE</small>
+                    <strong>github.com/Pjaisw1103</strong>
+                  </div>
+                </a>
+
+                <a class="contact-item" href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank" rel="noopener">
+                  <span class="ci-icon">👔</span>
+                  <div>
+                    <small>LINKEDIN PROFILE</small>
+                    <strong>linkedin.com/in/priya-jaiswal1103</strong>
+                  </div>
+                </a>
               </div>
             </div>
 
-            <div class="contact-details">
-              <div class="contact-detail">
-                <span class="detail-icon">✉</span>
-                <div><small>EMAIL</small><a href="mailto:priyajaisw9554@gmail.com">priyajaisw9554@gmail.com</a></div>
-              </div>
-              <div class="contact-detail">
-                <span class="detail-icon">☎</span>
-                <div><small>PHONE</small><a href="tel:+918840610240">+91-8840610240</a></div>
-              </div>
-              <div class="contact-detail">
-                <span class="detail-icon">in</span>
-                <div><small>LINKEDIN</small><a href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank" rel="noopener">priya-jaiswal1103</a></div>
-              </div>
-              <div class="contact-detail">
-                <span class="detail-icon">◆</span>
-                <div><small>GITHUB</small><a href="https://github.com/Pjaisw1103" target="_blank" rel="noopener">github.com/Pjaisw1103</a></div>
+            <!-- Interactive Contact & Query Message Form -->
+            <div class="contact-form-wrapper">
+              <form class="contact-form" id="queryContactForm" action="https://formspree.io/f/priyajaisw9554@gmail.com" method="POST">
+                <h3 class="form-title">Send Direct Message / Query</h3>
+                <p class="form-subtitle">Messages submitted here go directly to Priya's email.</p>
+
+                <div class="form-group">
+                  <label for="formName">Your Name *</label>
+                  <input type="text" id="formName" name="name" required placeholder="e.g. Rahul Sharma / Recruiter">
+                </div>
+
+                <div class="form-group">
+                  <label for="formEmail">Your Email Address *</label>
+                  <input type="email" id="formEmail" name="email" required placeholder="e.g. rahul@company.com">
+                </div>
+
+                <div class="form-group">
+                  <label for="formSubject">Subject / Topic</label>
+                  <input type="text" id="formSubject" name="subject" placeholder="e.g. DevOps Opportunity / General Query">
+                </div>
+
+                <div class="form-group">
+                  <label for="formMessage">Message / Query Details *</label>
+                  <textarea id="formMessage" name="message" rows="4" required placeholder="Write your message or query here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-glow btn-full" id="submitQueryBtn">
+                  <span id="btnText">Send Query to Email 🚀</span>
+                  <span class="spinner" id="btnSpinner" style="display:none;"></span>
+                </button>
+              </form>
+
+              <!-- Success Card Confirmation -->
+              <div class="form-success-box" id="formSuccessBox" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Query Sent Successfully!</h3>
+                <p>Thank you! Your message has been sent directly to <strong>priyajaisw9554@gmail.com</strong>. Priya will respond shortly.</p>
+                <button type="button" class="btn btn-sm btn-ghost" id="sendAnotherBtn">Send Another Message</button>
               </div>
             </div>
           </div>
-          <div class="contact-bottom"><span>OPEN TO OPPORTUNITIES</span><span>AZURE · DEVOPS · DEVSECOPS</span><span>LUCKNOW · INDIA</span></div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <span>© 2026 Priya </span>
-      <span>Built with HTML · CSS · JavaScript · GitHub Pages</span>
-      <a href="#home" aria-label="Back to top">↑</a>
+  <!-- RECRUITER FAST-TRACK FLOATING BAR -->
+  <div class="floating-bar" id="quickFloatingBar">
+    <a class="fb-item" href="assets/Priya_Jaiswal_DevOps_Resume.pdf" target="_blank" download>
+      <span>📄</span> Resume PDF
+    </a>
+    <a class="fb-item fb-accent" href="#contact">
+      <span>✉</span> Quick Query
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>© 2026 Priya Jaiswal. All rights reserved.</span>
+      <span>Engineered with HTML5 · Modern 3D CSS3 · JavaScript · GitHub Pages</span>
+      <a class="back-top" href="#home" aria-label="Back to Top">↑ Top</a>
     </div>
   </footer>
 
-  <div id="toast" class="toast">Email copied ✓</div>
+  <!-- RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal" aria-hidden="true">
+    <div class="modal-container glass-card">
+      <div class="modal-header">
+        <div>
+          <h2>Priya Jaiswal — DevOps Resume Highlights</h2>
+          <p>Azure Cloud · DevOps Engineer · DevSecOps</p>
+        </div>
+        <button class="modal-close" id="closeResumeModal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="res-section">
+          <h3>Summary</h3>
+          <p>Result-oriented Azure DevOps and DevSecOps Engineer passionate about building resilient, scalable, and secure cloud operations in Linux environments. Skilled in Terraform IaC, Azure DevOps, AKS Kubernetes, and SonarQube security gates.</p>
+        </div>
+
+        <div class="res-section">
+          <h3>Work Experience</h3>
+          <div class="res-item">
+            <div class="res-item-head">
+              <strong>DevOps Engineer Intern — DevOps Insiders</strong>
+              <span>2024 – 2025</span>
+            </div>
+            <ul>
+              <li>Provisioned production-grade Azure infrastructure using modular Terraform HCL with Blob remote state locking.</li>
+              <li>Engineered automated CI/CD pipelines in Azure DevOps & GitHub Actions with SonarQube and Checkov security gates.</li>
+              <li>Containerized microservices using Docker multi-stage builds and managed cluster deployments on Azure AKS.</li>
+              <li>Implemented end-to-end cluster observability with Prometheus metrics and Grafana alert dashboards.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="res-section">
+          <h3>Education</h3>
+          <p><strong>B.Tech in Computer Science & Engineering (2022–2026)</strong> — AKTU | CGPA: 8.43/10</p>
+        </div>
+
+        <div class="res-section">
+          <h3>Technical Skills</h3>
+          <p><strong>Cloud & IaC:</strong> Azure (VNet, AKS, Key Vault, Blob), Terraform, TFSec, TFLint</p>
+          <p><strong>CI/CD & Security:</strong> Azure DevOps, GitHub Actions, SonarQube, Checkov</p>
+          <p><strong>Containers & OS:</strong> Docker, Kubernetes, Linux (Ubuntu), Bash Scripting, Git</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a class="btn btn-accent" href="assets/Priya_Jaiswal_DevOps_Resume.pdf" target="_blank" rel="noopener" download>
+          <span>↓</span> Download Official PDF Resume
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT ARCHITECTURE MODAL -->
+  <div class="modal-overlay" id="projectModal" aria-hidden="true">
+    <div class="modal-container glass-card">
+      <div class="modal-header">
+        <div>
+          <h2 id="projModalTitle">Project Architecture Specification</h2>
+          <p id="projModalTag">Cloud Engineering Breakdown</p>
+        </div>
+        <button class="modal-close" id="closeProjModal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body" id="projModalBody">
+        <!-- Dynamic content injected via JavaScript -->
+      </div>
+
+      <div class="modal-footer">
+        <a class="btn btn-primary" id="projModalLink" href="#" target="_blank" rel="noopener">
+          View Full GitHub Repository ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast">Message status updated!</div>
+
   <script src="script.js"></script>
 </body>
 </html>
