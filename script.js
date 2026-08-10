@@ -158,12 +158,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ------------------------------------------------------------------------
-  // 1. Interactive 3D Card Mouse Tilt Engine
+  // 1. Interactive 3D Card Mouse Tilt Engine (Desktop Only)
   // ------------------------------------------------------------------------
   const tiltCards = document.querySelectorAll(".tilt-card");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
-  if (!prefersReducedMotion) {
+  if (!prefersReducedMotion && !isTouchDevice) {
     tiltCards.forEach(card => {
       const applyTilt = (clientX, clientY) => {
         const rect = card.getBoundingClientRect();
@@ -186,15 +187,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       card.addEventListener("mousemove", e => applyTilt(e.clientX, e.clientY));
       card.addEventListener("mouseleave", resetTilt);
-
-      card.addEventListener("touchmove", e => {
-        if (e.touches.length > 0) {
-          applyTilt(e.touches[0].clientX, e.touches[0].clientY);
-        }
-      }, { passive: true });
-
-      card.addEventListener("touchend", resetTilt, { passive: true });
-      card.addEventListener("touchcancel", resetTilt, { passive: true });
     });
   }
 
@@ -221,21 +213,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ------------------------------------------------------------------------
-  // 3. Mobile Navigation Toggle
+  // 3. Mobile Navigation Toggle & Backdrop Overlay
   // ------------------------------------------------------------------------
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
+  const navBackdrop = document.getElementById("navBackdrop");
+
+  function openMobileMenu() {
+    navLinks?.classList.add("active");
+    menuToggle?.classList.add("active");
+    navBackdrop?.classList.add("active");
+    menuToggle?.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMobileMenu() {
+    navLinks?.classList.remove("active");
+    menuToggle?.classList.remove("active");
+    navBackdrop?.classList.remove("active");
+    menuToggle?.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
 
   menuToggle?.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("active");
-    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    if (navLinks?.classList.contains("active")) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
   });
 
+  navBackdrop?.addEventListener("click", closeMobileMenu);
+
   document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks?.classList.remove("active");
-      menuToggle?.setAttribute("aria-expanded", "false");
-    });
+    link.addEventListener("click", closeMobileMenu);
   });
 
   // ------------------------------------------------------------------------
