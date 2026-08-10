@@ -2245,7 +2245,9 @@ button {
   }
 
   .btn-cheat {
-    display: none !important;
+    display: inline-flex !important;
+    padding: 6px 10px;
+    font-size: 0.75rem;
   }
 
   .nav-links {
@@ -2401,5 +2403,9 @@ button {
   .hero-cta { flex-direction: column; width: 100%; }
   .btn { width: 100%; }
   .brand-tag { display: none; }
-  .brand-text { font-size: 0.95rem; }
+  .brand-text { font-size: 0.92rem; }
+  .btn-cheat, .btn-accent {
+    padding: 5px 8px !important;
+    font-size: 0.7rem !important;
+  }
 }
