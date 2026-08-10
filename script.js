@@ -52,15 +52,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const particleCount = Math.min(Math.floor(width / 18), 75);
     const mouse = { x: null, y: null, maxDist: 160 };
 
-    window.addEventListener("mousemove", e => {
-      mouse.x = e.clientX;
-      mouse.y = e.clientY;
-    });
+    function updatePointer(clientX, clientY) {
+      mouse.x = clientX;
+      mouse.y = clientY;
+    }
 
-    window.addEventListener("mouseleave", () => {
+    function clearPointer() {
       mouse.x = null;
       mouse.y = null;
-    });
+    }
+
+    window.addEventListener("mousemove", e => updatePointer(e.clientX, e.clientY));
+    window.addEventListener("mouseleave", clearPointer);
+
+    window.addEventListener("touchstart", e => {
+      if (e.touches.length > 0) updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    window.addEventListener("touchmove", e => {
+      if (e.touches.length > 0) updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    window.addEventListener("touchend", clearPointer, { passive: true });
+    window.addEventListener("touchcancel", clearPointer, { passive: true });
 
     class NodeParticle {
       constructor() {
@@ -149,26 +163,38 @@ document.addEventListener("DOMContentLoaded", () => {
   const tiltCards = document.querySelectorAll(".tilt-card");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  if (!prefersReducedMotion && window.matchMedia("(pointer: fine)").matches) {
+  if (!prefersReducedMotion) {
     tiltCards.forEach(card => {
-      card.addEventListener("mousemove", e => {
+      const applyTilt = (clientX, clientY) => {
         const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
 
         const rotateX = ((y - centerY) / centerY) * -8;
         const rotateY = ((x - centerX) / centerX) * 8;
 
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(8px)`;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(6px)`;
         card.style.setProperty("--tilt-x", `${(x / rect.width) * 100}%`);
         card.style.setProperty("--tilt-y", `${(y / rect.height) * 100}%`);
-      });
+      };
 
-      card.addEventListener("mouseleave", () => {
+      const resetTilt = () => {
         card.style.transform = "";
-      });
+      };
+
+      card.addEventListener("mousemove", e => applyTilt(e.clientX, e.clientY));
+      card.addEventListener("mouseleave", resetTilt);
+
+      card.addEventListener("touchmove", e => {
+        if (e.touches.length > 0) {
+          applyTilt(e.touches[0].clientX, e.touches[0].clientY);
+        }
+      }, { passive: true });
+
+      card.addEventListener("touchend", resetTilt, { passive: true });
+      card.addEventListener("touchcancel", resetTilt, { passive: true });
     });
   }
 
@@ -672,14 +698,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ------------------------------------------------------------------------
-  // 11. Cursor Glow Following Effect
+  // 11. Cursor & Touch Glow Following Effect
   // ------------------------------------------------------------------------
   const cursorGlow = document.getElementById("cursorGlow");
-  if (cursorGlow && window.matchMedia("(pointer: fine)").matches) {
-    window.addEventListener("pointermove", e => {
-      cursorGlow.style.left = `${e.clientX}px`;
-      cursorGlow.style.top = `${e.clientY}px`;
-    });
+  if (cursorGlow && !prefersReducedMotion) {
+    const updateGlowPos = (x, y) => {
+      cursorGlow.style.left = `${x}px`;
+      cursorGlow.style.top = `${y}px`;
+    };
+
+    window.addEventListener("pointermove", e => updateGlowPos(e.clientX, e.clientY));
+    window.addEventListener("touchmove", e => {
+      if (e.touches.length > 0) updateGlowPos(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+    window.addEventListener("touchstart", e => {
+      if (e.touches.length > 0) updateGlowPos(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
   }
 
   // ------------------------------------------------------------------------
@@ -687,19 +721,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // ------------------------------------------------------------------------
   const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting || window.innerWidth <= 768) {
+      if (entry.isIntersecting) {
         entry.target.classList.add("visible");
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.01 });
+  }, { threshold: 0.05, rootMargin: "0px 0px -30px 0px" });
 
   document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
-
-  // Immediate visibility check for mobile viewports so content never disappears
-  if (window.innerWidth <= 768) {
-    document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
-  }
 
   const sections = document.querySelectorAll("section[id]");
   const navItems = document.querySelectorAll(".nav-links a");

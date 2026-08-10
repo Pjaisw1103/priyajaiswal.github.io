@@ -2169,18 +2169,38 @@ button {
     overflow-x: hidden !important;
   }
 
-  /* Force 100% visibility on mobile so content never disappears */
+  /* Smooth GPU-accelerated scroll reveal for mobile viewports */
   .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.visible {
     opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
+    transform: translateY(0) !important;
   }
 
-  /* Mobile GPU Optimization: Provide solid high-contrast card fallback */
-  .aurora-bg, .cursor-glow {
-    display: none !important;
+  /* GPU-accelerated ambient glowing background animations on mobile */
+  .aurora-bg {
+    display: block !important;
+    opacity: 0.5;
+    will-change: transform;
   }
 
+  .aurora-blob {
+    filter: blur(45px);
+  }
+
+  .cursor-glow {
+    display: block !important;
+    width: 200px;
+    height: 200px;
+    opacity: 0.5;
+  }
+
+  /* Mobile Glassmorphism card fallback with active touch feedback */
   .glass-card, 
   .site-header, 
   .about-card, 
@@ -2192,10 +2212,15 @@ button {
   .contact-form-wrapper,
   .metric-card,
   .tilt-card {
-    background: #0b132b !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+    background: rgba(11, 19, 43, 0.88) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
     border-color: rgba(255, 255, 255, 0.12) !important;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .glass-card:active, .tilt-card:active {
+    transform: scale(0.985);
   }
 
   :root[data-theme="light"] .glass-card,
@@ -2206,13 +2231,20 @@ button {
   :root[data-theme="light"] .project-card,
   :root[data-theme="light"] .education-card,
   :root[data-theme="light"] .contact-box {
-    background: #ffffff !important;
+    background: rgba(255, 255, 255, 0.92) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
     border-color: rgba(15, 23, 42, 0.15) !important;
   }
 
-  /* Hide negative-offset floating badges that break mobile layout */
+  /* Floating tech chips formatted neatly in hero visual for mobile */
   .tech-chip {
-    display: none !important;
+    display: inline-flex !important;
+    position: relative !important;
+    inset: auto !important;
+    margin: 4px;
+    font-size: 0.72rem;
+    padding: 6px 12px;
   }
 
   .container {
@@ -2268,6 +2300,18 @@ button {
 
   .nav-links.active {
     display: flex !important;
+    animation: navMobileSlideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  @keyframes navMobileSlideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .menu-toggle {
