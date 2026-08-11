@@ -34,6 +34,22 @@ Modern, high-impact, luxury obsidian black & signature gold engineering portfoli
 
 ---
 
+## 🛠️ Featured Resume Repositories
+
+1. 🌐 **[Multi-Environment Azure Infrastructure Setup](https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup)**
+   - *Tech Stack*: Azure Cloud, Terraform HCL, Azure DevOps, NAT Gateway, Application Gateway, Bastion, Azure SQL.
+   - *Overview*: Automated multi-environment (Dev, Staging, Prod) 3-tier enterprise Azure infrastructure using modular Terraform & Azure DevOps CI/CD pipelines.
+
+2. 🚀 **[CI/CD Deployment Automation Pipeline](https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline)**
+   - *Tech Stack*: Azure DevOps YAML, Docker, Python 3.10 FastAPI, ReactJS 18, Nginx, Azure VM Environments.
+   - *Overview*: End-to-end decoupled CI/CD pipelines for multi-stage containerized Todo application with automated release to Azure Virtual Machine Environments.
+
+3. ☸️ **[Azure AKS Provisioning & Workload Deployment](https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment)**
+   - *Tech Stack*: Azure AKS, ACR, Terraform Modules, Kubernetes Pods/Deployments, AcrPull RBAC, Network Policies.
+   - *Overview*: Provisioned production Azure AKS & ACR via generic reusable Terraform modules with RBAC integration, multi-namespace isolation, and zero-downtime rolling updates.
+
+---
+
 ## 📁 Repository Structure
 
 ```text

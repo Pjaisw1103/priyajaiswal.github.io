@@ -1124,60 +1124,72 @@
 
           <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="project-card w-100" onclick="openProjectModal('aks_terraform')">
+            <div class="project-card w-100">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">Azure IaC</span>
-                <small class="text-muted">Terraform & AKS</small>
+                <span class="badge bg-warning text-dark font-weight-bold">Azure Enterprise IaC</span>
+                <small class="text-muted">Terraform & Azure DevOps</small>
               </div>
               <div class="project-card-body">
                 <div>
-                  <h5>Production Azure AKS Cluster with Terraform IaC</h5>
-                  <p>Provisioned enterprise Azure AKS cluster with Blob storage remote state locking, private VNet
-                    subnets, and automated nodepool scaling.</p>
+                  <h5>Multi-Environment Azure Infrastructure Setup</h5>
+                  <p>Automated 3-Tier enterprise Azure infrastructure (Dev, Staging, Prod) using modular Terraform HCL & Azure DevOps CI/CD pipelines with NAT Gateway, App Gateway, Bastion & SQL Server.</p>
                 </div>
-                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
-                  <i class="fa-solid fa-network-wired me-1"></i> View Architecture Specs
-                </button>
+                <div class="d-flex gap-2 mt-2">
+                  <button onclick="openProjectModal('multi_env_azure')" class="btn-hero btn-hero-primary py-2 px-3 fs-6 border-0 w-100 justify-content-center">
+                    <i class="fa-solid fa-network-wired me-1"></i> Architecture Specs
+                  </button>
+                  <a href="https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup" target="_blank" class="btn btn-outline-warning py-2 px-3 fs-6 d-inline-flex align-items-center justify-content-center text-nowrap rounded-pill fw-bold">
+                    <i class="fa-brands fa-github me-1"></i> GitHub Repo
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="project-card w-100" onclick="openProjectModal('devsecops_pipeline')">
+            <div class="project-card w-100">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">DevSecOps</span>
-                <small class="text-muted">CI/CD Security</small>
+                <span class="badge bg-warning text-dark font-weight-bold">CI/CD & DevSecOps</span>
+                <small class="text-muted">Docker & Azure DevOps</small>
               </div>
               <div class="project-card-body">
                 <div>
-                  <h5>Automated DevSecOps Pipeline with SonarQube & Checkov</h5>
-                  <p>Engineered automated CI/CD pipeline enforcing SAST static security analysis, Checkov IaC
-                    compliance, and automated quality gates.</p>
+                  <h5>CI/CD Deployment Automation Pipeline</h5>
+                  <p>End-to-end decoupled Azure DevOps CI/CD pipelines orchestrating build, test, multi-stage Docker containerization (FastAPI + ReactJS + Nginx), and release to Virtual Machine Environments.</p>
                 </div>
-                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
-                  <i class="fa-solid fa-shield-halved me-1"></i> View Architecture Specs
-                </button>
+                <div class="d-flex gap-2 mt-2">
+                  <button onclick="openProjectModal('cicd_automation')" class="btn-hero btn-hero-primary py-2 px-3 fs-6 border-0 w-100 justify-content-center">
+                    <i class="fa-solid fa-shield-halved me-1"></i> Architecture Specs
+                  </button>
+                  <a href="https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline" target="_blank" class="btn btn-outline-warning py-2 px-3 fs-6 d-inline-flex align-items-center justify-content-center text-nowrap rounded-pill fw-bold">
+                    <i class="fa-brands fa-github me-1"></i> GitHub Repo
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div class="project-card w-100" onclick="openProjectModal('microservices_k8s')">
+            <div class="project-card w-100">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">Kubernetes</span>
-                <small class="text-muted">Prometheus & Grafana</small>
+                <span class="badge bg-warning text-dark font-weight-bold">Azure AKS & K8s</span>
+                <small class="text-muted">Modular Terraform</small>
               </div>
               <div class="project-card-body">
                 <div>
-                  <h5>Microservices Containerization & AKS Monitoring</h5>
-                  <p>Multi-stage Docker containerization for microservices with Prometheus metrics exporter and Grafana
-                    live cluster dashboards.</p>
+                  <h5>Azure AKS Provisioning & Workload Deployment</h5>
+                  <p>Provisioned Azure AKS cluster & ACR using generic reusable Terraform modules with AcrPull RBAC role assignment, multi-namespace isolation, rolling updates, PVC storage, and network policies.</p>
                 </div>
-                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
-                  <i class="fa-solid fa-chart-line me-1"></i> View Architecture Specs
-                </button>
+                <div class="d-flex gap-2 mt-2">
+                  <button onclick="openProjectModal('aks_provisioning')" class="btn-hero btn-hero-primary py-2 px-3 fs-6 border-0 w-100 justify-content-center">
+                    <i class="fa-solid fa-cubes me-1"></i> Architecture Specs
+                  </button>
+                  <a href="https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment" target="_blank" class="btn btn-outline-warning py-2 px-3 fs-6 d-inline-flex align-items-center justify-content-center text-nowrap rounded-pill fw-bold">
+                    <i class="fa-brands fa-github me-1"></i> GitHub Repo
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1347,7 +1359,7 @@
           <!-- Dynamic details populated via JS -->
         </div>
         <div class="modal-footer border-secondary">
-          <a href="https://github.com/Pjaisw1103" target="_blank" class="btn btn-warning fw-bold rounded-pill">
+          <a href="https://github.com/Pjaisw1103" target="_blank" id="projectModalRepoLink" class="btn btn-warning fw-bold rounded-pill">
             <i class="fa-brands fa-github me-1"></i> View Full Repository on GitHub
           </a>
         </div>
@@ -1463,47 +1475,62 @@
     function openProjectModal(projKey) {
       const title = document.getElementById('projectModalTitle');
       const body = document.getElementById('projectModalBody');
+      const repoLink = document.getElementById('projectModalRepoLink');
       const modal = new bootstrap.Modal(document.getElementById('projectModal'));
 
       const projects = {
-        aks_terraform: {
-          title: "Production Azure AKS Cluster with Terraform IaC",
+        multi_env_azure: {
+          title: "Multi-Environment Azure Infrastructure Setup",
+          url: "https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup",
           html: `<div class="mb-3">
-                  <h6 class="text-warning font-weight-bold">Architecture Highlights:</h6>
-                  <ul>
-                    <li>Provisioned Azure Resource Group, Virtual Network (VNet) with subnets & NSGs.</li>
-                    <li>Configured Azure Blob Storage backend for Terraform remote state locking.</li>
-                    <li>Deployed Azure Kubernetes Service (AKS) with system & user node pools.</li>
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-layer-group me-2"></i>Architecture & Infrastructure Specs:</h6>
+                  <ul class="list-unstyled space-y-2 mt-2">
+                    <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i><strong>Multi-Environment Tiering:</strong> Provisions Dev, Staging, and Production environments using modular Terraform HCL.</li>
+                    <li class="mb-2"><i class="fa-solid fa-network-wired text-info me-2"></i><strong>Enterprise Networking:</strong> Configures VNet subnets, NSG rules, Azure NAT Gateway, Private Endpoints, and Azure Application Gateway.</li>
+                    <li class="mb-2"><i class="fa-solid fa-lock text-warning me-2"></i><strong>Zero-Trust Security:</strong> Azure Bastion host for secure admin SSH/RDP access, and Azure Key Vault for secret rotation.</li>
+                    <li class="mb-2"><i class="fa-solid fa-database text-primary me-2"></i><strong>Database & State Isolation:</strong> Azure Storage Blob backend with lease-based state locking and Azure SQL Server backend.</li>
                   </ul>
                  </div>`
         },
-        devsecops_pipeline: {
-          title: "Automated DevSecOps Pipeline with SonarQube & Checkov",
+        cicd_automation: {
+          title: "CI/CD Deployment Automation Pipeline",
+          url: "https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline",
           html: `<div class="mb-3">
-                  <h6 class="text-warning font-weight-bold">Architecture Highlights:</h6>
-                  <ul>
-                    <li>Automated build pipeline triggered on git commit.</li>
-                    <li>Configured SonarQube SAST analysis step enforcing quality gates.</li>
-                    <li>Integrated Checkov IaC security scanner checking HCL scripts against policies.</li>
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-diagram-project me-2"></i>Pipeline & Release Automation Specs:</h6>
+                  <ul class="list-unstyled space-y-2 mt-2">
+                    <li class="mb-2"><i class="fa-solid fa-code-branch text-success me-2"></i><strong>Decoupled CI/CD Pipelines:</strong> Separate Azure DevOps YAML pipelines (FastAPI backend + React frontend).</li>
+                    <li class="mb-2"><i class="fa-brands fa-docker text-info me-2"></i><strong>Multi-Stage Dockerization:</strong> Optimized Docker containers with Python 3.10 FastAPI, React 18, Nginx reverse proxy, and MS SQL ODBC drivers.</li>
+                    <li class="mb-2"><i class="fa-solid fa-server text-warning me-2"></i><strong>VM Release Deployment:</strong> Automated artifact lifecycle management deploying directly to Azure DevOps Virtual Machine Environments (dev-env).</li>
+                    <li class="mb-2"><i class="fa-solid fa-rotate text-primary me-2"></i><strong>Zero Downtime Releases:</strong> Automated virtualenv setup, systemd service reloads, and Nginx web server reloading.</li>
                   </ul>
                  </div>`
         },
-        microservices_k8s: {
-          title: "Microservices Containerization & AKS Monitoring",
+        aks_provisioning: {
+          title: "Azure AKS Provisioning & Workload Deployment",
+          url: "https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment",
           html: `<div class="mb-3">
-                  <h6 class="text-warning font-weight-bold">Architecture Highlights:</h6>
-                  <ul>
-                    <li>Created multi-stage Dockerfiles optimizing image size.</li>
-                    <li>Deployed microservices onto Azure AKS using Kubernetes Deployments & Ingress.</li>
-                    <li>Configured Prometheus & Grafana live dashboards monitoring pod health.</li>
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-cubes me-2"></i>Kubernetes & Provisioning Specs:</h6>
+                  <ul class="list-unstyled space-y-2 mt-2">
+                    <li class="mb-2"><i class="fa-solid fa-cube text-success me-2"></i><strong>Generic Terraform Module:</strong> Reusable parameterizable module (modules/aks) provisioning Azure AKS and ACR.</li>
+                    <li class="mb-2"><i class="fa-solid fa-id-badge text-info me-2"></i><strong>RBAC Role Integration:</strong> Automatic AcrPull role assignment linking AKS Kubelet Managed Identity to Azure Container Registry.</li>
+                    <li class="mb-2"><i class="fa-solid fa-shapes text-warning me-2"></i><strong>Multi-Tenancy Isolation:</strong> Declarative YAML manifests organizing workloads across dev & qa Kubernetes namespaces.</li>
+                    <li class="mb-2"><i class="fa-solid fa-arrows-rotate text-primary me-2"></i><strong>HA Workloads & Storage:</strong> 3-replica Deployments with RollingUpdate, readiness/liveness probes, LoadBalancer services, PVC managed disks, and ingress Network Policies.</li>
                   </ul>
                  </div>`
         }
       };
 
+      // Alias legacy keys if triggered
+      projects['aks_terraform'] = projects['multi_env_azure'];
+      projects['devsecops_pipeline'] = projects['cicd_automation'];
+      projects['microservices_k8s'] = projects['aks_provisioning'];
+
       if (projects[projKey]) {
         title.innerText = projects[projKey].title;
         body.innerHTML = projects[projKey].html;
+        if (repoLink && projects[projKey].url) {
+          repoLink.href = projects[projKey].url;
+        }
         modal.show();
       }
     }

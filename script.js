@@ -455,77 +455,81 @@ document.addEventListener("DOMContentLoaded", () => {
   // 8. Project Architecture Spec Modal
   // ------------------------------------------------------------------------
   const projectModalData = {
-    p1: {
-      title: "CI/CD Pipeline with Quality & Security Scanning",
-      tag: "DevSecOps & Automated Delivery",
-      url: "https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline",
-      content: `
-        <div class="arch-spec-box">
-          <span class="arch-badge">✓ Verified DevSecOps Pipeline Spec</span>
-          <div class="arch-spec-flow">
-            <span class="flow-node">GitHub Repo</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Azure Pipeline</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">SonarQube Gate</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Checkov IaC</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Prod Release</span>
-          </div>
-          <div class="arch-spec-item">
-            <h4>Key Compliance Gates</h4>
-            <ul>
-              <li><strong>SonarQube:</strong> 0 Vulnerabilities, 0 Security Hotspots required to pass stage.</li>
-              <li><strong>Checkov:</strong> Static analysis on Dockerfiles & Azure Terraform specs.</li>
-              <li><strong>Zero Manual Intervention:</strong> Automated release execution on merge to main.</li>
-            </ul>
-          </div>
-        </div>`
-    },
-    p2: {
-      title: "Multi-Environment Infrastructure Automation",
-      tag: "Terraform IaC & Cloud State Management",
+    multi_env_azure: {
+      title: "Multi-Environment Azure Infrastructure Setup",
+      tag: "Terraform IaC & Azure DevOps",
       url: "https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup",
       content: `
         <div class="arch-spec-box">
-          <span class="arch-badge">✓ Verified IaC Architecture</span>
+          <span class="arch-badge">✓ Verified 3-Tier Enterprise Infrastructure</span>
           <div class="arch-spec-flow">
             <span class="flow-node">Terraform Modules</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">TFSec Audit</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Azure Blob Remote State</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Key Vault Secrets</span>
+            <span class="flow-node">Dev / Staging / Prod</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">NAT & App Gateway</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Azure SQL & Bastion</span>
           </div>
           <div class="arch-spec-item">
             <h4>Key Infrastructure Features</h4>
             <ul>
-              <li><strong>Remote Backend:</strong> Azure Storage Container with lease-based state locking.</li>
-              <li><strong>IaC Security:</strong> TFSec and TFLint static analysis integrated in PR checks.</li>
-              <li><strong>100% Reproducibility:</strong> One-command environment tear down & rebuild.</li>
+              <li><strong>Multi-Environment:</strong> Modular HCL scripts for automated provisioning of Dev, Staging, and Prod environments.</li>
+              <li><strong>Secure Networking:</strong> Dedicated VNet topology, subnets, NSGs, NAT Gateway, Application Gateway, and Bastion Host.</li>
+              <li><strong>Remote Backend & Secrets:</strong> Azure Storage Blob state locking and Azure Key Vault for zero-trust secret rotation.</li>
             </ul>
           </div>
         </div>`
     },
-    p3: {
-      title: "Azure AKS Cluster Provisioning & Deployment",
-      tag: "Kubernetes Orchestration & Observability",
+    cicd_automation: {
+      title: "CI/CD Deployment Automation Pipeline",
+      tag: "DevSecOps & Automated Release",
+      url: "https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline",
+      content: `
+        <div class="arch-spec-box">
+          <span class="arch-badge">✓ Verified End-to-End Pipeline Spec</span>
+          <div class="arch-spec-flow">
+            <span class="flow-node">GitHub / Azure Repos</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Multi-Stage Docker</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Artifact Publishing</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Azure VM Release</span>
+          </div>
+          <div class="arch-spec-item">
+            <h4>Key Pipeline & Release Features</h4>
+            <ul>
+              <li><strong>Decoupled Pipelines:</strong> Dedicated Azure DevOps YAML workflows for FastAPI Python backend and ReactJS frontend.</li>
+              <li><strong>Production Dockerization:</strong> Multi-stage builds with GPG keyring management, Microsoft SQL ODBC drivers, and Nginx.</li>
+              <li><strong>Automated VM Releases:</strong> Deployment to Azure DevOps Virtual Machine Environments (dev-env) with systemd service reloads.</li>
+            </ul>
+          </div>
+        </div>`
+    },
+    aks_provisioning: {
+      title: "Azure AKS Provisioning & Workload Deployment",
+      tag: "Kubernetes & Modular Provisioning",
       url: "https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment",
       content: `
         <div class="arch-spec-box">
-          <span class="arch-badge">✓ Verified K8s Cluster Spec</span>
+          <span class="arch-badge">✓ Verified K8s Provisioning & Workload Spec</span>
           <div class="arch-spec-flow">
-            <span class="flow-node">Azure AKS Cluster</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Ingress Controller</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">YAML Pod Manifests</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Prometheus / Grafana</span>
+            <span class="flow-node">Terraform Module</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Azure AKS + ACR</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">AcrPull RBAC</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">K8s Dev & QA Workloads</span>
           </div>
           <div class="arch-spec-item">
-            <h4>Key Kubernetes Features</h4>
+            <h4>Key Kubernetes & Cloud Features</h4>
             <ul>
-              <li><strong>Rolling Deployments:</strong> Zero-downtime updates with readiness & liveness probes.</li>
-              <li><strong>Observability:</strong> Metrics scraping via Prometheus & Grafana dashboard alerts.</li>
-              <li><strong>Resource Control:</strong> Explicit CPU & Memory resource requests/limits per pod.</li>
+              <li><strong>Generic IaC Module:</strong> Reusable parameterizable module (`modules/aks`) provisioning AKS cluster & ACR container registry.</li>
+              <li><strong>RBAC Integration:</strong> Automatic `AcrPull` role assignment for AKS Kubelet Managed Identity.</li>
+              <li><strong>Cloud-Native Manifests:</strong> Multi-namespace isolation, HA 3-replica Deployments, RollingUpdate zero-downtime, PVC managed disks, and ingress Network Policies.</li>
             </ul>
           </div>
         </div>`
     }
   };
+
+  // Backward compatibility keys
+  projectModalData.p1 = projectModalData.cicd_automation;
+  projectModalData.p2 = projectModalData.multi_env_azure;
+  projectModalData.p3 = projectModalData.aks_provisioning;
 
   const projectModal = document.getElementById("projectModal");
   const closeProjModalBtn = document.getElementById("closeProjModal");
