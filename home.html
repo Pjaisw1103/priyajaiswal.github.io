@@ -1124,9 +1124,9 @@
 
           <!-- Slide 1 -->
           <div class="swiper-slide">
-            <div class="project-card w-100">
+            <div class="project-card w-100" onclick="openProjectModal('multi_env_azure')">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">Azure Enterprise IaC</span>
+                <span class="badge bg-warning text-dark font-weight-bold">Azure IaC</span>
                 <small class="text-muted">Terraform & Azure DevOps</small>
               </div>
               <div class="project-card-body">
@@ -1134,62 +1134,47 @@
                   <h5>Multi-Environment Azure Infrastructure Setup</h5>
                   <p>Automated 3-Tier enterprise Azure infrastructure (Dev, Staging, Prod) using modular Terraform HCL & Azure DevOps CI/CD pipelines with NAT Gateway, App Gateway, Bastion & SQL Server.</p>
                 </div>
-                <div class="d-flex gap-2 mt-2">
-                  <button onclick="openProjectModal('multi_env_azure')" class="btn-hero btn-hero-primary py-2 px-3 fs-6 border-0 w-100 justify-content-center">
-                    <i class="fa-solid fa-network-wired me-1"></i> Architecture Specs
-                  </button>
-                  <a href="https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup" target="_blank" class="btn btn-outline-warning py-2 px-3 fs-6 d-inline-flex align-items-center justify-content-center text-nowrap rounded-pill fw-bold">
-                    <i class="fa-brands fa-github me-1"></i> GitHub Repo
-                  </a>
-                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-network-wired me-1"></i> View Architecture Specs
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Slide 2 -->
           <div class="swiper-slide">
-            <div class="project-card w-100">
+            <div class="project-card w-100" onclick="openProjectModal('cicd_automation')">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">CI/CD & DevSecOps</span>
-                <small class="text-muted">Docker & Azure DevOps</small>
+                <span class="badge bg-warning text-dark font-weight-bold">DevSecOps</span>
+                <small class="text-muted">Docker & CI/CD</small>
               </div>
               <div class="project-card-body">
                 <div>
                   <h5>CI/CD Deployment Automation Pipeline</h5>
                   <p>End-to-end decoupled Azure DevOps CI/CD pipelines orchestrating build, test, multi-stage Docker containerization (FastAPI + ReactJS + Nginx), and release to Virtual Machine Environments.</p>
                 </div>
-                <div class="d-flex gap-2 mt-2">
-                  <button onclick="openProjectModal('cicd_automation')" class="btn-hero btn-hero-primary py-2 px-3 fs-6 border-0 w-100 justify-content-center">
-                    <i class="fa-solid fa-shield-halved me-1"></i> Architecture Specs
-                  </button>
-                  <a href="https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline" target="_blank" class="btn btn-outline-warning py-2 px-3 fs-6 d-inline-flex align-items-center justify-content-center text-nowrap rounded-pill fw-bold">
-                    <i class="fa-brands fa-github me-1"></i> GitHub Repo
-                  </a>
-                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-shield-halved me-1"></i> View Architecture Specs
+                </button>
               </div>
             </div>
           </div>
 
           <!-- Slide 3 -->
           <div class="swiper-slide">
-            <div class="project-card w-100">
+            <div class="project-card w-100" onclick="openProjectModal('aks_provisioning')">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">Azure AKS & K8s</span>
-                <small class="text-muted">Modular Terraform</small>
+                <span class="badge bg-warning text-dark font-weight-bold">Kubernetes</span>
+                <small class="text-muted">Azure AKS & ACR</small>
               </div>
               <div class="project-card-body">
                 <div>
                   <h5>Azure AKS Provisioning & Workload Deployment</h5>
                   <p>Provisioned Azure AKS cluster & ACR using generic reusable Terraform modules with AcrPull RBAC role assignment, multi-namespace isolation, rolling updates, PVC storage, and network policies.</p>
                 </div>
-                <div class="d-flex gap-2 mt-2">
-                  <button onclick="openProjectModal('aks_provisioning')" class="btn-hero btn-hero-primary py-2 px-3 fs-6 border-0 w-100 justify-content-center">
-                    <i class="fa-solid fa-cubes me-1"></i> Architecture Specs
-                  </button>
-                  <a href="https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment" target="_blank" class="btn btn-outline-warning py-2 px-3 fs-6 d-inline-flex align-items-center justify-content-center text-nowrap rounded-pill fw-bold">
-                    <i class="fa-brands fa-github me-1"></i> GitHub Repo
-                  </a>
-                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-chart-line me-1"></i> View Architecture Specs
+                </button>
               </div>
             </div>
           </div>
