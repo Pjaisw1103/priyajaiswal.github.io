@@ -83,7 +83,6 @@ Open `http://localhost:8080` in your web browser.
 
 ## 📬 Direct Contact & Professional Links
 
-- 💬 **WhatsApp Chat**: [+91 8840610240](https://wa.me/918840610240)
 - ✉️ **Direct Email**: [priyajaisw9554@gmail.com](mailto:priyajaisw9554@gmail.com)
 - 💼 **LinkedIn Profile**: [priya-jaiswal1103](https://www.linkedin.com/in/priya-jaiswal1103/)
 - 💻 **GitHub Repositories**: [Pjaisw1103](https://github.com/Pjaisw1103)
