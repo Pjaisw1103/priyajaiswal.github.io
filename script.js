@@ -450,61 +450,60 @@ document.addEventListener("DOMContentLoaded", () => {
   resumeModal?.addEventListener("click", e => {
     if (e.target === resumeModal) closeModal();
   });
-
   // ------------------------------------------------------------------------
   // 8. Project Architecture Spec Modal
   // ------------------------------------------------------------------------
   const projectModalData = {
     multi_env_azure: {
-      title: "Multi-Environment Azure Infrastructure Setup",
+      title: "Secure 3-Tier Web Application Infrastructure on Azure",
       tag: "Terraform IaC & Azure DevOps",
       url: "https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup",
       content: `
         <div class="arch-spec-box">
           <span class="arch-badge">✓ Verified 3-Tier Enterprise Infrastructure</span>
           <div class="arch-spec-flow">
-            <span class="flow-node">Terraform Modules</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Dev / Staging / Prod</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">NAT & App Gateway</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Azure SQL & Bastion</span>
+            <span class="flow-node">Terraform Scripts</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Web / App / DB Subnets</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">NSGs & Bastion</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Azure DevOps CI/CD</span>
           </div>
           <div class="arch-spec-item">
             <h4>Key Infrastructure Features</h4>
             <ul>
-              <li><strong>Multi-Environment:</strong> Modular HCL scripts for automated provisioning of Dev, Staging, and Prod environments.</li>
-              <li><strong>Secure Networking:</strong> Dedicated VNet topology, subnets, NSGs, NAT Gateway, Application Gateway, and Bastion Host.</li>
-              <li><strong>Remote Backend & Secrets:</strong> Azure Storage Blob state locking and Azure Key Vault for zero-trust secret rotation.</li>
+              <li><strong>3-Tier Isolation:</strong> Architected & deployed modular 3-tier infrastructure (Web, App, DB) across isolated subnets using reusable Terraform scripts.</li>
+              <li><strong>Zero-Trust Security:</strong> Zero-trust NSG rules and Azure Bastion for private VM administration without exposing public IPs.</li>
+              <li><strong>Azure DevOps Automation:</strong> Built multi-stage Azure DevOps pipelines, reducing manual deployment effort by 40% with 99% rollout reliability.</li>
             </ul>
           </div>
         </div>`
     },
     cicd_automation: {
-      title: "CI/CD Deployment Automation Pipeline",
-      tag: "DevSecOps & Automated Release",
+      title: "Automated Infrastructure CI/CD & PR Validation Pipeline",
+      tag: "DevSecOps & tfsec / TFLint Gates",
       url: "https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline",
       content: `
         <div class="arch-spec-box">
-          <span class="arch-badge">✓ Verified End-to-End Pipeline Spec</span>
+          <span class="arch-badge">✓ Verified DevSecOps PR Pipeline Spec</span>
           <div class="arch-spec-flow">
-            <span class="flow-node">GitHub / Azure Repos</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Multi-Stage Docker</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Artifact Publishing</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">Azure VM Release</span>
+            <span class="flow-node">Pull Request Trigger</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">tfsec & TFLint Gates</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Speculative Plan Run</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">DEV & QA Approval Gate</span>
           </div>
           <div class="arch-spec-item">
-            <h4>Key Pipeline & Release Features</h4>
+            <h4>Key Pipeline & Security Features</h4>
             <ul>
-              <li><strong>Decoupled Pipelines:</strong> Dedicated Azure DevOps YAML workflows for FastAPI Python backend and ReactJS frontend.</li>
-              <li><strong>Production Dockerization:</strong> Multi-stage builds with GPG keyring management, Microsoft SQL ODBC drivers, and Nginx.</li>
-              <li><strong>Automated VM Releases:</strong> Deployment to Azure DevOps Virtual Machine Environments (dev-env) with systemd service reloads.</li>
+              <li><strong>PR Validation:</strong> Branch-driven CI/CD pipeline triggered on Pull Requests automating Terraform validation and speculative plan runs.</li>
+              <li><strong>Shift-Left Quality Gates:</strong> Integrated tfsec & TFLint into pipeline gates to block hardcoded credentials and open ingress ports.</li>
+              <li><strong>Approval Workflows:</strong> Multi-stage DEV and QA approval workflows reducing rollback rates and speeding up PR reviews by 30%.</li>
             </ul>
           </div>
         </div>`
     },
     aks_provisioning: {
       title: "Azure AKS Provisioning & Workload Deployment",
-      tag: "Kubernetes & Modular Provisioning",
-      url: "https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment",
+      tag: "Kubernetes & Modular Terraform HCL",
+      url: "https://github.com/Pjaisw1103/azure-aks-terraform-provisioning",
       content: `
         <div class="arch-spec-box">
           <span class="arch-badge">✓ Verified K8s Provisioning & Workload Spec</span>
@@ -512,14 +511,60 @@ document.addEventListener("DOMContentLoaded", () => {
             <span class="flow-node">Terraform Module</span> <span class="flow-arrow">➔</span>
             <span class="flow-node">Azure AKS + ACR</span> <span class="flow-arrow">➔</span>
             <span class="flow-node">AcrPull RBAC</span> <span class="flow-arrow">➔</span>
-            <span class="flow-node">K8s Dev & QA Workloads</span>
+            <span class="flow-node">Cloud-Native Manifests</span>
           </div>
           <div class="arch-spec-item">
             <h4>Key Kubernetes & Cloud Features</h4>
             <ul>
-              <li><strong>Generic IaC Module:</strong> Reusable parameterizable module (`modules/aks`) provisioning AKS cluster & ACR container registry.</li>
-              <li><strong>RBAC Integration:</strong> Automatic `AcrPull` role assignment for AKS Kubelet Managed Identity.</li>
-              <li><strong>Cloud-Native Manifests:</strong> Multi-namespace isolation, HA 3-replica Deployments, RollingUpdate zero-downtime, PVC managed disks, and ingress Network Policies.</li>
+              <li><strong>Generic IaC Module:</strong> Reusable parameterizable Terraform HCL module provisioning Azure AKS cluster & ACR.</li>
+              <li><strong>RBAC Role Integration:</strong> Automatic AcrPull role assignment linking AKS Kubelet Managed Identity to ACR.</li>
+              <li><strong>Workloads & Security:</strong> Multi-namespace isolation, HA 3-replica Deployments, RollingUpdate zero-downtime, PVC managed disks, and ingress Network Policies.</li>
+            </ul>
+          </div>
+        </div>`
+    },
+    azure_services: {
+      title: "Modular Azure Infrastructure Services Repositories",
+      tag: "Bastion, Load Balancers, VMs",
+      url: "https://github.com/Pjaisw1103/Azurerm_Bastion",
+      content: `
+        <div class="arch-spec-box">
+          <span class="arch-badge">✓ Verified Modular Infrastructure Modules</span>
+          <div class="arch-spec-flow">
+            <span class="flow-node">Bastion Module</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Load Balancer Module</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Ubuntu VM Module</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Remote Blob Locking</span>
+          </div>
+          <div class="arch-spec-item">
+            <h4>Key Modular Services</h4>
+            <ul>
+              <li><strong>Azurerm_Bastion:</strong> Modular Terraform script provisioning secure Azure Bastion Host for private VM administration.</li>
+              <li><strong>Azurerm_Loadbalancer:</strong> Enterprise Azure Load Balancers configuring backend pools, health probes, and NAT rules.</li>
+              <li><strong>Azurerm_Virtual_Machine:</strong> Automated Linux VM provisioning with SSH key pairs and remote state locking.</li>
+            </ul>
+          </div>
+        </div>`
+    },
+    k8s_workloads: {
+      title: "Kubernetes Microservices & Zero-Trust Network Policies",
+      tag: "Cloud-Native Manifests & Security",
+      url: "https://github.com/Pjaisw1103/k8s-network-policies",
+      content: `
+        <div class="arch-spec-box">
+          <span class="arch-badge">✓ Verified Cloud-Native K8s Workload Specs</span>
+          <div class="arch-spec-flow">
+            <span class="flow-node">Network Policies</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">Microservice Pods</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">ReplicaSets & HPA</span> <span class="flow-arrow">➔</span>
+            <span class="flow-node">PVC Storage Binding</span>
+          </div>
+          <div class="arch-spec-item">
+            <h4>Key Manifest Capabilities</h4>
+            <ul>
+              <li><strong>k8s-network-policies:</strong> Zero-trust network policies enforcing pod-to-pod ingress and egress traffic restrictions.</li>
+              <li><strong>k8s-deployments & pods:</strong> Declarative K8s manifests for microservice pod scaling, ReplicaSets, and rolling updates.</li>
+              <li><strong>k8s-persistent-volume:</strong> Persistent Volume Claims (PVC) binding Azure managed disks to stateful applications.</li>
             </ul>
           </div>
         </div>`

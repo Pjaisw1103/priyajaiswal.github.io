@@ -14,39 +14,47 @@ Modern, high-impact, luxury obsidian black & signature gold engineering portfoli
 
 | Metric / Criteria | Details |
 | :--- | :--- |
-| 🎯 **Target Role** | Entry-Level / Fresher Azure Cloud, DevOps & DevSecOps Engineer |
+| 🎯 **Target Role** | Azure Cloud, DevOps & DevSecOps Engineer |
 | ⚡ **Notice Period** | **0 Days (Immediate Joiner)** |
 | 🎓 **Academic Record** | **B.Tech Computer Science & Engineering** (CGPA: 8.43 / 10) — AKTU |
-| 💼 **Internship Experience** | **1 Year DevOps Internship** at DevOps Insiders (2024 – 2025) |
-| 🛠️ **Primary Technical Stack** | Azure Cloud, Terraform HCL, Docker, AKS Kubernetes, Azure DevOps, SonarQube, Checkov, Linux |
-| 📍 **Preferred Locations** | **Noida · Delhi · Lucknow · Remote** (Pan-India Ready) |
+| 💼 **Internship Experience** | **DevOps Engineer Intern** at DevOps Insiders (Jan 2026 – June 2026) |
+| 🛠️ **Primary Technical Stack** | Azure Cloud, Terraform IaC, tfsec, TFLint, Azure DevOps, Docker, Linux, Git |
+| 📍 **Preferred Locations** | **Noida · Lucknow · Pune · Remote** (Pan-India Ready) |
 
 ---
 
 ## 🌟 Key Portfolio Highlights
 
 - **✨ Obsidian Black & Signature Gold Luxury Theme**: Premium `#000000` dark mode UI with gold `#ffc200` accents, Maven Pro typography, glassmorphism navbar, and glowing `🟢 Open to Work` status.
-- **💻 Interactive Live Terminal Simulation**: Real-time Azure DevOps deployment command console (`terraform apply`, `checkov`, `sonarqube_quality_gate`).
-- **🛂 Compact Work Authorization & Location Flex**: Verified Indian Citizenship, 0-day notice period, and multi-city readiness (Noida, Delhi, Lucknow, Remote).
-- **🛠️ Interactive Technical Toolbox (Skills)**: Categorized technical pillars with interactive modal popups detailing sub-services (*AKS, VNet, Key Vault, HCL modules, SAST gates, Helm*).
-- **🎠 Production Projects Swiper Carousel**: Responsive project cards featuring enterprise architecture specs and GitHub repo links.
-- **📩 Direct Recruiter Contact Form**: WhatsApp direct chat, direct email link, and Formspree query routing to `priyajaisw9554@gmail.com`.
+- **💻 Interactive Live Terminal Simulation**: Real-time Azure DevOps deployment command console (`terraform apply`, `tfsec`, `tflint`).
+- **🛂 Compact Work Authorization & Location Flex**: Verified Indian Citizenship, 0-day notice period, and multi-city readiness (Noida, Lucknow, Pune, Remote).
+- **🛠️ Interactive Technical Toolbox (Skills)**: Categorized technical pillars (Cloud Platform, Infrastructure as Code, CI/CD, Security & Quality, Containers & OS, Networking).
+- **🎠 Production Projects Swiper Carousel**: Responsive project cards featuring architecture specs and GitHub repo links.
+- **📩 Direct Contact & Inquiry Form**: Direct email link, LinkedIn profile link, and Formspree query routing to `priyajaisw9554@gmail.com`.
 
 ---
 
 ## 🛠️ Featured Resume Repositories
 
-1. 🌐 **[Multi-Environment Azure Infrastructure Setup](https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup)**
-   - *Tech Stack*: Azure Cloud, Terraform HCL, Azure DevOps, NAT Gateway, Application Gateway, Bastion, Azure SQL.
-   - *Overview*: Automated multi-environment (Dev, Staging, Prod) 3-tier enterprise Azure infrastructure using modular Terraform & Azure DevOps CI/CD pipelines.
+1. 🌐 **[Secure 3-Tier Web Application Infrastructure on Azure](https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup)**
+   - *Tech Stack*: Azure Cloud, Terraform, CI/CD, Load Balancer, VNets, Subnets, Bastion Host.
+   - *Overview*: Architected and deployed a modular 3-tier infrastructure (Web, App, DB tiers) across isolated subnets using reusable Terraform scripts and zero-trust NSG rules.
 
-2. 🚀 **[CI/CD Deployment Automation Pipeline](https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline)**
-   - *Tech Stack*: Azure DevOps YAML, Docker, Python 3.10 FastAPI, ReactJS 18, Nginx, Azure VM Environments.
-   - *Overview*: End-to-end decoupled CI/CD pipelines for multi-stage containerized Todo application with automated release to Azure Virtual Machine Environments.
+2. 🚀 **[Automated Infrastructure CI/CD & PR Validation Pipeline](https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline)**
+   - *Tech Stack*: Azure DevOps, GitHub Actions, tfsec, TFLint, YAML.
+   - *Overview*: Engineered a branch-driven CI/CD pipeline triggered on Pull Requests to automate Terraform validation, tfsec security scanning, and TFLint gates.
 
-3. ☸️ **[Azure AKS Provisioning & Workload Deployment](https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment)**
-   - *Tech Stack*: Azure AKS, ACR, Terraform Modules, Kubernetes Pods/Deployments, AcrPull RBAC, Network Policies.
-   - *Overview*: Provisioned production Azure AKS & ACR via generic reusable Terraform modules with RBAC integration, multi-namespace isolation, and zero-downtime rolling updates.
+3. ☸️ **[Azure AKS Provisioning & Workload Deployment](https://github.com/Pjaisw1103/azure-aks-terraform-provisioning)**
+   - *Tech Stack*: Azure AKS, ACR, Terraform Modules, AcrPull RBAC, Kubernetes Manifests.
+   - *Overview*: Provisioned production Azure AKS & ACR via generic reusable Terraform modules with RBAC integration, multi-namespace isolation, and rolling updates.
+
+4. 📦 **[Modular Azure Infrastructure Services](https://github.com/Pjaisw1103/Azurerm_Bastion)**
+   - *Tech Stack*: Terraform HCL, Azure Bastion, Load Balancers, Virtual Machines, Blob Remote State.
+   - *Overview*: Dedicated modular HCL repositories for Azure Bastion, Azure Load Balancers, and Ubuntu Virtual Machines with state locking.
+
+5. 🛡️ **[Kubernetes Microservices & Network Security Policies](https://github.com/Pjaisw1103/k8s-network-policies)**
+   - *Tech Stack*: Kubernetes, Network Policies, Pods, Deployments, ReplicaSets, PVC Storage.
+   - *Overview*: Cloud-native manifests enforcing zero-trust pod network isolation policies, persistent volume binding, and rolling updates.
 
 ---
 

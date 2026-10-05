@@ -177,7 +177,13 @@
       color: var(--gold);
       font-weight: 900;
       font-size: .92rem;
-      box-shadow: 0 0 12px rgba(255, 194, 0, .3)
+      box-shadow: 0 0 12px rgba(255, 194, 0, .3);
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    }
+
+    .navbar-brand:hover .brand-badge, .brand-badge:hover {
+      transform: rotate(360deg) scale(1.12);
+      box-shadow: 0 0 22px rgba(255, 194, 0, .6);
     }
 
     .navbar-collapse {
@@ -195,16 +201,21 @@
       font-size: .95rem;
       padding: .5rem 1rem !important;
       border-radius: 999px;
-      transition: all .3s ease;
+      transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
       border: 1px solid transparent
     }
 
     .nav-link:hover,
     .nav-link.active {
       color: var(--gold) !important;
-      background: rgba(255, 194, 0, .12);
-      border-color: rgba(255, 194, 0, .25);
-      transform: translateY(-1px)
+      background: rgba(255, 194, 0, .15);
+      border-color: rgba(255, 194, 0, .35);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 15px rgba(255, 194, 0, 0.2);
+    }
+
+    .nav-link:active {
+      transform: scale(0.96);
     }
 
     .navbar-toggler {
@@ -347,7 +358,7 @@
       overflow: hidden;
       position: relative;
       margin-bottom: 20px;
-      min-width: 300px
+      min-width: 320px
     }
 
     .animated-item {
@@ -359,32 +370,18 @@
       left: 0;
       right: 0;
       opacity: 0;
-      animation: cycle 6s linear infinite
+      animation: cycle 8s linear infinite
     }
 
-    .animated-item:nth-child(2) {
-      animation-delay: 3s
-    }
+    .animated-item:nth-child(1) { animation-delay: 0s }
+    .animated-item:nth-child(2) { animation-delay: 2s }
+    .animated-item:nth-child(3) { animation-delay: 4s }
+    .animated-item:nth-child(4) { animation-delay: 6s }
 
     @keyframes cycle {
-
-      0%,
-      5% {
-        opacity: 0;
-        transform: translateY(20px)
-      }
-
-      15%,
-      45% {
-        opacity: 1;
-        transform: translateY(0)
-      }
-
-      55%,
-      100% {
-        opacity: 0;
-        transform: translateY(-20px)
-      }
+      0% { opacity: 0; transform: translateY(20px) }
+      4%, 22% { opacity: 1; transform: translateY(0) }
+      26%, 100% { opacity: 0; transform: translateY(-20px) }
     }
 
     .hero-lead {
@@ -409,23 +406,30 @@
       color: #fff;
       font-size: .82rem;
       font-weight: 700;
-      padding: 5px 14px;
+      padding: 6px 16px;
       border-radius: 50px;
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: all .25s
-    }
-
-    .tech-pill:hover {
-      background: var(--gold-light);
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-2px)
+      transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
     }
 
     .tech-pill i {
-      color: var(--gold)
+      color: var(--gold);
+      transition: transform 0.3s ease;
+    }
+
+    .tech-pill:hover, .tech-pill:active {
+      background: var(--gold-light);
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-4px) scale(1.06);
+      box-shadow: 0 8px 20px rgba(255, 194, 0, 0.35);
+    }
+
+    .tech-pill:hover i {
+      transform: scale(1.3) rotate(12deg);
     }
 
     .btn-hero {
@@ -467,6 +471,28 @@
       transform: translateY(-3px)
     }
 
+    .social-icon-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid var(--border);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold) !important;
+      font-size: 1.15rem;
+      transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .social-icon-btn:hover, .social-icon-btn:active {
+      background: var(--gold-light);
+      border-color: var(--gold);
+      color: var(--gold) !important;
+      transform: translateY(-4px) scale(1.15) rotate(6deg);
+      box-shadow: 0 8px 24px rgba(255, 194, 0, .45);
+    }
+
     .hero-terminal {
       width: 100%;
       max-width: 460px;
@@ -474,7 +500,15 @@
       border: 1.5px solid var(--border);
       box-shadow: 0 0 45px rgba(255, 194, 0, .25);
       background: rgba(10, 10, 10, .9);
-      overflow: hidden
+      overflow: hidden;
+      transition: all .4s cubic-bezier(0.25, 1, 0.5, 1);
+      cursor: pointer;
+    }
+
+    .hero-terminal:hover {
+      box-shadow: 0 0 60px rgba(255, 194, 0, .45), 0 15px 35px rgba(0, 0, 0, 0.8);
+      transform: translateY(-5px) scale(1.02);
+      border-color: var(--gold);
     }
 
     .terminal-header {
@@ -704,17 +738,17 @@
       width: 100%
     }
 
-    .contact-wa-btn {
-      background: rgba(37, 211, 102, .12);
-      border-color: rgba(37, 211, 102, .4);
-      color: #25d366 !important
+    .contact-call-btn {
+      background: rgba(255, 194, 0, .12);
+      border-color: rgba(255, 194, 0, .4);
+      color: var(--gold) !important
     }
 
-    .contact-wa-btn:hover {
-      background: #25d366;
-      color: #fff !important;
+    .contact-call-btn:hover {
+      background: var(--gold);
+      color: #181818 !important;
       transform: translateY(-4px);
-      box-shadow: 0 10px 30px rgba(37, 211, 102, .4)
+      box-shadow: 0 10px 30px rgba(255, 194, 0, .4)
     }
 
     .contact-mail-btn {
@@ -839,7 +873,7 @@
               Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#experiences"><i class="fa-solid fa-timeline me-1"></i>
               Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa-solid fa-envelope me-1"></i> Hire Me</a>
+          <li class="nav-item"><a class="nav-link" href="#contact"><i class="fa-solid fa-envelope me-1"></i> Contact</a>
           </li>
         </ul>
       </div>
@@ -860,7 +894,7 @@
       <div class="row align-items-center g-4">
         <div class="col-lg-7" data-aos="fade-right">
           <div class="hero-badge">
-            <i class="fa-solid fa-circle-check"></i> Entry-Level / Fresher · Azure Cloud & DevOps Engineer
+            <i class="fa-solid fa-circle-check"></i> Azure Cloud & DevOps Engineer
           </div>
 
           <h1 class="hero-name">Hi, I'm <span class="pj">Priya Jaiswal</span></h1>
@@ -868,21 +902,21 @@
           <div class="animated-info">
             <div class="animated-item">Azure Cloud Engineer</div>
             <div class="animated-item">DevOps & DevSecOps Engineer</div>
+            <div class="animated-item">Terraform IaC Specialist</div>
+            <div class="animated-item">CI/CD Pipeline Architect</div>
           </div>
 
           <p class="hero-lead">
-            Computer Science Engineering graduate with hands-on internship experience at <strong>DevOps
-              Insiders</strong>. Architecting automated Azure cloud infrastructure using modular Terraform HCL, AKS
-            Kubernetes clusters, and shift-left CI/CD security quality gates.
+            Computer Science graduate with hands-on internship experience in <strong>Microsoft Azure cloud infrastructure</strong>, <strong>Terraform IaC</strong>, and <strong>Azure DevOps CI/CD</strong>. Specialized in provisioning modular 3-tier cloud environments, automating zero-drift deployments, and embedding shift-left security scans (<strong>tfsec</strong>, <strong>TFLint</strong>).
           </p>
 
           <!-- Core Tech Keyword Badges -->
           <div class="tech-pill-list">
             <span class="tech-pill"><i class="fa-solid fa-cloud"></i> Microsoft Azure</span>
-            <span class="tech-pill"><i class="fa-solid fa-cubes"></i> Terraform HCL</span>
+            <span class="tech-pill"><i class="fa-solid fa-cubes"></i> Terraform IaC</span>
             <span class="tech-pill"><i class="fa-brands fa-docker"></i> Docker & AKS</span>
-            <span class="tech-pill"><i class="fa-solid fa-shield-cat"></i> SonarQube & Checkov</span>
-            <span class="tech-pill"><i class="fa-brands fa-github"></i> CI/CD Pipelines</span>
+            <span class="tech-pill"><i class="fa-solid fa-shield-cat"></i> tfsec & TFLint</span>
+            <span class="tech-pill"><i class="fa-brands fa-github"></i> Azure DevOps CI/CD</span>
             <span class="tech-pill"><i class="fa-solid fa-terminal"></i> Linux Ubuntu</span>
           </div>
 
@@ -891,20 +925,14 @@
               <i class="fa-solid fa-download"></i> Download Resume (PDF)
             </a>
             <a class="btn-hero btn-hero-outline" href="#contact">
-              <i class="fa-solid fa-paper-plane"></i> Contact Candidate
+              <i class="fa-solid fa-paper-plane"></i> Get In Touch
             </a>
           </div>
 
           <div class="d-flex align-items-center gap-3">
-            <a href="https://wa.me/918840610240?text=Hi%20Priya,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity!"
-              target="_blank" class="text-warning fs-4" title="Chat on WhatsApp"><i
-                class="fa-brands fa-whatsapp"></i></a>
-            <a href="mailto:priyajaisw9554@gmail.com" class="text-warning fs-4" title="Send Direct Email"><i
-                class="fa-solid fa-envelope"></i></a>
-            <a href="https://github.com/Pjaisw1103" target="_blank" class="text-warning fs-4"
-              title="GitHub Repository"><i class="fa-brands fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank" class="text-warning fs-4"
-              title="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:priyajaisw9554@gmail.com" class="social-icon-btn" title="Send Direct Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com/Pjaisw1103" target="_blank" class="social-icon-btn" title="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank" class="social-icon-btn" title="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
           </div>
         </div>
 
@@ -923,10 +951,10 @@
               <div class="text-success">✓ azurerm_resource_group.rg: Created [0s]</div>
               <div class="text-success">✓ azurerm_virtual_network.vnet: Created [4s]</div>
               <div class="text-success">✓ azurerm_kubernetes_cluster.aks: Created [42s]</div>
-              <div class="text-info">$ checkov -d ./terraform --framework terraform</div>
-              <div class="text-success">✓ Passed checks: 24, Failed: 0</div>
-              <div class="text-warning">$ sonarqube_quality_gate --status</div>
-              <div class="text-success">✓ Quality Gate Status: PASSED</div>
+              <div class="text-info">$ tfsec ./terraform --soft-fail=false</div>
+              <div class="text-success">✓ Passed security checks: 24, Vulnerabilities: 0</div>
+              <div class="text-warning">$ tflint --init && tflint</div>
+              <div class="text-success">✓ IaC Linting Status: PASSED</div>
             </div>
           </div>
         </div>
@@ -940,32 +968,23 @@
       <div class="section-head" data-aos="fade-up">
         <span class="section-tag">PROFESSIONAL PROFILE</span>
         <h2><i class="fa-solid fa-user"></i> About <span>Me</span></h2>
-        <p>Fresher Computer Science Engineer specializing in Azure Cloud, DevOps & DevSecOps.</p>
+        <p>Computer Science Engineering graduate specializing in Azure Cloud, Terraform IaC, and CI/CD Automation.</p>
       </div>
 
       <div class="row g-4 justify-content-center" data-aos="fade-up">
         <div class="col-lg-6">
           <div class="about-card">
-            <h4 class="text-warning fw-bold mb-3"><i class="fa-solid fa-code-branch me-2"></i> Engineering Background
-            </h4>
-            <p>Fresher Computer Science & Engineering graduate eager to launch a career in <strong>Azure Cloud
-                Infrastructure</strong>, <strong>Terraform IaC Automation</strong>, <strong>AKS Kubernetes
-                Containerization</strong>, and <strong>DevSecOps Shift-Left Security</strong>.</p>
-            <p>My technical focus centers on provisioning immutable, zero-downtime Azure environments, enforcing
-              SonarQube & Checkov security quality gates in CI/CD pipelines, and multi-stage Docker containerization.
-            </p>
+            <h4 class="text-warning fw-bold mb-3"><i class="fa-solid fa-code-branch me-2"></i> Professional Summary</h4>
+            <p>Computer Science graduate with hands-on internship experience in <strong>Microsoft Azure cloud infrastructure</strong>, <strong>Terraform IaC</strong>, and <strong>CI/CD automation</strong>.</p>
+            <p>Skilled in provisioning modular multi-tier cloud environments, setting up automated pipelines in Azure DevOps, and integrating shift-left security checks (tfsec, TFLint). Dedicated to infrastructure governance, zero-drift deployments, and reliable cloud operations.</p>
           </div>
         </div>
 
         <div class="col-lg-6">
           <div class="about-card">
-            <h4 class="text-warning fw-bold mb-3"><i class="fa-solid fa-shield-halved me-2"></i> Internship Foundation
-            </h4>
-            <p>During my 1-year DevOps internship at <strong>DevOps Insiders</strong>, I gained practical hands-on
-              experience authoring modular HCL scripts, configuring Azure Blob remote state locking, private VNets, and
-              Azure Key Vault secret integration.</p>
-            <p>Eager to apply my strong academic background and internship learning as an entry-level Azure Cloud &
-              DevOps Engineer, bringing a proactive learning attitude and 100% dedication.</p>
+            <h4 class="text-warning fw-bold mb-3"><i class="fa-solid fa-shield-halved me-2"></i> Internship & Focus Area</h4>
+            <p>During my DevOps Engineer Internship at <strong>DevOps Insiders</strong> (Jan 2026 – June 2026), I provisioned core Azure resources (VNets, Subnets, Bastion Host, VMs, Storage Accounts, NSGs) using modular Terraform, speeding up setup time by 15% and configuring remote state locking on Azure Blob Storage.</p>
+            <p>I engineered multi-stage Azure DevOps YAML pipelines, integrated automated security scanning (tfsec & TFLint), managed Git workflows, performed root-cause analysis (RCA), and authored Bash maintenance scripts on Ubuntu instances.</p>
           </div>
         </div>
       </div>
@@ -1049,15 +1068,15 @@
       <div class="section-head" data-aos="fade-up">
         <span class="section-tag">CORE COMPETENCIES</span>
         <h2><i class="fa-solid fa-gears"></i> Technical <span>Toolbox</span></h2>
-        <p>Click on any skill card to inspect sub-services, tools, and enterprise capabilities.</p>
+        <p>Click on any skill card to inspect sub-services, tools, and enterprise capabilities based on latest resume.</p>
       </div>
 
       <div class="row g-3 justify-content-center">
         <div class="col-md-4 col-sm-6" data-aos="zoom-in">
           <div class="skill-expand-card" onclick="openSkillModal('azure')">
             <i class="fa-solid fa-cloud text-warning fs-2 mb-2"></i>
-            <h5 class="text-white fw-bold mb-1">Microsoft Azure</h5>
-            <small class="text-muted">AKS, VNet, Blob Storage, Key Vault</small>
+            <h5 class="text-white fw-bold mb-1">Cloud Platform</h5>
+            <small class="text-muted">Microsoft Azure, VNets, Subnets, VMs, Bastion, Blob Storage, Load Balancer</small>
             <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
           </div>
         </div>
@@ -1065,17 +1084,17 @@
         <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="100">
           <div class="skill-expand-card" onclick="openSkillModal('terraform')">
             <i class="fa-solid fa-cubes text-warning fs-2 mb-2"></i>
-            <h5 class="text-white fw-bold mb-1">Terraform IaC</h5>
-            <small class="text-muted">Modular HCL, Remote State Locking</small>
+            <h5 class="text-white fw-bold mb-1">Infrastructure as Code</h5>
+            <small class="text-muted">Terraform, Reusable Modules, Remote State Locking, Variables, Providers</small>
             <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
           </div>
         </div>
 
         <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="200">
-          <div class="skill-expand-card" onclick="openSkillModal('docker_k8s')">
-            <i class="fa-brands fa-docker text-warning fs-2 mb-2"></i>
-            <h5 class="text-white fw-bold mb-1">Docker & AKS</h5>
-            <small class="text-muted">Kubernetes Manifests, Microservices</small>
+          <div class="skill-expand-card" onclick="openSkillModal('cicd')">
+            <i class="fa-brands fa-github text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">CI/CD & Automation</h5>
+            <small class="text-muted">Azure DevOps (YAML Pipelines), GitHub Actions, Git Workflows</small>
             <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
           </div>
         </div>
@@ -1083,26 +1102,26 @@
         <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="300">
           <div class="skill-expand-card" onclick="openSkillModal('devsecops')">
             <i class="fa-solid fa-shield-cat text-warning fs-2 mb-2"></i>
-            <h5 class="text-white fw-bold mb-1">SonarQube & Checkov</h5>
-            <small class="text-muted">DevSecOps Shift-Left Security</small>
+            <h5 class="text-white fw-bold mb-1">Security & Quality</h5>
+            <small class="text-muted">tfsec (Security Analysis), TFLint (IaC Linting), Shift-Left Security</small>
             <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
           </div>
         </div>
 
         <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="400">
-          <div class="skill-expand-card" onclick="openSkillModal('cicd')">
-            <i class="fa-brands fa-github text-warning fs-2 mb-2"></i>
-            <h5 class="text-white fw-bold mb-1">CI/CD Automation</h5>
-            <small class="text-muted">Azure DevOps Pipelines, GitHub Actions</small>
+          <div class="skill-expand-card" onclick="openSkillModal('docker_k8s')">
+            <i class="fa-brands fa-docker text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">Containers & OS</h5>
+            <small class="text-muted">Docker (Multi-stage Builds), Linux (Ubuntu Administration)</small>
             <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
           </div>
         </div>
 
         <div class="col-md-4 col-sm-6" data-aos="zoom-in" data-aos-delay="500">
-          <div class="skill-expand-card" onclick="openSkillModal('linux')">
-            <i class="fa-solid fa-terminal text-warning fs-2 mb-2"></i>
-            <h5 class="text-white fw-bold mb-1">Linux & Bash</h5>
-            <small class="text-muted">Ubuntu Admin, Shell Automation</small>
+          <div class="skill-expand-card" onclick="openSkillModal('networking')">
+            <i class="fa-solid fa-network-wired text-warning fs-2 mb-2"></i>
+            <h5 class="text-white fw-bold mb-1">Networking & Protocols</h5>
+            <small class="text-muted">Subnets, Network Security Groups (NSGs), Inbound/Outbound Rules, SSH</small>
             <div class="click-hint"><i class="fa-solid fa-hand-pointer me-1"></i> Click to inspect tools &rarr;</div>
           </div>
         </div>
@@ -1114,9 +1133,9 @@
   <section id="projects">
     <div class="container">
       <div class="section-head" data-aos="fade-up">
-        <span class="section-tag">PRACTICAL IMPLEMENTATIONS</span>
-        <h2><i class="fa-solid fa-laptop-code"></i> Production <span>Projects</span></h2>
-        <p>Click on any project card to view complete architecture breakdown, cloud services, and security gates.</p>
+        <span class="section-tag">FEATURED IMPLEMENTATIONS & ARCHITECTURE</span>
+        <h2><i class="fa-solid fa-laptop-code"></i> Featured <span>Projects</span></h2>
+        <p>Architectural breakdowns and hands-on cloud infrastructure automation projects.</p>
       </div>
 
       <div class="swiper projects-swiper" data-aos="fade-up">
@@ -1126,13 +1145,13 @@
           <div class="swiper-slide">
             <div class="project-card w-100" onclick="openProjectModal('multi_env_azure')">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">Azure IaC</span>
+                <span class="badge bg-warning text-dark font-weight-bold">Azure IaC & Cloud</span>
                 <small class="text-muted">Terraform & Azure DevOps</small>
               </div>
               <div class="project-card-body">
                 <div>
-                  <h5>Multi-Environment Azure Infrastructure Setup</h5>
-                  <p>Automated 3-Tier enterprise Azure infrastructure (Dev, Staging, Prod) using modular Terraform HCL & Azure DevOps CI/CD pipelines with NAT Gateway, App Gateway, Bastion & SQL Server.</p>
+                  <h5>Secure 3-Tier Web Application Infrastructure on Azure</h5>
+                  <p>Architected & deployed a modular 3-tier infrastructure (Web, App, DB tiers) across isolated subnets using reusable Terraform scripts, zero-trust NSG rules, Azure Bastion, and Azure DevOps multi-stage pipelines.</p>
                 </div>
                 <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
                   <i class="fa-solid fa-network-wired me-1"></i> View Architecture Specs
@@ -1145,13 +1164,13 @@
           <div class="swiper-slide">
             <div class="project-card w-100" onclick="openProjectModal('cicd_automation')">
               <div class="project-card-header">
-                <span class="badge bg-warning text-dark font-weight-bold">DevSecOps</span>
-                <small class="text-muted">Docker & CI/CD</small>
+                <span class="badge bg-warning text-dark font-weight-bold">DevSecOps & CI/CD</span>
+                <small class="text-muted">tfsec & TFLint Gates</small>
               </div>
               <div class="project-card-body">
                 <div>
-                  <h5>CI/CD Deployment Automation Pipeline</h5>
-                  <p>End-to-end decoupled Azure DevOps CI/CD pipelines orchestrating build, test, multi-stage Docker containerization (FastAPI + ReactJS + Nginx), and release to Virtual Machine Environments.</p>
+                  <h5>Automated Infrastructure CI/CD & PR Validation Pipeline</h5>
+                  <p>Engineered a branch-driven Azure DevOps & GitHub Actions CI/CD pipeline triggered on PRs to automate Terraform validation, tfsec security scanning, TFLint checks, and speculative plan runs with multi-stage approval gates.</p>
                 </div>
                 <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
                   <i class="fa-solid fa-shield-halved me-1"></i> View Architecture Specs
@@ -1170,7 +1189,45 @@
               <div class="project-card-body">
                 <div>
                   <h5>Azure AKS Provisioning & Workload Deployment</h5>
-                  <p>Provisioned Azure AKS cluster & ACR using generic reusable Terraform modules with AcrPull RBAC role assignment, multi-namespace isolation, rolling updates, PVC storage, and network policies.</p>
+                  <p>Provisioned Azure AKS cluster & ACR using generic reusable Terraform HCL modules with AcrPull RBAC role assignment, multi-namespace isolation, rolling updates, PVC storage, and network policies.</p>
+                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-cubes me-1"></i> View Architecture Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="swiper-slide">
+            <div class="project-card w-100" onclick="openProjectModal('azure_services')">
+              <div class="project-card-header">
+                <span class="badge bg-warning text-dark font-weight-bold">Modular IaC</span>
+                <small class="text-muted">Bastion, Load Balancers, VMs</small>
+              </div>
+              <div class="project-card-body">
+                <div>
+                  <h5>Modular Azure Infrastructure Services Repositories</h5>
+                  <p>Developed isolated modular Terraform HCL repositories for Azure Bastion host administration, Azure Load Balancers, and Ubuntu VM instances with remote state locking on Azure Blob Storage.</p>
+                </div>
+                <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
+                  <i class="fa-solid fa-server me-1"></i> View Architecture Specs
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5 -->
+          <div class="swiper-slide">
+            <div class="project-card w-100" onclick="openProjectModal('k8s_workloads')">
+              <div class="project-card-header">
+                <span class="badge bg-warning text-dark font-weight-bold">Cloud-Native</span>
+                <small class="text-muted">Network Policies & PVCs</small>
+              </div>
+              <div class="project-card-body">
+                <div>
+                  <h5>Kubernetes Microservices & Zero-Trust Network Policies</h5>
+                  <p>Created declarative Kubernetes manifests for microservices deployments, zero-trust pod network isolation policies, persistent volume claims (PVC), ReplicaSets, and rolling update strategies.</p>
                 </div>
                 <button class="btn-hero btn-hero-primary py-2 px-3 fs-6 mt-2 border-0 w-100 justify-content-center">
                   <i class="fa-solid fa-chart-line me-1"></i> View Architecture Specs
@@ -1193,24 +1250,26 @@
       <div class="section-head" data-aos="fade-up">
         <span class="section-tag">CAREER MILESTONES</span>
         <h2><i class="fa-solid fa-timeline"></i> Experience & <span>Education</span></h2>
-        <p>Corporate internship background and academic foundation.</p>
+        <p>Professional internship experience and academic qualifications.</p>
       </div>
 
       <div class="row g-4 justify-content-center">
         <!-- Experience Card -->
         <div class="col-lg-6" data-aos="fade-right">
           <div class="journey-exp-card h-100">
-            <span class="badge bg-warning text-dark font-weight-bold mb-2">DEVOPS INTERNSHIP (1 YEAR)</span>
-            <div class="text-warning small font-monospace mb-2"><i class="fa-solid fa-calendar me-1"></i> 2024 – 2025
-            </div>
+            <span class="badge bg-warning text-dark font-weight-bold mb-2">DEVOPS ENGINEER INTERNSHIP</span>
+            <div class="text-warning small font-monospace mb-2"><i class="fa-solid fa-calendar me-1"></i> Jan 2026 – June 2026</div>
             <h4 class="text-white fw-bold mb-1">DevOps Engineer Intern</h4>
-            <div class="text-warning font-weight-bold mb-3">DevOps Insiders</div>
+            <div class="text-warning font-weight-bold mb-3">DevOps Insiders (Remote, India)</div>
 
             <ul class="bullet-list">
-              <li>Provisioned production Azure infrastructure using modular Terraform HCL scripts.</li>
-              <li>Configured Azure Blob Storage backend with remote state locking.</li>
-              <li>Managed Azure Kubernetes Service (AKS) cluster deployments & Docker containerization.</li>
-              <li>Integrated SonarQube & Checkov static code security scanning inside Azure DevOps CI/CD pipelines.</li>
+              <li>Provisioned core Azure resources (VNets, Subnets, Bastion Host, VMs, Storage Accounts, NSGs) using modular Terraform, speeding up setup time by 15%.</li>
+              <li>Configured remote state storage on Azure Blob Storage with distributed state locking, preventing concurrent deployment conflicts across the team.</li>
+              <li>Engineered declarative multi-stage YAML pipelines in Azure DevOps to automate build, testing, and deployment workflows across environments.</li>
+              <li>Integrated automated security checks using <strong>TFLint</strong> for syntax linting and <strong>tfsec</strong> for pre-deployment IaC vulnerability analysis.</li>
+              <li>Managed infrastructure code repositories using Git branching workflows, enforcing PR approvals and authoring deployment runbooks.</li>
+              <li>Conducted root-cause analysis (RCA) on pipeline execution failures and Linux system bottlenecks using build logs to maintain environment stability.</li>
+              <li>Authored reusable Bash maintenance scripts on Ubuntu instances for routine environment setup, health monitoring, and system diagnostics.</li>
             </ul>
           </div>
         </div>
@@ -1219,15 +1278,23 @@
         <div class="col-lg-6" data-aos="fade-left">
           <div class="edu-card h-100">
             <span class="badge bg-warning text-dark font-weight-bold mb-2">GRADUATION (2022 – 2026)</span>
-            <div class="text-warning small font-monospace mb-2"><i class="fa-solid fa-graduation-cap me-1"></i> CGPA:
-              8.43 / 10</div>
-            <h4 class="text-white fw-bold mb-1">B.Tech in Computer Science & Engineering</h4>
-            <div class="text-warning font-weight-bold mb-3">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</div>
+            <div class="text-warning small font-monospace mb-2"><i class="fa-solid fa-graduation-cap me-1"></i> CGPA: 8.43 / 10</div>
+            <h4 class="text-white fw-bold mb-1">B.Tech in Computer Science and Engineering</h4>
+            <div class="text-warning font-weight-bold mb-1">Dr. A.P.J. Abdul Kalam Technical University (AKTU)</div>
+            <div class="text-muted small mb-3">Lucknow, Uttar Pradesh, India</div>
+            
+            <ul class="bullet-list mb-3">
+              <li>Specialization in Azure Cloud Infrastructure, DevOps Pipelines, & Linux Administration.</li>
+              <li>Core coursework: Operating Systems, Computer Networks, Database Management, & Software Security.</li>
+            </ul>
 
+            <hr class="border-secondary my-3">
+
+            <span class="badge bg-outline-warning text-warning border border-warning font-weight-bold mb-2">INTERMEDIATE (PCM) - 2021</span>
+            <h5 class="text-white fw-bold mb-1">Jawahar Navodaya Vidyalaya, Balrampur</h5>
+            <div class="text-muted small mb-2">CBSE Board | Uttar Pradesh, India</div>
             <ul class="bullet-list">
-              <li>Specialized in Cloud Computing, Operating Systems, Computer Networks, & Software Security.</li>
-              <li>Built capstone cloud automation & microservices containerization projects.</li>
-              <li>Maintained top 10% academic standing throughout the B.Tech CSE program.</li>
+              <li>Strong academic foundation in Mathematics, Physics, & Computer Science.</li>
             </ul>
           </div>
         </div>
@@ -1239,9 +1306,9 @@
   <section id="contact">
     <div class="container">
       <div class="section-head" data-aos="fade-up">
-        <span class="section-tag">GET IN TOUCH / HIRE CANDIDATE</span>
-        <h2><i class="fa-solid fa-envelope"></i> Contact <span>Candidate</span></h2>
-        <p>Interested in hiring Priya Jaiswal for Entry-Level Azure Cloud / DevOps roles? Connect directly below.</p>
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2><i class="fa-solid fa-envelope"></i> Contact <span>Me</span></h2>
+        <p>Have an opportunity or question? Feel free to call, email, or send a direct message below.</p>
       </div>
 
       <div class="contact-container" data-aos="fade-up">
@@ -1249,16 +1316,14 @@
         <!-- Direct Contact Action Cards -->
         <div class="row g-3 mb-4">
           <div class="col-md-6">
-            <a class="contact-action-btn contact-wa-btn"
-              href="https://wa.me/918840610240?text=Hi%20Priya,%20I%20reviewed%20your%20portfolio%20and%20would%20like%20to%20discuss%20an%20opportunity!"
-              target="_blank">
-              <i class="fa-brands fa-whatsapp fs-3 me-1"></i> Chat on WhatsApp
+            <a class="contact-action-btn contact-mail-btn" href="mailto:priyajaisw9554@gmail.com">
+              <i class="fa-solid fa-envelope fs-4 me-1"></i> Send Direct Email
             </a>
           </div>
 
           <div class="col-md-6">
-            <a class="contact-action-btn contact-mail-btn" href="mailto:priyajaisw9554@gmail.com">
-              <i class="fa-solid fa-envelope fs-3 me-1"></i> Send Direct Email
+            <a class="contact-action-btn contact-mail-btn" href="https://www.linkedin.com/in/priya-jaiswal1103/" target="_blank">
+              <i class="fa-brands fa-linkedin fs-4 me-1"></i> Connect on LinkedIn
             </a>
           </div>
         </div>
@@ -1266,9 +1331,8 @@
         <!-- Direct Recruiter Inquiry Form (Formspree Email Delivery) -->
         <form class="contact-form" id="queryContactForm" action="https://formspree.io/f/priyajaisw9554@gmail.com"
           method="POST">
-          <h5 class="text-warning fw-bold mb-1"><i class="fa-solid fa-paper-plane me-2"></i> Send Direct Message /
-            Inquiry</h5>
-          <p class="text-muted small mb-3">Messages submitted here go straight to candidate email:
+          <h5 class="text-warning fw-bold mb-1"><i class="fa-solid fa-paper-plane me-2"></i> Send Direct Message</h5>
+          <p class="text-muted small mb-3">Messages submitted here go straight to my email:
             <strong>priyajaisw9554@gmail.com</strong>.</p>
 
           <div class="row g-3 mb-2">
@@ -1401,50 +1465,51 @@
 
       const data = {
         azure: {
-          title: "Microsoft Azure Cloud Services",
+          title: "Cloud Platform — Microsoft Azure",
           html: `<ul class="list-group list-group-flush bg-transparent">
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-cubes text-warning me-2"></i> Azure Kubernetes Service (AKS):</strong> Production cluster orchestration & nodepool autoscaling.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-network-wired text-warning me-2"></i> Azure Virtual Networks (VNet):</strong> Private subnets, Network Security Groups (NSGs), & Peering.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-key text-warning me-2"></i> Azure Key Vault:</strong> Centralized secret management, TLS certificates, & Key Vault secrets integration.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-database text-warning me-2"></i> Azure Blob Storage:</strong> Terraform remote state backend with Blob state locking.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-infinity text-warning me-2"></i> Azure DevOps Services:</strong> Pipelines, Repos, Artifacts, & Environment deployment gates.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-cloud text-warning me-2"></i> Azure VNets & Subnets:</strong> Isolated 3-tier subnets, private/public subnets, & peering.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-server text-warning me-2"></i> Virtual Machines & Bastion:</strong> Secure Azure Bastion host for private VM access without public IP exposure.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-database text-warning me-2"></i> Azure Storage Accounts:</strong> Azure Blob Storage backend with state locking for Terraform.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-network-wired text-warning me-2"></i> Azure Load Balancers:</strong> High-availability load distribution for Web/App tiers.</li>
                 </ul>`
         },
         terraform: {
-          title: "Terraform Infrastructure as Code (IaC)",
+          title: "Infrastructure as Code — Terraform",
           html: `<ul class="list-group list-group-flush bg-transparent">
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-code text-warning me-2"></i> Modular HCL Architecture:</strong> Reusable modules for VNets, Resource Groups, & AKS clusters.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-lock text-warning me-2"></i> Remote State Locking:</strong> Azure Blob Storage backend with state locking protection.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-shield text-warning me-2"></i> Checkov & TFSec:</strong> Automated IaC static security scans checking for misconfigurations.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-folder-tree text-warning me-2"></i> TFLint & Format:</strong> HCL code formatting & linting checks.</li>
-                </ul>`
-        },
-        docker_k8s: {
-          title: "Docker & Kubernetes (AKS) Containers",
-          html: `<ul class="list-group list-group-flush bg-transparent">
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-brands fa-docker text-warning me-2"></i> Multi-Stage Docker Builds:</strong> Ultra-lightweight minimal container images.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-gear text-warning me-2"></i> Kubernetes Manifests:</strong> Deployments, Services, ConfigMaps, Secrets, & PVCs.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-box text-warning me-2"></i> Helm Charts:</strong> Application packaging & environment deployments.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-chart-line text-warning me-2"></i> Horizontal Pod Autoscaler (HPA):</strong> Automatic pod scaling.</li>
-                </ul>`
-        },
-        devsecops: {
-          title: "DevSecOps & Shift-Left Security",
-          html: `<ul class="list-group list-group-flush bg-transparent">
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-bug text-warning me-2"></i> SonarQube Quality Gates:</strong> SAST static code analysis.</li>
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-shield-halved text-warning me-2"></i> Checkov Compliance:</strong> Infrastructure security scanning.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-code text-warning me-2"></i> Reusable Modules:</strong> Modular HCL scripts for zero-drift cloud resource provisioning.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-lock text-warning me-2"></i> Remote State Locking:</strong> Azure Blob Storage backend preventing concurrent state corruption.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-sliders text-warning me-2"></i> Variables & Providers:</strong> Dynamic variable files (tfvars), environment separation, and provider configurations.</li>
                 </ul>`
         },
         cicd: {
-          title: "CI/CD Pipeline Automation",
+          title: "CI/CD & Automation — Azure DevOps & GitHub Actions",
           html: `<ul class="list-group list-group-flush bg-transparent">
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-brands fa-github text-warning me-2"></i> GitHub Actions & Azure DevOps:</strong> Automated YAML pipelines.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-diagram-project text-warning me-2"></i> Azure DevOps YAML Pipelines:</strong> Multi-stage build, test, and release deployment pipelines.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-brands fa-github text-warning me-2"></i> GitHub Actions & PR Triggers:</strong> Branch-driven PR validation and speculative plan runs.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-code-branch text-warning me-2"></i> Git Workflows:</strong> Feature branching, PR code review gates, and deployment runbooks.</li>
                 </ul>`
         },
-        linux: {
-          title: "Linux Administration & Bash Scripting",
+        devsecops: {
+          title: "Security & Code Quality — tfsec & TFLint",
           html: `<ul class="list-group list-group-flush bg-transparent">
-                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-terminal text-warning me-2"></i> Ubuntu Server Admin:</strong> User permissions, networking & SSH hardening.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-shield-halved text-warning me-2"></i> tfsec Security Analysis:</strong> Pre-deployment IaC vulnerability analysis blocking hardcoded secrets & open ingress ports.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-file-code text-warning me-2"></i> TFLint IaC Linting:</strong> Automated syntax linting and best-practice compliance in pipeline gates.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-user-shield text-warning me-2"></i> Shift-Left Security:</strong> Automated quality gates integrated before infrastructure deployment.</li>
+                </ul>`
+        },
+        docker_k8s: {
+          title: "Containers & OS — Docker & Linux Ubuntu",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-brands fa-docker text-warning me-2"></i> Docker Containerization:</strong> Multi-stage container builds and lightweight base images.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-terminal text-warning me-2"></i> Linux (Ubuntu Administration):</strong> System administration, package management, and system diagnostics.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-scroll text-warning me-2"></i> Bash Maintenance Scripts:</strong> Reusable maintenance scripts for setup and system health monitoring.</li>
+                </ul>`
+        },
+        networking: {
+          title: "Networking & Protocols — Azure & Network Security",
+          html: `<ul class="list-group list-group-flush bg-transparent">
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-network-wired text-warning me-2"></i> Subnets & NSGs:</strong> Zero-trust Network Security Group (NSG) rules and subnet traffic isolation.</li>
+                  <li class="list-group-item bg-transparent text-white border-secondary"><strong><i class="fa-solid fa-shield text-warning me-2"></i> Inbound/Outbound Port Rules:</strong> Strict port access rules, SSH keys, and zero public exposure for private DBs.</li>
                 </ul>`
         }
       };
@@ -1465,41 +1530,62 @@
 
       const projects = {
         multi_env_azure: {
-          title: "Multi-Environment Azure Infrastructure Setup",
+          title: "Secure 3-Tier Web Application Infrastructure on Azure",
           url: "https://github.com/Pjaisw1103/Multi-Environment-Azure-Infrastructure-Setup",
           html: `<div class="mb-3">
-                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-layer-group me-2"></i>Architecture & Infrastructure Specs:</h6>
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-layer-group me-2"></i>Architecture & Infrastructure Highlights:</h6>
                   <ul class="list-unstyled space-y-2 mt-2">
-                    <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i><strong>Multi-Environment Tiering:</strong> Provisions Dev, Staging, and Production environments using modular Terraform HCL.</li>
-                    <li class="mb-2"><i class="fa-solid fa-network-wired text-info me-2"></i><strong>Enterprise Networking:</strong> Configures VNet subnets, NSG rules, Azure NAT Gateway, Private Endpoints, and Azure Application Gateway.</li>
-                    <li class="mb-2"><i class="fa-solid fa-lock text-warning me-2"></i><strong>Zero-Trust Security:</strong> Azure Bastion host for secure admin SSH/RDP access, and Azure Key Vault for secret rotation.</li>
-                    <li class="mb-2"><i class="fa-solid fa-database text-primary me-2"></i><strong>Database & State Isolation:</strong> Azure Storage Blob backend with lease-based state locking and Azure SQL Server backend.</li>
+                    <li class="mb-2"><i class="fa-solid fa-check-circle text-success me-2"></i><strong>3-Tier Modular Infrastructure:</strong> Architected & deployed Web, App, and Database tiers across isolated subnets using reusable Terraform scripts.</li>
+                    <li class="mb-2"><i class="fa-solid fa-lock text-warning me-2"></i><strong>Zero-Trust Security:</strong> Configured zero-trust NSG rules and Azure Bastion for private VM administration without exposing public IPs.</li>
+                    <li class="mb-2"><i class="fa-solid fa-diagram-project text-info me-2"></i><strong>Azure DevOps Pipelines:</strong> Built multi-stage pipelines reducing manual deployment effort by 40% with 99% environment rollout reliability.</li>
                   </ul>
                  </div>`
         },
         cicd_automation: {
-          title: "CI/CD Deployment Automation Pipeline",
+          title: "Automated Infrastructure CI/CD & PR Validation Pipeline",
           url: "https://github.com/Pjaisw1103/CICD-Deployment-Automation-Pipeline",
           html: `<div class="mb-3">
-                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-diagram-project me-2"></i>Pipeline & Release Automation Specs:</h6>
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-diagram-project me-2"></i>Pipeline & DevSecOps Highlights:</h6>
                   <ul class="list-unstyled space-y-2 mt-2">
-                    <li class="mb-2"><i class="fa-solid fa-code-branch text-success me-2"></i><strong>Decoupled CI/CD Pipelines:</strong> Separate Azure DevOps YAML pipelines (FastAPI backend + React frontend).</li>
-                    <li class="mb-2"><i class="fa-brands fa-docker text-info me-2"></i><strong>Multi-Stage Dockerization:</strong> Optimized Docker containers with Python 3.10 FastAPI, React 18, Nginx reverse proxy, and MS SQL ODBC drivers.</li>
-                    <li class="mb-2"><i class="fa-solid fa-server text-warning me-2"></i><strong>VM Release Deployment:</strong> Automated artifact lifecycle management deploying directly to Azure DevOps Virtual Machine Environments (dev-env).</li>
-                    <li class="mb-2"><i class="fa-solid fa-rotate text-primary me-2"></i><strong>Zero Downtime Releases:</strong> Automated virtualenv setup, systemd service reloads, and Nginx web server reloading.</li>
+                    <li class="mb-2"><i class="fa-solid fa-code-branch text-success me-2"></i><strong>Branch-Driven PR Validation:</strong> Triggered on Pull Requests to automate Terraform validation, security scanning, and speculative plan runs.</li>
+                    <li class="mb-2"><i class="fa-solid fa-shield-cat text-warning me-2"></i><strong>tfsec & TFLint Gates:</strong> Integrated automated gates to block hardcoded credentials, open ingress ports, and non-compliant cloud setups.</li>
+                    <li class="mb-2"><i class="fa-solid fa-check-double text-primary me-2"></i><strong>Multi-Stage Approvals:</strong> Implemented DEV/QA approval workflows, speeding up PR reviews by 30% and lowering rollback rates.</li>
                   </ul>
                  </div>`
         },
         aks_provisioning: {
           title: "Azure AKS Provisioning & Workload Deployment",
-          url: "https://github.com/Pjaisw1103/Azure-AKS-Provisioning-and-Deployment",
+          url: "https://github.com/Pjaisw1103/azure-aks-terraform-provisioning",
           html: `<div class="mb-3">
-                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-cubes me-2"></i>Kubernetes & Provisioning Specs:</h6>
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-cubes me-2"></i>Kubernetes Provisioning Specs:</h6>
                   <ul class="list-unstyled space-y-2 mt-2">
-                    <li class="mb-2"><i class="fa-solid fa-cube text-success me-2"></i><strong>Generic Terraform Module:</strong> Reusable parameterizable module (modules/aks) provisioning Azure AKS and ACR.</li>
-                    <li class="mb-2"><i class="fa-solid fa-id-badge text-info me-2"></i><strong>RBAC Role Integration:</strong> Automatic AcrPull role assignment linking AKS Kubelet Managed Identity to Azure Container Registry.</li>
-                    <li class="mb-2"><i class="fa-solid fa-shapes text-warning me-2"></i><strong>Multi-Tenancy Isolation:</strong> Declarative YAML manifests organizing workloads across dev & qa Kubernetes namespaces.</li>
-                    <li class="mb-2"><i class="fa-solid fa-arrows-rotate text-primary me-2"></i><strong>HA Workloads & Storage:</strong> 3-replica Deployments with RollingUpdate, readiness/liveness probes, LoadBalancer services, PVC managed disks, and ingress Network Policies.</li>
+                    <li class="mb-2"><i class="fa-solid fa-cube text-success me-2"></i><strong>Terraform HCL Module:</strong> Reusable parameterizable module provisioning Azure AKS cluster & ACR container registry.</li>
+                    <li class="mb-2"><i class="fa-solid fa-id-badge text-info me-2"></i><strong>RBAC Integration:</strong> Automatic AcrPull role assignment linking AKS Kubelet Managed Identity to ACR.</li>
+                    <li class="mb-2"><i class="fa-solid fa-shapes text-warning me-2"></i><strong>Cloud-Native Manifests:</strong> Multi-namespace isolation, HA 3-replica Deployments, RollingUpdate zero-downtime, PVC managed disks, and ingress Network Policies.</li>
+                  </ul>
+                 </div>`
+        },
+        azure_services: {
+          title: "Modular Azure Infrastructure Services Repositories",
+          url: "https://github.com/Pjaisw1103/Azurerm_Bastion",
+          html: `<div class="mb-3">
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-server me-2"></i>Modular Infrastructure Repositories:</h6>
+                  <ul class="list-unstyled space-y-2 mt-2">
+                    <li class="mb-2"><i class="fa-solid fa-shield-halved text-success me-2"></i><strong>Azurerm_Bastion:</strong> Modular Terraform script provisioning secure Azure Bastion Host for private VM administration.</li>
+                    <li class="mb-2"><i class="fa-solid fa-network-wired text-info me-2"></i><strong>Azurerm_Loadbalancer:</strong> Enterprise Azure Load Balancers configuring backend pools, health probes, and NAT rules.</li>
+                    <li class="mb-2"><i class="fa-solid fa-desktop text-warning me-2"></i><strong>Azurerm_Virtual_Machine:</strong> Automated Linux VM provisioning with SSH key pairs and remote state locking.</li>
+                  </ul>
+                 </div>`
+        },
+        k8s_workloads: {
+          title: "Kubernetes Microservices & Zero-Trust Network Policies",
+          url: "https://github.com/Pjaisw1103/k8s-network-policies",
+          html: `<div class="mb-3">
+                  <h6 class="text-warning font-weight-bold"><i class="fa-solid fa-network-wired me-2"></i>Cloud-Native Workload Specs:</h6>
+                  <ul class="list-unstyled space-y-2 mt-2">
+                    <li class="mb-2"><i class="fa-solid fa-lock text-success me-2"></i><strong>k8s-network-policies:</strong> Zero-trust network policies enforcing pod-to-pod ingress and egress traffic restrictions.</li>
+                    <li class="mb-2"><i class="fa-solid fa-cubes text-info me-2"></i><strong>k8s-deployments & pods:</strong> Declarative K8s manifests for microservice pod scaling, ReplicaSets, and rolling updates.</li>
+                    <li class="mb-2"><i class="fa-solid fa-database text-primary me-2"></i><strong>k8s-persistent-volume:</strong> Persistent Volume Claims (PVC) binding Azure managed disks to stateful applications.</li>
                   </ul>
                  </div>`
         }
