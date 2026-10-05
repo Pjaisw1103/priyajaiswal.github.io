@@ -213,18 +213,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ------------------------------------------------------------------------
-  // 3. Mobile Navigation Toggle & Backdrop Overlay
+  // 3. Mobile Navigation Toggle & Backdrop Overlay (Auto-close on Outside Touch)
   // ------------------------------------------------------------------------
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
   const navBackdrop = document.getElementById("navBackdrop");
+  const bsNavCollapse = document.getElementById("navContent");
+  const bsNavToggler = document.querySelector(".navbar-toggler");
 
   function openMobileMenu() {
     navLinks?.classList.add("active");
     menuToggle?.classList.add("active");
     navBackdrop?.classList.add("active");
     menuToggle?.setAttribute("aria-expanded", "true");
-    document.body.style.overflow = "hidden";
   }
 
   function closeMobileMenu() {
@@ -232,7 +233,16 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle?.classList.remove("active");
     navBackdrop?.classList.remove("active");
     menuToggle?.setAttribute("aria-expanded", "false");
-    document.body.style.overflow = "";
+
+    if (bsNavCollapse && bsNavCollapse.classList.contains("show")) {
+      if (typeof bootstrap !== "undefined" && bootstrap.Collapse) {
+        const bsCollapse = bootstrap.Collapse.getInstance(bsNavCollapse) || new bootstrap.Collapse(bsNavCollapse, { toggle: false });
+        bsCollapse.hide();
+      } else {
+        bsNavCollapse.classList.remove("show");
+      }
+      bsNavToggler?.setAttribute("aria-expanded", "false");
+    }
   }
 
   menuToggle?.addEventListener("click", () => {
@@ -245,9 +255,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navBackdrop?.addEventListener("click", closeMobileMenu);
 
-  document.querySelectorAll(".nav-links a").forEach(link => {
+  document.querySelectorAll(".nav-links a, #navContent .nav-link").forEach(link => {
     link.addEventListener("click", closeMobileMenu);
   });
+
+  const handleGlobalOutsideTouch = (e) => {
+    const isInsideNavbar = e.target.closest(".navbar");
+    if (!isInsideNavbar && (navLinks?.classList.contains("active") || bsNavCollapse?.classList.contains("show"))) {
+      closeMobileMenu();
+    }
+  };
+
+  document.addEventListener("click", handleGlobalOutsideTouch);
+  document.addEventListener("touchstart", handleGlobalOutsideTouch, { passive: true });
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 40) closeMobileMenu();
+  }, { passive: true });
 
   // ------------------------------------------------------------------------
   // 4. Hero Typewriter Command CLI
